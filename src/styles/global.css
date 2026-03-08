@@ -375,6 +375,7 @@ h1, h2, h3, h4, h5, h6 {
    ======================================== */
 .hero {
 	padding: 10rem 0 6rem;
+	margin-top: 80px;
 	background: var(--v2-bg);
 	font-family: var(--v2-font);
 	position: relative;
