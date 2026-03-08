@@ -390,7 +390,7 @@ h1, h2, h3, h4, h5, h6 {
 	animation: heroReveal 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 .hero-illus-tr {
-	top: 80px;
+	top: 65px;
 	right: 0;
 	width: 45%;
 	max-width: 600px;
