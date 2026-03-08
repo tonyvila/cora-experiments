@@ -1,0 +1,703 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<!--
+Evergreen generic proposal template.
+Copy this file into src/pages/proposal/[slug].astro and replace all placeholder tokens.
+-->
+
+<Layout
+	title="Cora — Proposal for {{CLIENT_NAME}}"
+	description="AI transformation proposal template by Cora and Process Street."
+	image={`${base}/proposal/{{PROPOSAL_SLUG}}-hero.jpg`}
+	noindex={true}
+>
+
+<Navbar />
+
+<main>
+
+	<!-- ===== HERO V2C: BOTTOM FLOATING CARD ===== -->
+	<section class="proposal-hero">
+		<div class="proposal-hero-img-wrap">
+				<img src={`${base}/proposal/{{PROPOSAL_SLUG}}-hero.jpg`} alt="Cora and {{CLIENT_NAME}} — geometric illustration of operations transformation" class="proposal-hero-img" width="1440" height="810" />
+		</div>
+		<div class="proposal-hero-card-wrap container proposal-container-image">
+			<div class="proposal-hero-card">
+				<h1 class="proposal-hero-heading">Proposal for <span class="proposal-recipient">{{CLIENT_NAME}}</span></h1>
+					<p class="proposal-hero-meta">Prepared by Cora &middot; {{PROPOSAL_DATE}}</p>
+				<p class="proposal-hero-meta">Account Lead: Vinay Patankar &middot; vinay@cora.st</p>
+					<p class="proposal-hero-valid">Valid through {{VALID_THROUGH_DATE}}</p>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===== PERSONAL LETTER ===== -->
+	<section class="section proposal-letter-section">
+		<div class="container proposal-container-narrow">
+			<p style="font-size: 1.125rem; color: var(--v2-text-secondary); line-height: 1.8; margin-bottom: 1.25rem;">
+				Dear {{CLIENT_NAME}},
+			</p>
+				<p style="font-size: 1.125rem; color: var(--v2-text-secondary); line-height: 1.8; margin-bottom: 1.25rem;">{{LETTER_PARAGRAPH_1}}</p>
+				<p style="font-size: 1.125rem; color: var(--v2-text-secondary); line-height: 1.8; margin-bottom: 1.25rem;">{{LETTER_PARAGRAPH_2}}</p>
+			<p style="font-size: 1.125rem; color: var(--v2-text-secondary); line-height: 1.8; margin-bottom: 2rem;">
+				Every workflow we deploy for customers, we have already built and tested for ourselves. Let's get to work.
+			</p>
+			<p style="font-size: 1.125rem; color: var(--v2-text); font-weight: 500;">Vinay Patankar | Cofounder and CEO</p>
+			<img src={`${base}/proposal/vinay-signature.png`} alt="Vinay Patankar signature" width="180" style="margin-top: 0.5rem; opacity: 0.85;" />
+		</div>
+	</section>
+
+	<!-- ===== EXECUTIVE SUMMARY ===== -->
+	<section class="section proposal-tight-top">
+		<div class="container proposal-container-narrow">
+			<h2 class="section-title proposal-h2-left">Executive Summary</h2>
+				<p style="font-size: 1.0625rem; color: var(--v2-text-secondary); line-height: 1.8; margin-bottom: 1.25rem;">{{EXEC_SUMMARY_PARAGRAPH_1}}</p>
+				<p style="font-size: 1.0625rem; color: var(--v2-text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">{{EXEC_SUMMARY_PARAGRAPH_2}}</p>
+			<ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1rem;">
+					<li style="font-size: 1rem; color: var(--v2-text-secondary); padding-left: 1.25rem; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; border-radius: 50%; background: var(--v2-accent-softer); display: block;"></span>{{EXEC_BULLET_1}}</li>
+					<li style="font-size: 1rem; color: var(--v2-text-secondary); padding-left: 1.25rem; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; border-radius: 50%; background: var(--v2-accent-softer); display: block;"></span>{{EXEC_BULLET_2}}</li>
+					<li style="font-size: 1rem; color: var(--v2-text-secondary); padding-left: 1.25rem; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; border-radius: 50%; background: var(--v2-accent-softer); display: block;"></span>{{EXEC_BULLET_3}}</li>
+					<li style="font-size: 1rem; color: var(--v2-text-secondary); padding-left: 1.25rem; position: relative; line-height: 1.6;"><span style="position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; border-radius: 50%; background: var(--v2-accent-softer); display: block;"></span>{{EXEC_BULLET_4}}</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- ===== CHALLENGES ===== -->
+	<section class="section proposal-tight-top">
+		<div class="container">
+			<h2 class="section-title" style="margin-bottom: 0.75rem;">Current Challenges</h2>
+				<p class="section-desc" style="margin-bottom: 3rem;">{{CHALLENGES_SUBHEAD}}</p>
+			<div class="features-grid">
+				<div class="feature-card">
+						<h3 class="feature-card-title" style="color: var(--v2-accent);">{{CHALLENGE_TITLE_1}}</h3>
+						<p class="feature-card-desc">{{CHALLENGE_DESC_1}}</p>
+				</div>
+				<div class="feature-card">
+						<h3 class="feature-card-title" style="color: var(--v2-accent);">{{CHALLENGE_TITLE_2}}</h3>
+						<p class="feature-card-desc">{{CHALLENGE_DESC_2}}</p>
+				</div>
+				<div class="feature-card">
+						<h3 class="feature-card-title" style="color: var(--v2-accent);">{{CHALLENGE_TITLE_3}}</h3>
+						<p class="feature-card-desc">{{CHALLENGE_DESC_3}}</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===== WORKSPACE IMAGE BREAK ===== -->
+	<section class="section proposal-image-break">
+		<div class="container proposal-container-image">
+			<img src={`${base}/proposal/{{PROPOSAL_SLUG}}-workspace.jpg`} alt="Cora workspace — geometric illustration of content operations infrastructure" width="1200" height="630" class="proposal-editorial-image" />
+		</div>
+	</section>
+
+	<!-- ===== SOLUTION ===== -->
+	<section class="section proposal-tight-top">
+		<div class="container proposal-container-narrow">
+			<h2 class="section-title proposal-h2-left">The Solution</h2>
+				<p style="font-size: 1.0625rem; color: var(--v2-text-secondary); line-height: 1.8; margin-bottom: 1.5rem;">{{SOLUTION_INTRO}}</p>
+
+			<h3 style="font-size: 1.25rem; color: var(--v2-text); margin-bottom: 0.75rem; margin-top: 2rem;">Business Brain Architecture</h3>
+			<p style="font-size: 1rem; color: var(--v2-text-secondary); line-height: 1.8; margin-bottom: 1.25rem;">
+				A shared organizational context layer that captures institutional knowledge, processes, decision patterns, and operational history across departments. When a team member asks "how do we handle X," the answer exists in the system, not in someone's memory.
+			</p>
+
+			<h3 style="font-size: 1.25rem; color: var(--v2-text); margin-bottom: 0.75rem; margin-top: 2rem;">Second Brains for Key Leaders</h3>
+			<p style="font-size: 1rem; color: var(--v2-text-secondary); line-height: 1.8; margin-bottom: 1.25rem;">
+				Each key leader gets a role-specific AI system that compounds their context and output quality over time. It remembers their preferences, understands their domain, and handles the operational work that consumes their strategic capacity.
+			</p>
+
+			<h3 style="font-size: 1.25rem; color: var(--v2-text); margin-bottom: 0.75rem; margin-top: 2rem;">Managed AI Agents</h3>
+			<p style="font-size: 1rem; color: var(--v2-text-secondary); line-height: 1.8;">
+				Dedicated AI teammates deployed on real computers, managed by our team, trained on {{CLIENT_NAME}}'s specific workflows. Each agent operates continuously, connects to your existing tools (Workday, Jira, Slack, Google Workspace, Salesforce), and executes real workflow tasks with human review and governance.
+			</p>
+		</div>
+	</section>
+
+	<!-- ===== WHY CORA ===== -->
+	<section class="section roles">
+		<div class="container">
+			<h2 class="section-title" style="margin-bottom: 0.75rem;">Why Cora</h2>
+			<p class="section-desc" style="margin-bottom: 3rem;">Six reasons this is fundamentally different.</p>
+			<div class="roles-grid">
+				<div class="role-card">
+					<h3 class="role-card-title">Real Computer, Real Work</h3>
+					<p class="role-card-desc">Cora operates on an actual computer using the same software your team uses. It opens Workday, navigates Jira, queries Snowflake, and builds reports. A teammate that works the way your people work.</p>
+				</div>
+				<div class="role-card">
+					<h3 class="role-card-title">Managed, Not DIY</h3>
+					<p class="role-card-desc">You do not need to build an AI operations team. We deploy, secure, maintain, and continuously optimize the agents. You get the output without the infrastructure overhead.</p>
+				</div>
+				<div class="role-card">
+					<h3 class="role-card-title">Security by Design</h3>
+					<p class="role-card-desc">Tightest possible access from day one. Daily automated audits, prompt injection defense, complete audit trails, least-privilege architecture, and progressive autonomy earned through consistent accuracy.</p>
+				</div>
+				<div class="role-card">
+					<h3 class="role-card-title">Built by Operators</h3>
+					<p class="role-card-desc">Every workflow we deploy for customers, we have already built and tested internally. We are an operations company that ships working systems, not a consulting firm that recommends.</p>
+				</div>
+				<div class="role-card">
+					<h3 class="role-card-title">Continuous Improvement</h3>
+					<p class="role-card-desc">The agents identify inefficiencies, suggest optimizations, and build new solutions autonomously. Every night, they get better at your specific operations.</p>
+				</div>
+				<div class="role-card">
+					<h3 class="role-card-title">Cross-Domain Intelligence</h3>
+					<p class="role-card-desc">One Cora agent covers what would require specialists across compliance, data operations, communications, reporting, and administration. Expert-level capability across every domain, available 24/7.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===== BUSINESS CASE ===== -->
+	<section class="section proposal-tight-top proposal-tight-bottom">
+		<div class="container proposal-container-wide">
+			<h2 class="section-title" style="margin-bottom: 0.75rem;">Business Case</h2>
+				<p class="section-desc" style="margin-bottom: 2.5rem;">{{BUSINESS_CASE_SUBHEAD}}</p>
+
+			<div style="overflow-x: auto;">
+				<table style="width: 100%; border-collapse: separate; border-spacing: 0; border-radius: var(--v2-radius); overflow: hidden; border: 1px solid var(--v2-border); font-size: 0.9375rem;">
+					<thead>
+						<tr style="background: rgba(212, 98, 43, 0.06);">
+							<th style="padding: 1rem 1.25rem; text-align: left; font-weight: 600; color: var(--v2-text); border-bottom: 1px solid var(--v2-border);">Approach</th>
+							<th style="padding: 1rem 1.25rem; text-align: left; font-weight: 600; color: var(--v2-text); border-bottom: 1px solid var(--v2-border);">Annual Cost</th>
+							<th style="padding: 1rem 1.25rem; text-align: left; font-weight: 600; color: var(--v2-text); border-bottom: 1px solid var(--v2-border);">Scope</th>
+							<th style="padding: 1rem 1.25rem; text-align: left; font-weight: 600; color: var(--v2-text); border-bottom: 1px solid var(--v2-border);">Outcome</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td style="padding: 1rem 1.25rem; color: var(--v2-text-secondary); border-bottom: 1px solid var(--v2-border);">Internal AI ops team (4-5 FTEs)</td>
+							<td style="padding: 1rem 1.25rem; color: var(--v2-text-secondary); border-bottom: 1px solid var(--v2-border);">$800K-$1.2M</td>
+							<td style="padding: 1rem 1.25rem; color: var(--v2-text-secondary); border-bottom: 1px solid var(--v2-border);">Single domain focus</td>
+							<td style="padding: 1rem 1.25rem; color: var(--v2-text-secondary); border-bottom: 1px solid var(--v2-border);">12-18 month ramp</td>
+						</tr>
+						<tr>
+							<td style="padding: 1rem 1.25rem; color: var(--v2-text-secondary); border-bottom: 1px solid var(--v2-border);">Big 4 consulting engagement</td>
+							<td style="padding: 1rem 1.25rem; color: var(--v2-text-secondary); border-bottom: 1px solid var(--v2-border);">$2M-$5M</td>
+							<td style="padding: 1rem 1.25rem; color: var(--v2-text-secondary); border-bottom: 1px solid var(--v2-border);">Strategy + roadmap</td>
+							<td style="padding: 1rem 1.25rem; color: var(--v2-text-secondary); border-bottom: 1px solid var(--v2-border);">Slide deck, no execution</td>
+						</tr>
+						<tr style="background: rgba(212, 98, 43, 0.06);">
+							<td style="padding: 1rem 1.25rem; color: var(--v2-accent); font-weight: 600;">Cora AI Transformation</td>
+							<td style="padding: 1rem 1.25rem; color: var(--v2-accent); font-weight: 600;">{{TOTAL_INVESTMENT}}</td>
+							<td style="padding: 1rem 1.25rem; color: var(--v2-accent); font-weight: 600;">Cross-functional execution</td>
+							<td style="padding: 1rem 1.25rem; color: var(--v2-accent); font-weight: 600;">Live agents in 30 days</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<p style="font-size: 1rem; color: var(--v2-text-secondary); line-height: 1.8; margin-top: 1.5rem; text-align: center; font-style: italic;">
+				As operational complexity grows, manual coordination scales linearly. AI execution does not.
+			</p>
+		</div>
+	</section>
+
+	<!-- ===== ROLLOUT ===== -->
+	<section class="section proposal-rollout-section">
+		<div class="container">
+			<h2 class="proposal-rollout-heading">Rollout Plan</h2>
+			<p class="proposal-rollout-sub">From first agent to enterprise-scale transformation.</p>
+			<div class="steps-grid proposal-steps-grid">
+				<div class="step-card">
+					<div class="step-number">1</div>
+					<h3 class="step-title">Month 1</h3>
+					<p class="step-desc">Kickoff, data access boundary setup, first managed workflow deployed with review-first controls.</p>
+				</div>
+				<div class="step-card">
+					<div class="step-number">2</div>
+					<h3 class="step-title">Month 2</h3>
+					<p class="step-desc">Business brain foundation live, core operating context and source systems structured for reliable retrieval.</p>
+				</div>
+				<div class="step-card">
+					<div class="step-number">3</div>
+					<h3 class="step-title">Month 3</h3>
+					<p class="step-desc">First leader second brain deployed, output quality benchmarked, correction loop tuned for consistency.</p>
+				</div>
+				<div class="step-card">
+					<div class="step-number">4</div>
+					<h3 class="step-title">Month 4</h3>
+					<p class="step-desc">Cross-functional agent workflows expanded with guardrails, approvals, and measurable SLA tracking.</p>
+				</div>
+				<div class="step-card">
+					<div class="step-number">5</div>
+					<h3 class="step-title">Month 5</h3>
+					<p class="step-desc">Always-on execution patterns introduced for high-confidence recurring operations and background tasks.</p>
+				</div>
+				<div class="step-card">
+					<div class="step-number">6</div>
+					<h3 class="step-title">Month 6</h3>
+					<p class="step-desc">Operating model handoff completed with governance cadence, roadmap, and expansion priorities defined.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===== INVESTMENT ===== -->
+	<section class="section proposal-investment-section">
+		<div class="container proposal-container-narrow">
+			<h2 class="section-title proposal-h2-left proposal-h2-spacious">Investment</h2>
+
+				<div class="proposal-investment-card">
+				<h3 style="font-size: 1.25rem; color: var(--v2-accent); margin-bottom: 1.5rem;">AI Transformation Program</h3>
+				<div class="proposal-investment-grid">
+					<div>
+						<p style="font-size: 0.8125rem; color: var(--v2-text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Total Investment</p>
+						<p style="font-size: 1.5rem; color: var(--v2-accent); font-weight: 600;">{{TOTAL_INVESTMENT}}</p>
+					</div>
+					<div>
+						<p style="font-size: 0.8125rem; color: var(--v2-text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Engagement Term</p>
+						<p style="font-size: 1.5rem; color: var(--v2-text); font-weight: 600;">{{COMMITMENT_TERM}}</p>
+					</div>
+					<div>
+						<p style="font-size: 0.8125rem; color: var(--v2-text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Solutions Engineering</p>
+						<p style="font-size: 1.5rem; color: var(--v2-text); font-weight: 600;">{{MONTHLY_HOURS}}</p>
+					</div>
+					<div>
+						<p style="font-size: 0.8125rem; color: var(--v2-text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Monthly</p>
+						<p style="font-size: 1.5rem; color: var(--v2-text); font-weight: 600;">{{MONTHLY_FEE}}/mo</p>
+					</div>
+				</div>
+				<div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--v2-border);">
+					<p style="font-size: 0.875rem; color: var(--v2-text-muted); line-height: 1.7;">Includes: business brain architecture, second brains for key leaders, managed AI agents, implementation, ongoing maintenance, security monitoring, model optimization, dedicated solutions engineering. Additional hours at $100/hr.</p>
+				</div>
+			</div>
+
+			<p style="font-size: 0.9375rem; color: var(--v2-text-muted); line-height: 1.7; margin-bottom: 0.5rem;">
+				Not included: AI model token costs ($200-$2,000/month depending on workload, billed to your account), hardware costs if applicable, third-party tool subscriptions.
+			</p>
+		</div>
+	</section>
+
+	<!-- ===== SECURITY ===== -->
+	<section class="section proposal-tight-top proposal-tight-bottom">
+		<div class="container proposal-container-narrow">
+			<h2 class="section-title proposal-h2-left">Security Approach</h2>
+			<p style="font-size: 1rem; color: var(--v2-text-secondary); line-height: 1.8; margin-bottom: 1.25rem;">
+				We take a conservative, incremental approach designed for enterprise-grade requirements. Agents start within the tightest possible access boundaries. All external-facing actions require manual approval. Sensitive systems are accessed through bridge mechanisms, not direct integrations.
+			</p>
+			<p style="font-size: 1rem; color: var(--v2-text-secondary); line-height: 1.8; margin-bottom: 1.25rem;">
+				Access scope increases only after consistent accuracy: manual review of 100+ outputs with zero corrections before auto-send. Daily automated security audits, prompt injection guardrails, complete audit trail, and token spend limits are built in from day one.
+			</p>
+			<p style="font-size: 1rem; line-height: 1.8;">
+				<a href={`${base}/security`} style="color: var(--v2-accent); text-decoration: none; font-weight: 500;">Learn more about our security framework &rarr;</a>
+			</p>
+		</div>
+	</section>
+
+	<!-- ===== TEAM + TERMS ===== -->
+	<section class="section proposal-tight-top proposal-tight-bottom">
+		<div class="container proposal-container-narrow">
+			<h2 class="section-title proposal-h2-left proposal-h2-spacious">Your Team</h2>
+
+				<div class="proposal-team-grid">
+					<div class="proposal-team-card">
+					<img src={`${base}/proposal/{{PROPOSAL_SLUG}}-team-vinay.png`} alt="Vinay Patankar headshot" class="proposal-team-headshot" width="88" height="88" />
+					<p style="font-size: 0.8125rem; color: var(--v2-text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Account Lead</p>
+					<p style="font-size: 1rem; color: var(--v2-text); font-weight: 600;">Vinay Patankar</p>
+					<p style="font-size: 0.875rem; color: var(--v2-text-muted);">Strategy, escalation</p>
+				</div>
+					<div class="proposal-team-card">
+					<img src={`${base}/proposal/{{PROPOSAL_SLUG}}-team-lincoln.png`} alt="Lincoln Bauduin headshot" class="proposal-team-headshot" width="88" height="88" />
+					<p style="font-size: 0.8125rem; color: var(--v2-text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Solutions Engineer</p>
+					<p style="font-size: 1rem; color: var(--v2-text); font-weight: 600;">Lincoln Bauduin</p>
+					<p style="font-size: 0.875rem; color: var(--v2-text-muted);">Implementation, workflows</p>
+				</div>
+					<div class="proposal-team-card">
+					<img src={`${base}/proposal/{{PROPOSAL_SLUG}}-team-gustavo.png`} alt="Gustavo Amaral headshot" class="proposal-team-headshot" width="88" height="88" />
+					<p style="font-size: 0.8125rem; color: var(--v2-text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">Customer Success</p>
+					<p style="font-size: 1rem; color: var(--v2-text); font-weight: 600;">Gustavo Amaral</p>
+					<p style="font-size: 0.875rem; color: var(--v2-text-muted);">Onboarding, training</p>
+				</div>
+			</div>
+
+			<h2 class="section-title proposal-h2-left">Terms</h2>
+			<div style="font-size: 0.9375rem; color: var(--v2-text-secondary); line-height: 1.8;">
+				<p style="margin-bottom: 0.75rem;">Engagement term is defined in the Investment section above, renewing month-to-month thereafter. Either party may terminate with 30 days written notice after the initial term.</p>
+				<p style="margin-bottom: 0.75rem;">Monthly invoicing, net 30 days. First month payable upon execution. Monthly solutions engineering scope is as listed in the Investment section. Additional hours at $100/hour.</p>
+				<p style="margin-bottom: 0.75rem;">Early termination requires payment of remaining months in the initial term.</p>
+				<p>Both parties agree to maintain confidentiality of proprietary information. Mutual NDA executed alongside this agreement if not already in place.</p>
+			</div>
+
+			<div style="margin-top: 2rem; font-size: 0.875rem; color: var(--v2-text-muted);">
+				<a href="https://www.process.st/terms" style="color: var(--v2-text-muted); text-decoration: underline;">Terms</a> &middot;
+				<a href="https://www.process.st/privacy" style="color: var(--v2-text-muted); text-decoration: underline;">Privacy</a> &middot;
+				<a href={`${base}/security`} style="color: var(--v2-text-muted); text-decoration: underline;">Security</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===== ACCEPTANCE FORM ===== -->
+	<section class="section proposal-acceptance-section">
+			<div class="container proposal-container-form">
+				<div id="acceptance-card" class="proposal-acceptance-card">
+				<!-- FORM STATE -->
+				<div id="acceptance-form-wrap">
+					<h2 style="font-family: var(--v2-font-heading); font-size: 1.75rem; text-align: center; color: var(--v2-text); margin-bottom: 0.5rem;">Accept this Proposal</h2>
+					<p style="text-align: center; font-size: 0.9375rem; color: var(--v2-text-muted); margin-bottom: 2rem;">Your digital signature will be recorded and a signed PDF sent to both parties.</p>
+
+						<form id="proposal-acceptance-form" class="proposal-acceptance-form">
+						<input type="hidden" name="proposal_slug" value="{{PROPOSAL_SLUG}}" />
+						<input type="hidden" name="client_name" value="{{CLIENT_NAME}}" />
+						<input type="hidden" name="proposal_amount" value="{{TOTAL_INVESTMENT}}" />
+						<input type="hidden" name="offer_type" value="{{OFFER_TYPE}}" />
+						<input type="hidden" name="monthly_fee" value="{{MONTHLY_FEE}}" />
+						<input type="hidden" name="commitment_term" value="{{COMMITMENT_TERM}}" />
+
+						<div>
+							<label style="display: block; font-size: 0.875rem; font-weight: 500; color: var(--v2-text); margin-bottom: 0.35rem;">Full Name</label>
+							<input type="text" name="signer_name" required placeholder="Your full name" maxlength="200" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--v2-border); border-radius: 8px; font-family: var(--v2-font); font-size: 1rem; background: #fff; color: var(--v2-text); outline: none;" />
+						</div>
+						<div>
+							<label style="display: block; font-size: 0.875rem; font-weight: 500; color: var(--v2-text); margin-bottom: 0.35rem;">Title</label>
+							<input type="text" name="signer_title" required placeholder="Your role" maxlength="200" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--v2-border); border-radius: 8px; font-family: var(--v2-font); font-size: 1rem; background: #fff; color: var(--v2-text); outline: none;" />
+						</div>
+						<div>
+							<label style="display: block; font-size: 0.875rem; font-weight: 500; color: var(--v2-text); margin-bottom: 0.35rem;">Email</label>
+							<input type="email" name="signer_email" required placeholder="you@example.com" maxlength="254" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--v2-border); border-radius: 8px; font-family: var(--v2-font); font-size: 1rem; background: #fff; color: var(--v2-text); outline: none;" />
+						</div>
+						<div>
+							<label style="display: block; font-size: 0.875rem; font-weight: 500; color: var(--v2-text); margin-bottom: 0.35rem;">Digital Signature</label>
+							<input type="text" name="signer_signature" required placeholder="Type your full name as signature" maxlength="200" style="width: 100%; padding: 0.75rem 1rem; border: 1px solid var(--v2-border); border-radius: 8px; font-family: var(--v2-font); font-size: 1rem; font-style: italic; background: #fff; color: var(--v2-text); outline: none;" />
+						</div>
+
+						<button type="submit" id="accept-btn" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 0.5rem;">Accept Proposal</button>
+
+						<p style="font-size: 0.75rem; color: var(--v2-text-muted); text-align: center; line-height: 1.5; margin-top: 0.25rem;">
+							By clicking Accept, you agree to the terms outlined in this proposal and authorize Process Street, Inc. to begin the Cora engagement.
+						</p>
+					</form>
+				</div>
+
+				<!-- LOADING STATE -->
+				<div id="acceptance-loading" style="display: none; text-align: center; padding: 3rem 1rem;">
+					<div style="display: inline-block; width: 40px; height: 40px; border: 3px solid var(--v2-border); border-top-color: var(--v2-accent); border-radius: 50%; animation: spin 0.8s linear infinite;"></div>
+					<p style="margin-top: 1.25rem; font-size: 1rem; color: var(--v2-text-muted);">Submitting your acceptance...</p>
+				</div>
+
+				<!-- SUCCESS STATE -->
+				<div id="acceptance-success" style="display: none; text-align: center; padding: 3rem 1rem;">
+					<div style="width: 56px; height: 56px; border-radius: 50%; background: var(--v2-accent); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+					</div>
+					<h2 style="font-family: var(--v2-font-heading); font-size: 1.75rem; color: var(--v2-text); margin-bottom: 0.75rem;">Thank You</h2>
+					<p style="font-size: 1.0625rem; color: var(--v2-text-secondary); line-height: 1.7;" id="acceptance-message"></p>
+					<p style="font-size: 0.875rem; color: var(--v2-text-muted); margin-top: 1.5rem;">A signed PDF will be sent to your email shortly.</p>
+				</div>
+
+				<!-- ALREADY ACCEPTED STATE -->
+				<div id="acceptance-already" style="display: none; text-align: center; padding: 3rem 1rem;">
+					<div style="width: 56px; height: 56px; border-radius: 50%; background: var(--v2-accent); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+					</div>
+					<h2 style="font-family: var(--v2-font-heading); font-size: 1.75rem; color: var(--v2-text); margin-bottom: 0.75rem;">Proposal Accepted</h2>
+					<p style="font-size: 1.0625rem; color: var(--v2-text-secondary); line-height: 1.7;" id="already-accepted-message">This proposal has already been accepted.</p>
+					<p style="font-size: 0.875rem; color: var(--v2-text-muted); margin-top: 1.5rem;">A signed copy has been sent to both parties. If you need assistance, contact <a href="mailto:vinay@cora.st" style="color: var(--v2-accent);">vinay@cora.st</a>.</p>
+				</div>
+			</div>
+
+			<script>
+				(function() {
+					var slug = document.querySelector('input[name="proposal_slug"]').value;
+
+					// Check acceptance status on page load
+					fetch('https://vp58.app.n8n.cloud/webhook/proposal-status?slug=' + encodeURIComponent(slug))
+						.then(function(r) { return r.json(); })
+						.then(function(status) {
+							if (status.accepted) {
+								document.getElementById('acceptance-form-wrap').style.display = 'none';
+								document.getElementById('acceptance-already').style.display = 'block';
+								var msg = 'This proposal was accepted';
+								if (status.accepted_at) {
+									var d = new Date(status.accepted_at);
+									msg += ' on ' + d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+								}
+								if (status.signer_name) msg += ' by ' + status.signer_name;
+								msg += '.';
+								document.getElementById('already-accepted-message').textContent = msg;
+							}
+						})
+						.catch(function() { /* silently proceed with form */ });
+
+					// Form submission handler
+					document.getElementById('proposal-acceptance-form').addEventListener('submit', async function(e) {
+						e.preventDefault();
+						var btn = document.getElementById('accept-btn');
+						if (btn.disabled) return;
+						btn.disabled = true;
+
+						var form = e.target;
+						var formData = new FormData(form);
+						var data = Object.fromEntries(formData.entries());
+						data.accepted_at = new Date().toISOString();
+						data.proposal_url = window.location.href;
+
+						document.getElementById('acceptance-form-wrap').style.display = 'none';
+						document.getElementById('acceptance-loading').style.display = 'block';
+
+						try {
+							var res = await fetch('https://vp58.app.n8n.cloud/webhook/proposal-acceptance', {
+								method: 'POST',
+								headers: { 'Content-Type': 'application/json' },
+								body: JSON.stringify(data)
+							});
+							var result = await res.json();
+							document.getElementById('acceptance-loading').style.display = 'none';
+
+							if (result.error === 'already_accepted') {
+								document.getElementById('acceptance-already').style.display = 'block';
+								var msg = 'This proposal was already accepted';
+								if (result.accepted_at) {
+									var d = new Date(result.accepted_at);
+									msg += ' on ' + d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+								}
+								if (result.signer_name) msg += ' by ' + result.signer_name;
+								msg += '.';
+								document.getElementById('already-accepted-message').textContent = msg;
+							} else if (res.ok) {
+								document.getElementById('acceptance-success').style.display = 'block';
+								document.getElementById('acceptance-message').textContent =
+									"We're excited to help " + data.client_name + " on their AI Transformation journey.";
+							} else {
+								throw new Error(result.message || 'Submission failed');
+							}
+						} catch (err) {
+							document.getElementById('acceptance-loading').style.display = 'none';
+							document.getElementById('acceptance-form-wrap').style.display = 'block';
+							btn.disabled = false;
+							btn.textContent = 'Try Again';
+							alert('Something went wrong. Please try again or contact vinay@cora.st.');
+						}
+					});
+				})();
+			</script>
+		</div>
+	</section>
+
+	<!-- ===== CONTACT ===== -->
+	<section class="final-cta">
+		<div class="container final-cta-container">
+			<h2 class="final-cta-heading">Questions?</h2>
+			<p class="final-cta-sub">Contact Vinay Patankar at <a href="mailto:vinay@cora.st" style="color: var(--v2-accent); text-decoration: none;">vinay@cora.st</a></p>
+			<p style="font-size: 0.9375rem; color: var(--v2-text-muted);">Process Street, Inc. &middot; <a href="https://www.cora.st" style="color: var(--v2-text-muted); text-decoration: underline;">www.cora.st</a></p>
+		</div>
+	</section>
+
+</main>
+
+<Footer />
+
+</Layout>
+
+<style>
+	/* Proposal V2C — bottom floating card */
+	.proposal-hero {
+		position: relative;
+		min-height: 520px;
+		display: flex;
+		align-items: flex-end;
+		overflow: visible;
+	}
+	.proposal-hero-img-wrap {
+		position: absolute;
+		inset: 0;
+		overflow: hidden;
+	}
+	.proposal-hero-img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.proposal-hero-card-wrap {
+		position: relative;
+		z-index: 1;
+		transform: translateY(40%);
+		display: flex;
+		justify-content: center;
+	}
+	.proposal-hero-card {
+		background: var(--v2-bg, #FAF6F1);
+		border-radius: 16px;
+		padding: 2.5rem 3.5rem;
+		box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+		border: 1px solid var(--v2-border, #e8e0d8);
+		max-width: 100%;
+		width: 100%;
+		text-align: center;
+	}
+	.proposal-hero-heading {
+		font-family: var(--v2-font-heading);
+		font-size: 3rem;
+		font-weight: 900;
+		line-height: 1.1;
+		color: var(--v2-text, #1a1a2e);
+		margin-bottom: 1.25rem;
+	}
+	.proposal-recipient {
+		display: inline-block;
+		white-space: nowrap;
+	}
+	.proposal-hero-meta {
+		font-size: 1rem;
+		font-weight: 700;
+		color: var(--v2-text-secondary, #555);
+		line-height: 1.6;
+	}
+	.proposal-hero-valid {
+		display: inline-block;
+		margin-top: 0.75rem;
+		padding: 0.35rem 0.85rem;
+		background: rgba(212, 98, 43, 0.1);
+		border: 1px solid rgba(212, 98, 43, 0.25);
+		border-radius: 999px;
+		font-size: 0.8125rem;
+		font-weight: 700;
+		color: var(--v2-accent, #C4652A);
+	}
+
+	.proposal-container-narrow {
+		max-width: 720px;
+	}
+	.proposal-container-wide {
+		max-width: 860px;
+	}
+	.proposal-container-image {
+		max-width: 960px;
+	}
+	.proposal-container-form {
+		max-width: 620px;
+	}
+	.proposal-letter-section {
+		padding-top: clamp(9rem, 16vw, 14rem);
+		padding-bottom: 3rem;
+	}
+	.proposal-tight-top {
+		padding-top: clamp(2rem, 4vw, 3.25rem);
+	}
+	.proposal-tight-bottom {
+		padding-bottom: clamp(2rem, 4vw, 3.25rem);
+	}
+	.proposal-image-break {
+		padding: 3rem 0;
+	}
+	.proposal-investment-section {
+		padding-top: clamp(2.5rem, 5vw, 4rem);
+		padding-bottom: clamp(1.5rem, 3vw, 2rem);
+	}
+	.proposal-acceptance-section {
+		padding-top: 3rem;
+		padding-bottom: 4rem;
+	}
+	.proposal-h2-left {
+		text-align: left;
+		font-size: 2rem;
+		margin-bottom: 1.5rem;
+	}
+	.proposal-h2-spacious {
+		margin-bottom: 2rem;
+	}
+	.proposal-editorial-image {
+		border-radius: var(--v2-radius);
+		box-shadow: var(--v2-shadow-lg);
+		width: 100%;
+		height: auto;
+	}
+	.proposal-rollout-section {
+		background: var(--v2-text);
+		color: #fff;
+		padding: 4rem 0;
+	}
+	.proposal-rollout-heading {
+		font-family: var(--v2-font-heading);
+		font-size: 2.25rem;
+		text-align: center;
+		color: #fff;
+		margin-bottom: 0.75rem;
+	}
+	.proposal-rollout-sub {
+		text-align: center;
+		font-size: 1.0625rem;
+		color: rgba(255, 255, 255, 0.65);
+		margin-bottom: 3rem;
+	}
+	.proposal-steps-grid {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+	.proposal-investment-card {
+		background: var(--v2-surface);
+		border: 1px solid var(--v2-border);
+		border-radius: var(--v2-radius);
+		padding: 2rem;
+		box-shadow: var(--v2-shadow);
+		margin-bottom: 2rem;
+	}
+	.proposal-investment-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	}
+	.proposal-team-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+		margin-bottom: 3rem;
+	}
+	.proposal-team-card {
+		background: var(--v2-surface);
+		border: 1px solid var(--v2-border);
+		border-radius: var(--v2-radius);
+		padding: 1.5rem;
+		text-align: center;
+	}
+	.proposal-team-headshot {
+		width: 5.5rem;
+		height: 5.5rem;
+		border-radius: 999px;
+		object-fit: cover;
+		display: block;
+		margin: 0 auto 0.875rem;
+		border: 1px solid var(--v2-border);
+	}
+	.proposal-acceptance-card {
+		background: var(--v2-surface);
+		border: 2px solid var(--v2-accent);
+		border-radius: var(--v2-radius);
+		padding: 2.5rem;
+		box-shadow: var(--v2-shadow-lg);
+	}
+	.proposal-acceptance-form {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
+	@keyframes spin {
+		to { transform: rotate(360deg); }
+	}
+
+	@media (max-width: 768px) {
+		.proposal-hero {
+			min-height: 350px;
+		}
+		.proposal-hero-card {
+			padding: 2rem 1.5rem;
+		}
+		.proposal-hero-heading {
+			font-size: 2.25rem;
+		}
+		.proposal-team-grid {
+			grid-template-columns: 1fr;
+		}
+		.proposal-investment-grid {
+			grid-template-columns: 1fr;
+		}
+		.proposal-rollout-heading {
+			font-size: 1.875rem;
+		}
+	}
+</style>

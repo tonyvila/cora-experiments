@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ReserveButton from '../components/ReserveButton.astro';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faBoxesStacked, faTruckFast, faCommentDots, faEnvelopeOpenText, faChartLine, faMoneyCheckDollar, faArrowsRotate } from '@fortawesome/pro-light-svg-icons';
+const iconProducts = icon(faBoxesStacked).html[0];
+const iconOrders = icon(faTruckFast).html[0];
+const iconService = icon(faCommentDots).html[0];
+const iconMarketing = icon(faEnvelopeOpenText).html[0];
+const iconAnalytics = icon(faChartLine).html[0];
+const iconPricing = icon(faMoneyCheckDollar).html[0];
+const iconUpdated = icon(faArrowsRotate).html[0];
+---
+
+<Layout title="Cora — AI Employees for Shopify">
+
+	<Navbar />
+
+	<main>
+
+		<!-- ===== HERO ===== -->
+		<section class="hero" id="hero">
+			<div class="container hero-container hero-container-wide">
+				<div class="hero-pill"><span class="hero-pill-dot"></span><span class="hero-pill-text">AI-Powered Shopify Operations</span></div>
+				<h1 class="hero-heading">Your Store Runs Itself. <span class="accent">Shopify on Autopilot.</span></h1>
+				<p class="hero-sub">
+					An AI ecommerce operator that manages products, processes orders, handles customer service, and optimizes your Shopify store 24/7&nbsp;&mdash; while you focus on growing the business.
+				</p>
+				<div class="hero-stat">
+					<span class="hero-stat-number">20hrs</span>
+					<span class="hero-stat-label">Saved on store operations per week</span>
+				</div>
+				<div class="hero-buttons">
+					<ReserveButton />
+					<a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+				</div>
+
+				<div class="hw-wrap">
+					<div class="hw-glow"></div>
+					<div class="hw-box">
+						<div class="hw-vents hw-vents-left">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-center">
+							<div class="hw-logo">
+								<svg width="11" height="13" viewBox="0 0 24 28" fill="rgba(139,94,60,0.4)" xmlns="http://www.w3.org/2000/svg"><path d="M20.8 17.7c-.3.7-.7 1.4-1.1 2-.6.9-1.1 1.5-1.5 1.9-.6.6-1.3 1-2 1-.5 0-1.1-.2-1.9-.5-.7-.3-1.4-.5-2-.5-.6 0-1.3.2-2 .5-.7.3-1.3.5-1.8.5-.7 0-1.4-.3-2-1-.4-.4-.9-1-1.5-1.9-.7-.9-1.2-2-1.6-3.2-.5-1.3-.7-2.5-.7-3.7 0-1.4.3-2.5.9-3.5.5-.8 1.1-1.4 1.9-1.8.8-.5 1.6-.7 2.5-.7.5 0 1.2.2 2 .5.8.4 1.3.5 1.5.5.2 0 .7-.2 1.7-.6.8-.4 1.5-.5 2.1-.4 1.6.1 2.7.8 3.5 2-1.4.9-2.1 2.1-2.1 3.6 0 1.2.4 2.3 1.3 3.1.4.4.8.7 1.3.9-.1.3-.2.6-.4 1zM16.5 2c0 1-.3 1.9-1 2.7-.8 1-1.8 1.6-2.9 1.5 0-.1 0-.2 0-.3 0-.9.4-1.9 1-2.7.3-.4.8-.7 1.3-1 .6-.3 1.1-.4 1.5-.5.1.1.1.2.1.3z"/></svg>
+							</div>
+						</div>
+						<div class="hw-vents hw-vents-right">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-power"></div>
+					</div>
+				</div>
+				<p class="hero-hw-note">Runs on dedicated hardware: your office or the cloud. <span style="color: var(--v2-accent); font-weight: 500;">Always upgraded to the latest AI.</span></p>
+			</div>
+		</section>
+
+		<!-- ===== THE PROBLEM ===== -->
+		<section class="section value-prop">
+			<div class="container">
+				<h2 class="section-title">The Problem</h2>
+
+				<div class="problem-grid">
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Product updates take hours every week</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Customer inquiries pile up overnight</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Inventory management is a nightmare</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">No time for marketing optimization</span></div>
+				</div>
+
+				<p class="problem-callout">What if your Shopify store ran itself, products updated, orders processed, customers helped, and marketing optimized. All automatically?</p>
+			</div>
+		</section>
+
+		<!-- ===== WHAT YOUR AI SHOPIFY OPERATOR DOES ===== -->
+		<section class="section roles" id="how-it-works">
+			<div class="container">
+				<h2 class="section-title">What Your AI Shopify Operator Does</h2>
+				<p class="section-subtext">End-to-end ecommerce operations, product management, order fulfillment, customer service, and growth optimization.</p>
+				<div class="roles-grid">
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconProducts}></div>
+						<h3 class="role-card-title">Product Management</h3>
+						<p class="role-card-desc">Updates product listings, manages variants, adjusts pricing, and maintains accurate inventory counts across all channels.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconOrders}></div>
+						<h3 class="role-card-title">Order Operations</h3>
+						<p class="role-card-desc">Processes orders, handles fulfillment updates, manages returns and exchanges, and resolves shipping issues automatically.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconService}></div>
+						<h3 class="role-card-title">Customer Service</h3>
+						<p class="role-card-desc">Responds to customer inquiries, tracks orders, processes refunds, and handles pre-sale questions 24/7.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconMarketing}></div>
+						<h3 class="role-card-title">Marketing Automation</h3>
+						<p class="role-card-desc">Manages email campaigns, updates discount codes, runs A/B tests on product pages, and optimizes for conversions.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconAnalytics}></div>
+						<h3 class="role-card-title">Analytics &amp; Insights</h3>
+						<p class="role-card-desc">Monitors sales trends, identifies top performers, flags slow-moving inventory, and surfaces optimization opportunities.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconPricing}></div>
+						<h3 class="role-card-title">Pricing Optimization</h3>
+						<p class="role-card-desc">Monitors competitor prices, suggests pricing adjustments, and manages dynamic pricing rules to maximize margins.</p>
+					</div>
+				</div>
+				<div class="roles-footer-card">
+				<div class="roles-footer-icon" set:html={iconUpdated}></div>
+				<h3 class="roles-footer-title">Always Updated</h3>
+				<p class="roles-footer-text">AI moves fast. We keep up so you don't have to. Automatic upgrades to the latest models, new capabilities as they ship. No AI expertise required on your team.</p>
+			</div>
+			</div>
+		</section>
+
+		<!-- ===== COMPLETE STORE OPERATIONS ===== -->
+		<section class="section features">
+			<div class="container">
+				<h2 class="section-title">Complete Store Operations</h2>
+				<p class="section-subtext">From product listing to customer delivery, your AI handles every aspect of running your Shopify store.</p>
+				<div class="value-grid-4">
+					<div class="value-card">
+						<h3 class="value-card-title">Store Operations</h3>
+						<ul class="value-list">
+							<li>Bulk product updates and imports</li>
+							<li>Inventory sync across channels</li>
+							<li>Collection and tag management</li>
+							<li>SEO optimization for listings</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Order Management</h3>
+						<ul class="value-list">
+							<li>Process and fulfill orders</li>
+							<li>Handle returns and exchanges</li>
+							<li>Track shipments and update customers</li>
+							<li>Manage backorders and preorders</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Customer Experience</h3>
+						<ul class="value-list">
+							<li>24/7 customer service</li>
+							<li>Order status inquiries</li>
+							<li>Product recommendations</li>
+							<li>Review management</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Growth &amp; Marketing</h3>
+						<ul class="value-list">
+							<li>Email campaign management</li>
+							<li>Discount code creation</li>
+							<li>Abandoned cart recovery</li>
+							<li>Social proof automation</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== ECOMMERCE THAT SCALES ===== -->
+		<section class="section stats">
+			<div class="container">
+				<h2 class="section-title">Ecommerce That Scales</h2>
+				<div class="stats-grid">
+					<div class="stat-item">
+						<span class="stat-number">20hrs</span>
+						<span class="stat-label">Store operations saved per week</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">&lt;1hr</span>
+						<span class="stat-label">Average response to customer inquiries</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">15%</span>
+						<span class="stat-label">Increase in conversion rate</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">24/7</span>
+						<span class="stat-label">Store operations and support</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== HOW IT WORKS ===== -->
+		<section class="next-steps">
+			<div class="container">
+				<h2 class="accent-heading">How It Works</h2>
+				<div class="steps-grid">
+					<div class="step-card">
+						<span class="step-number">1</span>
+						<h3 class="step-title">Connect Your Store</h3>
+						<p class="step-desc">We connect to your Shopify store, apps, and any other sales channels you use.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">2</span>
+						<h3 class="step-title">Learn Your Business</h3>
+						<p class="step-desc">Your AI Ecommerce Operator learns your products, policies, and brand voice.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">3</span>
+						<h3 class="step-title">Start Operating</h3>
+						<p class="step-desc">Product updates happen automatically. Orders get processed. Customers get helped. You focus on growth.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FINAL CTA ===== -->
+		<section class="section final-cta" id="final-cta">
+			<div class="container final-cta-container">
+				<h2 class="final-cta-heading">Ready to Automate Your Store?</h2>
+				<p class="final-cta-sub">
+					Tell us about your Shopify store and biggest operational challenges. We'll show you how to run it on autopilot.
+				</p>
+				<ReserveButton size="lg" />
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+
+</Layout>

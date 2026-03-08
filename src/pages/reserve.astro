@@ -1,0 +1,329 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ReserveButton from '../components/ReserveButton.astro';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faCircleCheck, faCircleXmark, faLock, faShieldHalved, faCalendarCheck } from '@fortawesome/pro-light-svg-icons';
+const iconCheck = icon(faCircleCheck).html[0];
+const iconX = icon(faCircleXmark).html[0];
+const iconLock = icon(faLock).html[0];
+const iconShieldCheck = icon(faShieldHalved).html[0];
+const iconCalendar = icon(faCalendarCheck).html[0];
+---
+
+<Layout title="Cora — Reserve Your Spot">
+
+	<Navbar />
+
+	<main>
+
+		<!-- ===== HERO ===== -->
+		<section class="reserve-hero">
+			<div class="container">
+				<div class="hero-pill"><span class="hero-pill-dot"></span><span class="hero-pill-text">Early Access Now Open</span></div>
+				<h1 class="reserve-hero-heading">Secure Your Spot.<br><span class="accent">Lock In Founder Pricing.</span></h1>
+				<p class="reserve-hero-sub">
+					A <strong>$100 fully refundable deposit</strong> reserves your place in line for Cora.
+					Get early access, priority onboarding, and pricing that <u>will never go up</u> for you, <span style="color: var(--v2-accent);">plus automatic upgrades to every new AI model.</span>
+				</p>
+			</div>
+		</section>
+
+		<!-- ===== STATS BAR ===== -->
+		<section class="container">
+			<div class="reserve-stats">
+				<div class="reserve-stat-item">
+					<span class="reserve-stat-number">47</span>
+					<span class="reserve-stat-label">Companies Deployed</span>
+				</div>
+				<div class="reserve-stat-item">
+					<span class="reserve-stat-number">$2.3M</span>
+					<span class="reserve-stat-label">Pipeline Generated</span>
+				</div>
+				<div class="reserve-stat-item">
+					<span class="reserve-stat-number">100%</span>
+					<span class="reserve-stat-label">Deposits Honored</span>
+				</div>
+				<div class="reserve-stat-item">
+					<span class="reserve-stat-number">$100</span>
+					<span class="reserve-stat-label">Fully Refundable</span>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== TWO-COLUMN LAYOUT ===== -->
+		<section class="section">
+			<div class="container reserve-layout">
+
+				<!-- LEFT COLUMN: Content cards -->
+				<div class="reserve-content">
+
+					<!-- Here's the situation -->
+					<div class="reserve-card">
+						<h2 class="reserve-card-title">Here's the situation</h2>
+						<p class="reserve-card-text">
+							AI is changing at a rapid pace. It's hard for businesses to stay on top. New models ship monthly. New capabilities emerge constantly. Security requirements evolve.
+						</p>
+						<p class="reserve-card-text" style="margin-top: 0.75rem;">
+							We're intentionally limiting how many companies we onboard. Every Cora client gets hands-on setup, weekly calls, and a dedicated team making sure their AI employee actually delivers — and stays current with every AI advancement.
+						</p>
+						<p class="reserve-card-text" style="margin-top: 0.75rem;">
+							The $100 deposit isn't about the money. It's about commitment. It separates "maybe someday" from "I'm ready to move."
+						</p>
+					</div>
+
+					<!-- What your deposit gets you -->
+					<div class="reserve-card">
+						<h2 class="reserve-card-title">What your $100 deposit gets you</h2>
+						<ul class="reserve-check-list">
+							<li>
+								<span class="reserve-list-icon" set:html={iconCheck}></span>
+								<span><strong>Priority Queue Position</strong> — Skip the waitlist. First in line for the next onboarding cohort.</span>
+							</li>
+							<li>
+								<span class="reserve-list-icon" set:html={iconCheck}></span>
+								<span><strong>Founder Pricing, Forever</strong> — Lock in $3,000/month. When we raise prices (and we will), yours stays the same.</span>
+							</li>
+							<li>
+								<span class="reserve-list-icon" set:html={iconCheck}></span>
+								<span><strong>Automatic Upgrades Included</strong> — New AI models, new capabilities, new security updates — all included. No AI expertise required.</span>
+							</li>
+							<li>
+								<span class="reserve-list-icon" set:html={iconCheck}></span>
+								<span><strong>VIP Onboarding</strong> — 50 hours of hands-on setup, not the 20 hours public launch clients get.</span>
+							</li>
+							<li>
+								<span class="reserve-list-icon" set:html={iconCheck}></span>
+								<span><strong>Future-Proof Your Operations</strong> — Stay ahead of AI changes without the learning curve. We handle the complexity.</span>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Without a deposit -->
+					<div class="reserve-card">
+						<h2 class="reserve-card-title">Without a deposit, you:</h2>
+						<ul class="reserve-x-list">
+							<li>
+								<span class="reserve-list-icon" set:html={iconX}></span>
+								<span>Go to the back of the line behind paying customers</span>
+							</li>
+							<li>
+								<span class="reserve-list-icon" set:html={iconX}></span>
+								<span>Pay full price when we raise rates (likely Q3)</span>
+							</li>
+							<li>
+								<span class="reserve-list-icon" set:html={iconX}></span>
+								<span>Get standard onboarding, not VIP treatment</span>
+							</li>
+							<li>
+								<span class="reserve-list-icon" set:html={iconX}></span>
+								<span>Miss the opportunity to shape early features</span>
+							</li>
+							<li>
+								<span class="reserve-list-icon" set:html={iconX}></span>
+								<span>Risk us being at capacity when you're finally ready</span>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Let's do the math -->
+					<div class="reserve-card">
+						<h2 class="reserve-card-title">Let's do the math</h2>
+						<p class="reserve-card-text" style="margin-bottom: 1.25rem;">
+							A junior SDR costs $60,000–80,000/year fully loaded. They take 3–6 months to ramp. They leave in 12–18 months. Cora is $3,000/month. That's $36,000/year for an AI employee that:
+						</p>
+						<ul class="reserve-check-list" style="margin-bottom: 1.25rem;">
+							<li>
+								<span class="reserve-list-icon" set:html={iconCheck}></span>
+								<span>Is fully productive on day one</span>
+							</li>
+							<li>
+								<span class="reserve-list-icon" set:html={iconCheck}></span>
+								<span>Works 24/7 without breaks</span>
+							</li>
+							<li>
+								<span class="reserve-list-icon" set:html={iconCheck}></span>
+								<span>Never quits or needs replacing</span>
+							</li>
+							<li>
+								<span class="reserve-list-icon" set:html={iconCheck}></span>
+								<span>Can switch roles overnight</span>
+							</li>
+						</ul>
+						<p class="reserve-card-text" style="margin-bottom: 1.25rem;">
+							You're not spending $100. You're reserving a spot that will save you $40,000+ this year.
+						</p>
+						<div class="reserve-math-row">
+							<div class="reserve-math-item reserve-math-item-bad">
+								<div class="reserve-math-label">Junior SDR</div>
+								<div class="reserve-math-price">$60–80K</div>
+								<div class="reserve-math-note">per year, fully loaded</div>
+							</div>
+							<div class="reserve-math-vs">vs</div>
+							<div class="reserve-math-item reserve-math-item-good">
+								<div class="reserve-math-label">Cora AI Employee</div>
+								<div class="reserve-math-price">$36K</div>
+								<div class="reserve-math-note">per year, 24/7, all roles</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- RIGHT COLUMN: Sticky form -->
+				<div class="reserve-form-card">
+						<div class="reserve-form-header">
+							<div class="reserve-form-lock" set:html={iconLock}></div>
+							<h3 class="reserve-form-title">Reserve Your Spot</h3>
+							<p class="reserve-form-subtitle">$100 fully refundable deposit</p>
+						</div>
+
+						<form id="reserve-form">
+							<div class="reserve-form-fields">
+								<div>
+									<label class="reserve-label" for="email">Work Email</label>
+									<input class="reserve-input" type="email" id="email" name="email" placeholder="you@company.com" required />
+								</div>
+								<div>
+									<label class="reserve-label" for="company">Company Name</label>
+									<input class="reserve-input" type="text" id="company" name="company" placeholder="Acme Inc." required />
+								</div>
+							</div>
+							<button type="submit" class="reserve-submit">Reserve Your Spot</button>
+						</form>
+
+						<div class="reserve-trust">
+							<div class="reserve-trust-item">
+								<span class="reserve-trust-icon" set:html={iconShieldCheck}></span>
+								<span>100% refundable anytime before onboarding</span>
+							</div>
+							<div class="reserve-trust-item">
+								<span class="reserve-trust-icon" set:html={iconLock}></span>
+								<span>Secure payment via Stripe</span>
+							</div>
+							<div class="reserve-trust-item">
+								<span class="reserve-trust-icon" set:html={iconCalendar}></span>
+								<span>We'll reach out within 24 hours</span>
+							</div>
+						</div>
+						<p class="reserve-form-fine">
+							Your $100 deposit is applied to your first month's invoice.
+						</p>
+						<div class="reserve-urgency">
+							7 spots filled this week. Cohort closes when full.
+						</div>
+					</div>
+
+			</div>
+		</section>
+
+		<!-- ===== FAQ ===== -->
+		<section class="reserve-faq">
+			<div class="container">
+				<h2 class="reserve-faq-title">Frequently Asked Questions</h2>
+				<div class="reserve-faq-list">
+					<div class="reserve-faq-card">
+						<button class="reserve-faq-question">
+							Is the $100 actually refundable?
+							<svg class="reserve-faq-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</button>
+						<div class="reserve-faq-answer">
+							<div class="reserve-faq-answer-inner">
+								Yes. 100%. No questions asked. If you change your mind anytime before onboarding starts, we refund you immediately. We've never denied a refund request.
+							</div>
+						</div>
+					</div>
+					<div class="reserve-faq-card">
+						<button class="reserve-faq-question">
+							When will I get onboarded?
+							<svg class="reserve-faq-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</button>
+						<div class="reserve-faq-answer">
+							<div class="reserve-faq-answer-inner">
+								We onboard in monthly cohorts of 15–20 companies. Most deposits convert to onboarding within 2–4 weeks. We'll confirm your exact start date within 24 hours of deposit.
+							</div>
+						</div>
+					</div>
+					<div class="reserve-faq-card">
+						<button class="reserve-faq-question">
+							What if I'm not ready to commit to $3,000/month yet?
+							<svg class="reserve-faq-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</button>
+						<div class="reserve-faq-answer">
+							<div class="reserve-faq-answer-inner">
+								That's exactly what the deposit is for. It reserves your spot and locks in pricing without any long-term commitment. You can cancel and get your $100 back anytime before onboarding.
+							</div>
+						</div>
+					</div>
+					<div class="reserve-faq-card">
+						<button class="reserve-faq-question">
+							Will prices really go up?
+							<svg class="reserve-faq-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</button>
+						<div class="reserve-faq-answer">
+							<div class="reserve-faq-answer-inner">
+								Yes. We're deliberately underpriced during early access to build case studies. Once we have 100 deployed clients, we're raising to $4,500/month. Your rate stays at $3,000 forever.
+							</div>
+						</div>
+					</div>
+					<div class="reserve-faq-card">
+						<button class="reserve-faq-question">
+							What happens after I put down the deposit?
+							<svg class="reserve-faq-chevron" width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+						</button>
+						<div class="reserve-faq-answer">
+							<div class="reserve-faq-answer-inner">
+								Within 24 hours, you'll get an email to schedule a 30-minute call. We'll discuss your use case, confirm fit, and schedule your onboarding start date. The deposit is applied to your first month.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FINAL CTA ===== -->
+		<section class="reserve-final-cta">
+			<div class="container">
+				<h2 class="reserve-final-cta-heading">Still here? Good.</h2>
+				<p class="reserve-final-cta-sub">
+					AI moves fast. We keep up so you don't have to. Lock in now before the next wave of AI changes. Your Cora will always stay current, automatically.
+				</p>
+				<ReserveButton size="lg" />
+				<p class="reserve-final-cta-fine">
+					Fully refundable. No commitment. Just priority access, and a future-proof AI employee.
+				</p>
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+
+</Layout>
+
+<script>
+	// Reserve form — build mailto with field values
+	document.getElementById('reserve-form')?.addEventListener('submit', (e) => {
+		e.preventDefault();
+		const form = e.target as HTMLFormElement;
+		const email = (form.querySelector('#email') as HTMLInputElement).value.trim();
+		const company = (form.querySelector('#company') as HTMLInputElement).value.trim();
+
+		const subject = encodeURIComponent('Reserve My Spot');
+		const body = encodeURIComponent(
+			`Hi, I'd like to reserve my spot for Cora.\n\nWork Email: ${email}\nCompany: ${company}\n\nPlease let me know the next steps!`
+		);
+		window.location.href = `mailto:hello@cora.st?subject=${subject}&body=${body}`;
+	});
+
+	// FAQ accordion
+	document.querySelectorAll('.reserve-faq-card').forEach((card) => {
+		const btn = card.querySelector('.reserve-faq-question');
+		btn?.addEventListener('click', () => {
+			const isOpen = card.classList.contains('open');
+			document.querySelectorAll('.reserve-faq-card').forEach((c) => c.classList.remove('open'));
+			if (!isOpen) card.classList.add('open');
+		});
+	});
+</script>

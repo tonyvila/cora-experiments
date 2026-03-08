@@ -1,0 +1,485 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ReserveButton from '../components/ReserveButton.astro';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faLightbulb, faGear, faScrewdriverWrench, faComments, faFileLines, faShieldHalved, faLock, faUserShield, faBuilding, faCartShopping, faCloud, faUsers, faHouse, faBriefcase, faRotate, faBolt } from '@fortawesome/pro-light-svg-icons';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const iconBulb = icon(faLightbulb).html[0];
+const iconGear = icon(faGear).html[0];
+const iconTools = icon(faScrewdriverWrench).html[0];
+const iconComments = icon(faComments).html[0];
+const iconFileLines = icon(faFileLines).html[0];
+const iconShield = icon(faShieldHalved).html[0];
+const iconLock = icon(faLock).html[0];
+const iconUserShield = icon(faUserShield).html[0];
+const iconBuilding = icon(faBuilding).html[0];
+const iconCart = icon(faCartShopping).html[0];
+const iconCloud = icon(faCloud).html[0];
+const iconUsers = icon(faUsers).html[0];
+const iconHouse = icon(faHouse).html[0];
+const iconBriefcase = icon(faBriefcase).html[0];
+const iconRotate = icon(faRotate).html[0];
+const iconBolt = icon(faBolt).html[0];
+const iconShieldCheck = icon(faShieldHalved).html[0];
+---
+
+<Layout title="Cora — Meet Your New Teammate">
+
+	<Navbar isHomepage={true} />
+
+	<main>
+
+		<!-- ===== HERO ===== -->
+		<section class="hero" id="hero">
+			<div class="container hero-container">
+				<h1 class="hero-heading">Meet your new teammate</h1>
+				<p class="hero-sub">
+					Cora is an AI employee that takes over a real computer and gets work done&nbsp;&mdash;
+					SDR, developer, support, marketing. Always on. Always improving.
+				</p>
+				<div class="hero-buttons">
+					<ReserveButton />
+					<a href="#pricing" class="btn btn-outline">See Pricing</a>
+				</div>
+
+				<div class="hw-wrap">
+					<div class="hw-glow"></div>
+					<div class="hw-box">
+						<div class="hw-vents hw-vents-left">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-center">
+							<div class="hw-logo">
+								<svg width="11" height="13" viewBox="0 0 24 28" fill="rgba(139,94,60,0.4)" xmlns="http://www.w3.org/2000/svg"><path d="M20.8 17.7c-.3.7-.7 1.4-1.1 2-.6.9-1.1 1.5-1.5 1.9-.6.6-1.3 1-2 1-.5 0-1.1-.2-1.9-.5-.7-.3-1.4-.5-2-.5-.6 0-1.3.2-2 .5-.7.3-1.3.5-1.8.5-.7 0-1.4-.3-2-1-.4-.4-.9-1-1.5-1.9-.7-.9-1.2-2-1.6-3.2-.5-1.3-.7-2.5-.7-3.7 0-1.4.3-2.5.9-3.5.5-.8 1.1-1.4 1.9-1.8.8-.5 1.6-.7 2.5-.7.5 0 1.2.2 2 .5.8.4 1.3.5 1.5.5.2 0 .7-.2 1.7-.6.8-.4 1.5-.5 2.1-.4 1.6.1 2.7.8 3.5 2-1.4.9-2.1 2.1-2.1 3.6 0 1.2.4 2.3 1.3 3.1.4.4.8.7 1.3.9-.1.3-.2.6-.4 1zM16.5 2c0 1-.3 1.9-1 2.7-.8 1-1.8 1.6-2.9 1.5 0-.1 0-.2 0-.3 0-.9.4-1.9 1-2.7.3-.4.8-.7 1.3-1 .6-.3 1.1-.4 1.5-.5.1.1.1.2.1.3z"/></svg>
+							</div>
+						</div>
+						<div class="hw-vents hw-vents-right">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-power"></div>
+					</div>
+					<a href="https://openclaw.ai/" target="_blank" rel="noopener noreferrer" class="hw-badge">Powered by OpenClaw</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== VALUE PROPOSITION ===== -->
+		<section class="section value-prop" id="value-prop">
+			<div class="container">
+				<h2 class="section-title">Not a chatbot. A real employee.</h2>
+				<p class="section-desc">
+					Cora takes over an actual computer. Opens apps. Sends emails. Writes code. Builds automations.
+					Everything a human does, but 24/7, perfectly, forever.
+				</p>
+				<p class="section-subtext">
+					Trained like any employee: KPIs, skills, personality. Figures out how to hit goals on its own.
+				</p>
+
+				<div class="value-grid">
+					<div class="value-card">
+						<h3 class="value-card-title">What this solves</h3>
+						<ul class="value-list">
+							<li>Need work done, can't justify a hire</li>
+							<li>Tasks pile up overnight</li>
+							<li>Need expertise across domains</li>
+							<li>Competitors moving faster</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">What you get</h3>
+						<ul class="value-list">
+							<li>Works 24/7 with perfect accuracy</li>
+							<li>Writes code to automate itself</li>
+							<li>Gets better every single night</li>
+							<li>Expert in every tool and topic</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">What you replace</h3>
+						<ul class="value-list">
+							<li>Multiple hires</li>
+							<li>Recruiting, onboarding, payroll</li>
+							<li>Coverage gaps</li>
+							<li>Tool sprawl</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FEATURES ===== -->
+		<section class="section features" id="features">
+			<div class="container">
+				<h2 class="section-title">Works while you sleep</h2>
+				<div class="features-grid">
+					<div class="feature-card">
+						<span class="feature-card-icon" set:html={iconBulb}></span>
+						<h3 class="feature-card-title">Expert in everything</h3>
+						<p class="feature-card-desc">
+							Spreadsheets. Code. Design. Copy. Financial analysis. Expert-level execution across every domain.
+						</p>
+					</div>
+					<div class="feature-card">
+						<span class="feature-card-icon" set:html={iconGear}></span>
+						<h3 class="feature-card-title">Builds without being asked</h3>
+						<p class="feature-card-desc">
+							Every night finds inefficiencies, builds solutions, creates automations.
+							You wake up to improvements you didn't know you needed.
+						</p>
+					</div>
+					<div class="feature-card">
+						<span class="feature-card-icon" set:html={iconTools}></span>
+						<h3 class="feature-card-title">Uses any tool</h3>
+						<p class="feature-card-desc">
+							New AI tool dropped last week? Your Cora already uses it. Generates images, analyzes data,
+							integrates everything in your stack.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== ROLES ===== -->
+		<section class="section roles" id="roles">
+			<div class="container">
+				<h2 class="section-title">Roles Cora fills</h2>
+				<p class="section-subtext">One employee. Every role.</p>
+				<div class="roles-grid">
+					<div class="role-card">
+						<h3 class="role-card-title">Webmaster</h3>
+						<ul class="role-list">
+							<li>Update content and listings</li>
+							<li>Monitor performance and uptime</li>
+							<li>Manage inventory and orders</li>
+							<li>Optimize SEO and speed</li>
+						</ul>
+					</div>
+					<div class="role-card">
+						<h3 class="role-card-title">Developer &amp; Automation</h3>
+						<ul class="role-list">
+							<li>Automate work with code</li>
+							<li>Build internal tools</li>
+							<li>System integrations and APIs</li>
+							<li>Deploy and monitor systems</li>
+						</ul>
+					</div>
+					<div class="role-card">
+						<h3 class="role-card-title">SDR</h3>
+						<ul class="role-list">
+							<li>Personalized outreach at scale</li>
+							<li>Research and qualify leads</li>
+							<li>Adaptive engagement follow-up</li>
+							<li>Multi-channel campaign orchestration</li>
+						</ul>
+					</div>
+					<div class="role-card">
+						<h3 class="role-card-title">Marketing</h3>
+						<ul class="role-list">
+							<li>Create posts, blogs, ads</li>
+							<li>Design graphics and images</li>
+							<li>Track campaign performance</li>
+							<li>Competitive research and analysis</li>
+						</ul>
+					</div>
+					<div class="role-card">
+						<h3 class="role-card-title">Customer Support</h3>
+						<ul class="role-list">
+							<li>Respond to tickets, chat</li>
+							<li>Troubleshoot technical issues</li>
+							<li>Create help documentation</li>
+							<li>Track improvement metrics</li>
+						</ul>
+					</div>
+					<div class="role-card">
+						<h3 class="role-card-title">Executive Assistant</h3>
+						<ul class="role-list">
+							<li>Calendar and email management</li>
+							<li>Meeting prep and notes</li>
+							<li>Travel arrangements</li>
+							<li>Project coordination and follow-up</li>
+						</ul>
+					</div>
+				</div>
+				<p class="roles-footer">Start with one role. Watch it evolve.</p>
+			</div>
+		</section>
+
+		<!-- ===== HARDWARE / DEPLOYMENT ===== -->
+		<section class="section hardware" id="hardware">
+			<div class="container">
+				<h2 class="section-title">Choose your deployment</h2>
+				<div class="hardware-grid">
+					<div class="hardware-card">
+						<h3 class="hardware-card-title">Cloud VPS</h3>
+						<p class="hardware-card-desc">
+							Dedicated VPS in secure infrastructure. No hardware on-site. Full remote control.
+						</p>
+					</div>
+					<div class="hardware-card">
+						<h3 class="hardware-card-title">Mac Mini</h3>
+						<span class="hardware-badge">Most Popular</span>
+						<p class="hardware-card-desc">
+							Sits on your desk. Connects to your network. Watch it work or remote in anytime.
+						</p>
+					</div>
+					<div class="hardware-card">
+						<h3 class="hardware-card-title">Mac Studio</h3>
+						<p class="hardware-card-desc">
+							High-performance for complex workloads and local AI models. Multiple roles simultaneously.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== SECURITY & CONTROL ===== -->
+		<section class="section security" id="security">
+			<div class="container">
+				<h2 class="section-title">Full control. Full transparency.</h2>
+				<div class="security-grid">
+					<div class="security-item">
+						<div class="security-icon" set:html={iconComments}></div>
+						<div>
+							<h3 class="security-item-title">Jump in anytime</h3>
+							<p class="security-item-desc">Chat via Slack, Teams, WhatsApp, SMS. Or take over the computer locally or remotely.</p>
+						</div>
+					</div>
+					<div class="security-item">
+						<div class="security-icon" set:html={iconFileLines}></div>
+						<div>
+							<h3 class="security-item-title">Complete audit trail</h3>
+							<p class="security-item-desc">See every action. What it did, when, why.</p>
+						</div>
+					</div>
+					<div class="security-item">
+						<div class="security-icon" set:html={iconShield}></div>
+						<div>
+							<h3 class="security-item-title">Minimum access principle</h3>
+							<p class="security-item-desc">Configured with only what it needs. Increase access as trust builds.</p>
+						</div>
+					</div>
+					<div class="security-item">
+						<div class="security-icon" set:html={iconLock}></div>
+						<div>
+							<h3 class="security-item-title">Your security boundaries</h3>
+							<p class="security-item-desc">Uses your VPN, access controls, authentication. No API required.</p>
+						</div>
+					</div>
+					<div class="security-item">
+						<div class="security-icon" set:html={iconUserShield}></div>
+						<div>
+							<h3 class="security-item-title">You own everything</h3>
+							<p class="security-item-desc">The computer. The data. The software. Open source tech. No vendor lock-in.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== PRICING ===== -->
+		<section class="section pricing" id="pricing">
+			<div class="container">
+				<h2 class="section-title">Simple, transparent pricing</h2>
+				<div class="pricing-grid">
+					<div class="pricing-card">
+						<h3 class="pricing-card-name">Cora Flex</h3>
+						<div class="pricing-card-price">$3,000<span class="pricing-period">/mo</span></div>
+						<ul class="pricing-list">
+							<li><strong>Mac mini</strong> included or <span class="tooltip-wrap">BYOD<span class="tooltip-icon" tabindex="0" role="button" aria-label="More info">?</span><span class="tooltip-text">Bring Your Own Device — must meet OpenClaw minimum requirements</span></span></li>
+							<li>Runs on your premises</li>
+							<li>Uses real software and UIs</li>
+							<li>Full audit logs</li>
+							<li>Ideal for legacy systems and first AI hires</li>
+						</ul>
+						<a href="#final-cta" class="btn btn-primary pricing-cta">Hire Cora Flex</a>
+					</div>
+					<div class="pricing-card pricing-card-coming-soon">
+						<h3 class="pricing-card-name">Cora Pro</h3>
+						<div class="pricing-card-price">$5,000<span class="pricing-period">/mo</span></div>
+						<ul class="pricing-list">
+							<li><strong>Mac Studio</strong> included</li>
+							<li>Runs on your premises</li>
+							<li>Run local and open source models</li>
+							<li>Higher compute and parallel execution</li>
+							<li>Advanced customization</li>
+							<li>Designed for ops-heavy and privacy-sensitive teams</li>
+						</ul>
+						<a href="#final-cta" class="btn btn-primary pricing-cta btn-coming-soon">Coming Soon</a>
+					</div>
+					<div class="pricing-card">
+						<h3 class="pricing-card-name">Cora Cloud</h3>
+						<div class="pricing-card-price">$3,000<span class="pricing-period">/mo</span></div>
+						<ul class="pricing-list">
+							<li><strong>No hardware</strong> required</li>
+							<li>Fast deployment</li>
+							<li>Secure remote access</li>
+							<li>Easy to scale</li>
+							<li>Best for modern SaaS environments</li>
+						</ul>
+						<a href="#final-cta" class="btn btn-primary pricing-cta">Hire Cora Cloud</a>
+					</div>
+				</div>
+				<p class="pricing-note">
+					Every Cora is a dedicated AI employee. Pricing reflects not just the technology,
+					but the ongoing service required to make it valuable.
+				</p>
+			</div>
+		</section>
+
+		<!-- ===== WHAT'S INCLUDED ===== -->
+		<section class="section included" id="included">
+			<div class="container">
+				<h2 class="section-title">What's included</h2>
+				<p class="section-desc">
+					Cora is a managed AI employee, not a tool you configure on your own.
+				</p>
+				<div class="included-content">
+					<ul class="included-list">
+						<li>Up to 50 hours of onboarding and setup</li>
+						<li>Weekly one-hour calls for the first year</li>
+						<li>Workflow design and iteration</li>
+						<li>Guidance on permissions and access</li>
+						<li>Monitoring, tuning, and troubleshooting</li>
+						<li>Ongoing performance management</li>
+					</ul>
+					<p class="included-note">
+						Because your Cora operates inside sensitive systems, some tasks remain supervised
+						or co-piloted rather than fully delegated.
+					</p>
+					<p class="included-closer">
+						Think of this as hiring an employee with a dedicated manager, not installing software.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== WHO THIS IS FOR ===== -->
+		<section class="section who" id="who">
+			<div class="container">
+				<h2 class="section-title">Who this is for</h2>
+
+				<div class="who-cards">
+					<div class="who-icon-card">
+						<div class="who-icon-box" set:html={iconBuilding}></div>
+						<span class="who-icon-label">Agencies</span>
+					</div>
+					<div class="who-icon-card">
+						<div class="who-icon-box" set:html={iconCart}></div>
+						<span class="who-icon-label">Ecommerce</span>
+					</div>
+					<div class="who-icon-card">
+						<div class="who-icon-box" set:html={iconCloud}></div>
+						<span class="who-icon-label">SaaS</span>
+					</div>
+					<div class="who-icon-card">
+						<div class="who-icon-box" set:html={iconUsers}></div>
+						<span class="who-icon-label">Recruitment Firms</span>
+					</div>
+					<div class="who-icon-card">
+						<div class="who-icon-box" set:html={iconHouse}></div>
+						<span class="who-icon-label">Property Management</span>
+					</div>
+					<div class="who-icon-card">
+						<div class="who-icon-box" set:html={iconBriefcase}></div>
+						<span class="who-icon-label">Professional Services</span>
+					</div>
+				</div>
+
+				<div class="who-columns">
+					<div class="who-card who-yes">
+						<h3 class="who-card-title">You need this if</h3>
+						<ul class="who-list">
+							<li>Can't justify another hire but need work done</li>
+							<li>Want business running 24/7</li>
+							<li>Need expertise across domains</li>
+							<li>Want the AI competitive advantage</li>
+						</ul>
+					</div>
+					<div class="who-card who-no">
+						<h3 class="who-card-title">This isn't for you if</h3>
+						<ul class="who-list">
+							<li>You want a chatbot</li>
+							<li>You have zero processes</li>
+							<li>You want to do work manually</li>
+							<li>You don't think AI is helpful</li>
+						</ul>
+					</div>
+				</div>
+
+				<blockquote class="who-quote">
+					"Not adopting AI employees is like refusing computers in 1995."
+				</blockquote>
+			</div>
+		</section>
+
+		<!-- ===== WHAT HAPPENS NEXT ===== -->
+		<section class="next-steps">
+			<div class="container">
+				<h2 class="accent-heading">What happens next</h2>
+				<div class="steps-grid">
+					<div class="step-card">
+						<span class="step-number">1</span>
+						<h3 class="step-title">Define role and access</h3>
+						<p class="step-desc">What your Cora does, which systems it needs, what success looks like.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">2</span>
+						<h3 class="step-title">Deploy and configure</h3>
+						<p class="step-desc">We ship hardware or deploy cloud. Full setup, security config, stack integration.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">3</span>
+						<h3 class="step-title">Your Cora starts working</h3>
+						<p class="step-desc">Within hours, work gets done. Expand access as you see results.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== THE FUTURE IS HERE ===== -->
+		<section class="future-vision">
+			<div class="container">
+				<h2 class="accent-heading accent-heading-lg">The future is here</h2>
+				<div class="future-grid">
+					<div class="future-card">
+						<div class="future-icon-box" set:html={iconRotate}></div>
+						<p class="future-body">One AI employee. Any job. 24/7. Continuously improving.</p>
+					</div>
+					<div class="future-card">
+						<div class="future-icon-box" set:html={iconBolt}></div>
+						<p class="future-body">Works harder than any human ever could. Builds automations overnight you never imagined.</p>
+					</div>
+					<div class="future-card">
+						<div class="future-icon-box" set:html={iconShieldCheck}></div>
+						<p class="future-body">Real hardware you control. Full transparency. Always working.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FINAL CTA ===== -->
+		<section class="section final-cta" id="final-cta">
+			<div class="container final-cta-container">
+				<h2 class="final-cta-heading">Ready to get started?</h2>
+				<p class="final-cta-sub">
+					Your competitors are already moving. Lock in founder pricing now.
+				</p>
+				<ReserveButton size="lg" />
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+
+</Layout>

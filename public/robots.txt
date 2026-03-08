@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+Disallow: /proposal/
+
+# Block AI crawlers
+User-agent: GPTBot
+Disallow: /proposal/
+
+User-agent: ChatGPT-User
+Disallow: /proposal/
+
+User-agent: Google-Extended
+Disallow: /proposal/
+
+User-agent: CCBot
+Disallow: /proposal/
+
+User-agent: anthropic-ai
+Disallow: /proposal/
+
+User-agent: ClaudeBot
+Disallow: /proposal/
+
+User-agent: PerplexityBot
+Disallow: /proposal/
+
+User-agent: Bytespider
+Disallow: /proposal/
+
+Sitemap: https://www.cora.st/sitemap-index.xml

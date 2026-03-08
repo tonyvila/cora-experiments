@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ReserveButton from '../components/ReserveButton.astro';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faLayerGroup, faArrowsRotate as faReconcile, faFileLines, faChartLine, faBuilding, faTriangleExclamation, faArrowsRotate } from '@fortawesome/pro-light-svg-icons';
+const iconCategorize = icon(faLayerGroup).html[0];
+const iconReconcile = icon(faReconcile).html[0];
+const iconDocs = icon(faFileLines).html[0];
+const iconReporting = icon(faChartLine).html[0];
+const iconMultiEntity = icon(faBuilding).html[0];
+const iconAnomaly = icon(faTriangleExclamation).html[0];
+const iconUpdated = icon(faArrowsRotate).html[0];
+---
+
+<Layout title="Cora — AI Employees for Accounting Firms">
+
+	<Navbar />
+
+	<main>
+
+		<!-- ===== HERO ===== -->
+		<section class="hero" id="hero">
+			<div class="container hero-container hero-container-wide">
+				<div class="hero-pill"><span class="hero-pill-dot"></span><span class="hero-pill-text">Built for Accounting Firms</span></div>
+				<h1 class="hero-heading">Stop Losing $127K/Year <span class="accent">To Admin Work.</span></h1>
+				<p class="hero-sub">
+					Your staff accountants spend 23 hours/week on data entry, reconciliation, and chasing documents. AI Accounting does the grunt work so your team does the thinking.
+				</p>
+				<div class="hero-stat">
+					<span class="hero-stat-number">$91K</span>
+					<span class="hero-stat-label">Annual savings per accountant replaced</span>
+				</div>
+				<div class="hero-buttons">
+					<ReserveButton />
+					<a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+				</div>
+
+				<div class="hw-wrap">
+					<div class="hw-glow"></div>
+					<div class="hw-box">
+						<div class="hw-vents hw-vents-left">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-center">
+							<div class="hw-logo">
+								<svg width="11" height="13" viewBox="0 0 24 28" fill="rgba(139,94,60,0.4)" xmlns="http://www.w3.org/2000/svg"><path d="M20.8 17.7c-.3.7-.7 1.4-1.1 2-.6.9-1.1 1.5-1.5 1.9-.6.6-1.3 1-2 1-.5 0-1.1-.2-1.9-.5-.7-.3-1.4-.5-2-.5-.6 0-1.3.2-2 .5-.7.3-1.3.5-1.8.5-.7 0-1.4-.3-2-1-.4-.4-.9-1-1.5-1.9-.7-.9-1.2-2-1.6-3.2-.5-1.3-.7-2.5-.7-3.7 0-1.4.3-2.5.9-3.5.5-.8 1.1-1.4 1.9-1.8.8-.5 1.6-.7 2.5-.7.5 0 1.2.2 2 .5.8.4 1.3.5 1.5.5.2 0 .7-.2 1.7-.6.8-.4 1.5-.5 2.1-.4 1.6.1 2.7.8 3.5 2-1.4.9-2.1 2.1-2.1 3.6 0 1.2.4 2.3 1.3 3.1.4.4.8.7 1.3.9-.1.3-.2.6-.4 1zM16.5 2c0 1-.3 1.9-1 2.7-.8 1-1.8 1.6-2.9 1.5 0-.1 0-.2 0-.3 0-.9.4-1.9 1-2.7.3-.4.8-.7 1.3-1 .6-.3 1.1-.4 1.5-.5.1.1.1.2.1.3z"/></svg>
+							</div>
+						</div>
+						<div class="hw-vents hw-vents-right">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-power"></div>
+					</div>
+				</div>
+				<p class="hero-hw-note">Runs on dedicated hardware: your office or the cloud. <span style="color: var(--v2-accent); font-weight: 500;">Always upgraded to the latest AI.</span></p>
+			</div>
+		</section>
+
+		<!-- ===== THE PROBLEM ===== -->
+		<section class="section value-prop">
+			<div class="container">
+				<h2 class="section-title">The Problem</h2>
+
+				<div class="problem-grid">
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">CPAs spend 23 hrs/week on data entry</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">47% of accountants considering leaving due to repetitive work</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">89 days average to fill an open accounting position</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Clients waiting 5+ days for basic reconciliation reports</span></div>
+				</div>
+
+				<p class="problem-callout">What if your books were always current, your team focused on advisory work, and you never turned away clients due to capacity?</p>
+			</div>
+		</section>
+
+		<!-- ===== EVERYTHING YOUR FIRM NEEDS TO SCALE ===== -->
+		<section class="section roles" id="how-it-works">
+			<div class="container">
+				<h2 class="section-title">Everything Your Firm Needs to Scale</h2>
+				<p class="section-subtext">Not a generic chatbot. Purpose-built for accounting workflows.</p>
+				<div class="roles-grid">
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconCategorize}></div>
+						<h3 class="role-card-title">Auto-Categorization</h3>
+						<p class="role-card-desc">ML-powered transaction coding that learns your chart of accounts and client preferences. 98.7% accuracy out of the box.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconReconcile}></div>
+						<h3 class="role-card-title">Real-Time Reconciliation</h3>
+						<p class="role-card-desc">Bank feeds matched and reconciled continuously, not at month-end. Catch discrepancies in hours, not weeks.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconDocs}></div>
+						<h3 class="role-card-title">Document Collection</h3>
+						<p class="role-card-desc">Automated follow-ups for missing receipts, invoices, and statements. Clients respond to texts faster than emails.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconReporting}></div>
+						<h3 class="role-card-title">Financial Reporting</h3>
+						<p class="role-card-desc">Generate P&amp;L, balance sheets, and custom reports in under 60 seconds. On-demand or scheduled delivery.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconMultiEntity}></div>
+						<h3 class="role-card-title">Multi-Entity Support</h3>
+						<p class="role-card-desc">Handle unlimited companies with automatic consolidation. Perfect for firms with multi-entity clients.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconAnomaly}></div>
+						<h3 class="role-card-title">Anomaly Detection</h3>
+						<p class="role-card-desc">Flag unusual transactions, duplicate payments, and potential fraud. Catch issues before they become problems.</p>
+					</div>
+				</div>
+				<div class="roles-footer-card">
+				<div class="roles-footer-icon" set:html={iconUpdated}></div>
+				<h3 class="roles-footer-title">Always Updated</h3>
+				<p class="roles-footer-text">AI moves fast. We keep up so you don't have to. Automatic upgrades to the latest models, new capabilities as they ship. No AI expertise required on your team.</p>
+			</div>
+			</div>
+		</section>
+
+		<!-- ===== DEEP INTEGRATION WITH YOUR STACK ===== -->
+		<section class="section features">
+			<div class="container">
+				<h2 class="section-title">Deep Integration With Your Stack</h2>
+				<p class="section-subtext">Native connections to the tools you already use. No API configuration required.</p>
+				<div class="value-grid-4">
+					<div class="value-card">
+						<h3 class="value-card-title">QuickBooks Integration</h3>
+						<ul class="value-list">
+							<li>Bank feed management and categorization</li>
+							<li>Invoice and bill entry automation</li>
+							<li>Bank and credit card reconciliation</li>
+							<li>Sales tax tracking and filing prep</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Xero Integration</h3>
+						<ul class="value-list">
+							<li>Automatic bank rule creation</li>
+							<li>Multi-currency transaction handling</li>
+							<li>Payroll integration and reconciliation</li>
+							<li>Fixed asset management</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Document Management</h3>
+						<ul class="value-list">
+							<li>Email receipt capture and extraction</li>
+							<li>Mobile receipt scanning integration</li>
+							<li>Document storage and organization</li>
+							<li>Audit trail maintenance</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Compliance &amp; Security</h3>
+						<ul class="value-list">
+							<li>Security-certified infrastructure</li>
+							<li>Bank-grade encryption at rest and in transit</li>
+							<li>Role-based access controls</li>
+							<li>Complete audit trail for all actions</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== THE MATH IS SIMPLE ===== -->
+		<section class="section stats">
+			<div class="container">
+				<h2 class="section-title">The Math Is Simple</h2>
+				<div class="stats-grid">
+					<div class="stat-item">
+						<span class="stat-number">23hrs</span>
+						<span class="stat-label">Saved per week per accountant</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">$91K</span>
+						<span class="stat-label">Annual savings vs. staff accountant</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">98.7%</span>
+						<span class="stat-label">Transaction categorization accuracy</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">30 days</span>
+						<span class="stat-label">Average time to positive ROI</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== HOW IT WORKS ===== -->
+		<section class="next-steps">
+			<div class="container">
+				<h2 class="accent-heading">How It Works</h2>
+				<div class="steps-grid">
+					<div class="step-card">
+						<span class="step-number">1</span>
+						<h3 class="step-title">Connect Your Software</h3>
+						<p class="step-desc">One-click integration with QuickBooks, Xero, Sage, and 50+ other tools. We start learning immediately.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">2</span>
+						<h3 class="step-title">Configure &amp; Train</h3>
+						<p class="step-desc">We set up your chart of accounts, preferences, and workflows. Your AI learns your patterns.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">3</span>
+						<h3 class="step-title">Scale Your Practice</h3>
+						<p class="step-desc">Take on more clients without hiring. Your AI handles the grunt work, your team does the thinking.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FINAL CTA ===== -->
+		<section class="section final-cta" id="final-cta">
+			<div class="container final-cta-container">
+				<h2 class="final-cta-heading">Your Competitors Are Already Using AI</h2>
+				<p class="final-cta-sub">
+					The firms that adopt AI first will take your clients. Not because they're better, but because they're faster, cheaper, and always available.
+				</p>
+				<ReserveButton size="lg" />
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+
+</Layout>

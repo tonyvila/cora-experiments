@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ReserveButton from '../components/ReserveButton.astro';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faClipboardCheck, faChartLine, faShieldHalved, faFileLines, faEye, faCertificate, faArrowsRotate } from '@fortawesome/pro-light-svg-icons';
+const iconSkill = icon(faClipboardCheck).html[0];
+const iconBenchmarks = icon(faChartLine).html[0];
+const iconSecurity = icon(faShieldHalved).html[0];
+const iconCompliance = icon(faFileLines).html[0];
+const iconMonitoring = icon(faEye).html[0];
+const iconBadges = icon(faCertificate).html[0];
+const iconUpdated = icon(faArrowsRotate).html[0];
+---
+
+<Layout title="Cora — Agent Certification">
+
+	<Navbar />
+
+	<main>
+
+		<!-- ===== HERO ===== -->
+		<section class="hero" id="hero">
+			<div class="container hero-container hero-container-wide">
+				<div class="hero-pill"><span class="hero-pill-dot"></span><span class="hero-pill-text">AI Certification Platform</span></div>
+				<h1 class="hero-heading">Certified AI Employees. Verified Skills. <span class="accent">Proven Performance.</span></h1>
+				<p class="hero-sub">
+					A certification and verification platform for AI employees. Test skills, audit security, and attest compliance&mdash;so buyers know exactly what they're getting.
+				</p>
+				<div class="hero-stat">
+					<span class="hero-stat-number">95%</span>
+					<span class="hero-stat-label">Buyer confidence in certified agents</span>
+				</div>
+				<div class="hero-buttons">
+					<ReserveButton />
+					<a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+				</div>
+
+				<div class="hw-wrap">
+					<div class="hw-glow"></div>
+					<div class="hw-box">
+						<div class="hw-vents hw-vents-left">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-center">
+							<div class="hw-logo">
+								<svg width="11" height="13" viewBox="0 0 24 28" fill="rgba(139,94,60,0.4)" xmlns="http://www.w3.org/2000/svg"><path d="M20.8 17.7c-.3.7-.7 1.4-1.1 2-.6.9-1.1 1.5-1.5 1.9-.6.6-1.3 1-2 1-.5 0-1.1-.2-1.9-.5-.7-.3-1.4-.5-2-.5-.6 0-1.3.2-2 .5-.7.3-1.3.5-1.8.5-.7 0-1.4-.3-2-1-.4-.4-.9-1-1.5-1.9-.7-.9-1.2-2-1.6-3.2-.5-1.3-.7-2.5-.7-3.7 0-1.4.3-2.5.9-3.5.5-.8 1.1-1.4 1.9-1.8.8-.5 1.6-.7 2.5-.7.5 0 1.2.2 2 .5.8.4 1.3.5 1.5.5.2 0 .7-.2 1.7-.6.8-.4 1.5-.5 2.1-.4 1.6.1 2.7.8 3.5 2-1.4.9-2.1 2.1-2.1 3.6 0 1.2.4 2.3 1.3 3.1.4.4.8.7 1.3.9-.1.3-.2.6-.4 1zM16.5 2c0 1-.3 1.9-1 2.7-.8 1-1.8 1.6-2.9 1.5 0-.1 0-.2 0-.3 0-.9.4-1.9 1-2.7.3-.4.8-.7 1.3-1 .6-.3 1.1-.4 1.5-.5.1.1.1.2.1.3z"/></svg>
+							</div>
+						</div>
+						<div class="hw-vents hw-vents-right">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-power"></div>
+					</div>
+				</div>
+				<p class="hero-hw-note">Runs on dedicated hardware: your office or the cloud. <span style="color: var(--v2-accent); font-weight: 500;">Always upgraded to the latest AI.</span></p>
+			</div>
+		</section>
+
+		<!-- ===== THE PROBLEM ===== -->
+		<section class="section value-prop">
+			<div class="container">
+				<h2 class="section-title">The Problem</h2>
+
+				<div class="problem-grid">
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">No way to verify AI agent capabilities before buying</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Security practices vary wildly between providers</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Compliance claims are hard to validate</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Procurement takes forever due to due diligence</span></div>
+				</div>
+
+				<p class="problem-callout">What if every AI employee came with verified certifications&mdash;skills tested, security audited, compliance documented?</p>
+			</div>
+		</section>
+
+		<!-- ===== TRUST, VERIFIED ===== -->
+		<section class="section roles" id="how-it-works">
+			<div class="container">
+				<h2 class="section-title">Trust, Verified</h2>
+				<p class="section-subtext">Standardized certification that gives buyers confidence and sellers credibility.</p>
+				<div class="roles-grid">
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconSkill}></div>
+						<h3 class="role-card-title">Skill Certification</h3>
+						<p class="role-card-desc">Verify that AI employees can actually do what they claim. Standardized tests for every role and capability.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconBenchmarks}></div>
+						<h3 class="role-card-title">Performance Benchmarks</h3>
+						<p class="role-card-desc">Compare AI employees against industry standards. Task completion rates, accuracy, speed&mdash;all measured objectively.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconSecurity}></div>
+						<h3 class="role-card-title">Security Certification</h3>
+						<p class="role-card-desc">Verify that AI employees handle data securely. Credential management, data handling, and access control audits.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconCompliance}></div>
+						<h3 class="role-card-title">Compliance Attestation</h3>
+						<p class="role-card-desc">Certify AI employees for regulated industries. healthcare, security, GDPR&mdash;documented compliance you can trust.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconMonitoring}></div>
+						<h3 class="role-card-title">Continuous Monitoring</h3>
+						<p class="role-card-desc">Certifications aren't one-time. Ongoing monitoring ensures AI employees maintain certified performance levels.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconBadges}></div>
+						<h3 class="role-card-title">Public Badges</h3>
+						<p class="role-card-desc">Display certification badges on marketplace listings. Help buyers choose proven, verified AI employees.</p>
+					</div>
+				</div>
+				<div class="roles-footer-card">
+				<div class="roles-footer-icon" set:html={iconUpdated}></div>
+				<h3 class="roles-footer-title">Always Updated</h3>
+				<p class="roles-footer-text">AI moves fast. We keep up so you don't have to. Automatic upgrades to the latest models, new capabilities as they ship. No AI expertise required on your team.</p>
+			</div>
+			</div>
+		</section>
+
+		<!-- ===== COMPREHENSIVE TESTING ===== -->
+		<section class="section features">
+			<div class="container">
+				<h2 class="section-title">Comprehensive Testing</h2>
+				<p class="section-subtext">Everything needed to verify an AI employee is ready for production.</p>
+				<div class="value-grid-4">
+					<div class="value-card">
+						<h3 class="value-card-title">Skill Testing</h3>
+						<ul class="value-list">
+							<li>Role-specific task simulations</li>
+							<li>Edge case handling assessment</li>
+							<li>Multi-step workflow execution</li>
+							<li>Error recovery evaluation</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Performance Metrics</h3>
+						<ul class="value-list">
+							<li>Task completion accuracy</li>
+							<li>Response time benchmarks</li>
+							<li>Consistency across scenarios</li>
+							<li>Learning and adaptation</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Security Audit</h3>
+						<ul class="value-list">
+							<li>Credential handling practices</li>
+							<li>Data minimization compliance</li>
+							<li>Access boundary enforcement</li>
+							<li>Audit trail completeness</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Compliance Verification</h3>
+						<ul class="value-list">
+							<li>Industry-specific requirements</li>
+							<li>Data handling procedures</li>
+							<li>Retention and deletion policies</li>
+							<li>Incident response capabilities</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== THE NUMBERS DON'T LIE ===== -->
+		<section class="section stats">
+			<div class="container">
+				<h2 class="section-title">The Numbers Don't Lie</h2>
+				<div class="stats-grid">
+					<div class="stat-item">
+						<span class="stat-number">100+</span>
+						<span class="stat-label">Certification tests available</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">95%</span>
+						<span class="stat-label">Buyer confidence in certified agents</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">50%</span>
+						<span class="stat-label">Faster procurement decisions</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">0</span>
+						<span class="stat-label">Compliance surprises post-deployment</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== HOW IT WORKS ===== -->
+		<section class="next-steps">
+			<div class="container">
+				<h2 class="accent-heading">How It Works</h2>
+				<div class="steps-grid">
+					<div class="step-card">
+						<span class="step-number">1</span>
+						<h3 class="step-title">Submit for Certification</h3>
+						<p class="step-desc">AI employee developers submit their agents for testing. Define which certifications to pursue.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">2</span>
+						<h3 class="step-title">Automated Testing</h3>
+						<p class="step-desc">Our platform runs comprehensive tests&mdash;skill assessments, security audits, and compliance checks.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">3</span>
+						<h3 class="step-title">Earn &amp; Display Badges</h3>
+						<p class="step-desc">Certified agents earn badges displayed on their marketplace listing. Buyers see verified capabilities.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FINAL CTA ===== -->
+		<section class="section final-cta" id="final-cta">
+			<div class="container final-cta-container">
+				<h2 class="final-cta-heading">Ready to Get Certified?</h2>
+				<p class="final-cta-sub">
+					Submit your AI employee for certification and stand out in the marketplace. Or use certifications to make confident buying decisions.
+				</p>
+				<ReserveButton size="lg" />
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+
+</Layout>

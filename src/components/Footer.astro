@@ -1,0 +1,84 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<footer class="footer">
+	<div class="container footer-inner">
+		<div class="footer-brand">
+			<img src={`${base}/logo.svg`} alt="Cora logo" class="footer-logo" />
+		</div>
+		<div class="footer-columns">
+			<div class="footer-column">
+				<h4 class="footer-column-heading">Industries</h4>
+				<a href={`${base}/healthcare`} class="footer-column-link">Healthcare</a>
+				<a href={`${base}/finance`} class="footer-column-link">Finance</a>
+				<a href={`${base}/insurance`} class="footer-column-link">Insurance</a>
+				<a href={`${base}/real-estate`} class="footer-column-link">Real Estate</a>
+				<a href={`${base}/property-management`} class="footer-column-link">Property Management</a>
+				<a href={`${base}/legal`} class="footer-column-link">Legal</a>
+				<a href={`${base}/construction`} class="footer-column-link">Construction</a>
+				<a href={`${base}/hospitality`} class="footer-column-link">Hospitality</a>
+				<a href={`${base}/manufacturing`} class="footer-column-link">Manufacturing</a>
+				<a href={`${base}/logistics`} class="footer-column-link">Logistics</a>
+				<a href={`${base}/ecommerce-shopify`} class="footer-column-link">Ecommerce - Shopify</a>
+				<a href={`${base}/ecommerce-amazon`} class="footer-column-link">Ecommerce - Amazon</a>
+				<a href={`${base}/marketplace`} class="footer-column-link">Marketplace</a>
+				<a href={`${base}/leasing`} class="footer-column-link">Leasing</a>
+				<a href={`${base}/accounting`} class="footer-column-link">Accounting</a>
+				<a href={`${base}/outsourcing`} class="footer-column-link">Outsourcing</a>
+			</div>
+			<div class="footer-column">
+				<h4 class="footer-column-heading">Teams</h4>
+				<a href={`${base}/sales`} class="footer-column-link">Sales</a>
+				<a href={`${base}/marketing`} class="footer-column-link">Marketing</a>
+				<a href={`${base}/customer-success`} class="footer-column-link">Customer Success</a>
+				<a href={`${base}/support`} class="footer-column-link">Support</a>
+				<a href={`${base}/finance-and-accounting`} class="footer-column-link">Finance & Accounting</a>
+				<a href={`${base}/hr-&-people`} class="footer-column-link">HR & People</a>
+				<a href={`${base}/revenue-operations`} class="footer-column-link">Revenue Operations</a>
+				<a href={`${base}/executive`} class="footer-column-link">Executive</a>
+				<a href={`${base}/procurement`} class="footer-column-link">Procurement</a>
+			</div>
+			<div class="footer-column">
+				<h4 class="footer-column-heading">Use Cases</h4>
+				<a href={`${base}/sales`} class="footer-column-link">SDR</a>
+				<a href={`${base}/inbound`} class="footer-column-link">Inbound</a>
+				<a href={`${base}/sales-engineer`} class="footer-column-link">Sales Engineer</a>
+				<a href={`${base}/customer-success`} class="footer-column-link">CSM</a>
+				<a href={`${base}/support`} class="footer-column-link">Customer Support</a>
+				<a href={`${base}/finance-and-accounting`} class="footer-column-link">Bookkeeper</a>
+				<a href={`${base}/recruiting`} class="footer-column-link">Recruiting</a>
+				<a href={`${base}/executive`} class="footer-column-link">Executive Assistant</a>
+				<a href={`${base}/community-manager`} class="footer-column-link">Community Manager</a>
+				<a href={`${base}/social-media`} class="footer-column-link">Social Media</a>
+				<a href={`${base}/seo`} class="footer-column-link">SEO</a>
+				<a href={`${base}/marketing`} class="footer-column-link">Ad Ops</a>
+				<a href={`${base}/revenue-operations`} class="footer-column-link">RevOps</a>
+				<a href={`${base}/churn-prevention`} class="footer-column-link">Churn Prevention</a>
+				<a href={`${base}/finance-ops`} class="footer-column-link">Finance Ops</a>
+				<a href={`${base}/hr-&-people`} class="footer-column-link">HR Ops</a>
+				<a href={`${base}/procurement`} class="footer-column-link">Procurement</a>
+				<a href={`${base}/iso-9001`} class="footer-column-link">ISO 9001</a>
+			</div>
+			<div class="footer-column">
+				<h4 class="footer-column-heading">Platform</h4>
+				<a href={`${base}/security`} class="footer-column-link">Security</a>
+				<a href={`${base}/secure-hosting`} class="footer-column-link">Secure Hosting</a>
+				<a href={`${base}/enterprise-permissions`} class="footer-column-link">Enterprise Permissions</a>
+				<a href={`${base}/audit-logging`} class="footer-column-link">Audit Logging</a>
+				<a href={`${base}/compliance-wrapper`} class="footer-column-link">Compliance Wrapper</a>
+				<a href={`${base}/hardened-runtime`} class="footer-column-link">Hardened Runtime</a>
+				<a href={`${base}/agent-marketplace`} class="footer-column-link">Agent Marketplace</a>
+				<a href={`${base}/agent-app-store`} class="footer-column-link">Agent App Store</a>
+				<a href={`${base}/agent-certification`} class="footer-column-link">Agent Certification</a>
+				<a href={`${base}/workforce-management`} class="footer-column-link">Workforce Management</a>
+				<a href={`${base}/faq`} class="footer-column-link">FAQ</a>
+				<a href={`${base}/pricing`} class="footer-column-link">Pricing</a>
+			</div>
+		</div>
+		<div class="footer-contact">
+			<a href="mailto:hello@cora.st" class="footer-email">hello@cora.st</a>
+		</div>
+		<p class="footer-copy">&copy; {new Date().getFullYear()} Cora. All rights reserved.</p>
+	</div>
+</footer>

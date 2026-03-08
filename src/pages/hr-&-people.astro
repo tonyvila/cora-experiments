@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ReserveButton from '../components/ReserveButton.astro';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faUserCheck, faShieldHalved, faCalendarDays, faComments, faClipboardList, faChartLine, faArrowsRotate } from '@fortawesome/pro-light-svg-icons';
+const iconOnboarding = icon(faUserCheck).html[0];
+const iconBenefits = icon(faShieldHalved).html[0];
+const iconTimeOff = icon(faCalendarDays).html[0];
+const iconSelfService = icon(faComments).html[0];
+const iconCompliance = icon(faClipboardList).html[0];
+const iconAnalytics = icon(faChartLine).html[0];
+const iconUpdated = icon(faArrowsRotate).html[0];
+---
+
+<Layout title="Cora — AI HR Operations">
+
+	<Navbar />
+
+	<main>
+
+		<!-- ===== HERO ===== -->
+		<section class="hero" id="hero">
+			<div class="container hero-container hero-container-wide">
+				<div class="hero-pill"><span class="hero-pill-dot"></span><span class="hero-pill-text">Built for HR Teams</span></div>
+				<h1 class="hero-heading">HR Operations <span class="accent">On Autopilot.</span></h1>
+				<p class="hero-sub">
+					Your AI HR assistant handles onboarding, benefits, compliance, and employee questions&mdash;freeing your team for strategic work.
+				</p>
+				<div class="hero-stat">
+					<span class="hero-stat-number">75%</span>
+					<span class="hero-stat-label">Reduction in HR ticket volume</span>
+				</div>
+				<div class="hero-buttons">
+					<ReserveButton />
+					<a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+				</div>
+
+				<div class="hw-wrap">
+					<div class="hw-glow"></div>
+					<div class="hw-box">
+						<div class="hw-vents hw-vents-left">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-center">
+							<div class="hw-logo">
+								<svg width="11" height="13" viewBox="0 0 24 28" fill="rgba(139,94,60,0.4)" xmlns="http://www.w3.org/2000/svg"><path d="M20.8 17.7c-.3.7-.7 1.4-1.1 2-.6.9-1.1 1.5-1.5 1.9-.6.6-1.3 1-2 1-.5 0-1.1-.2-1.9-.5-.7-.3-1.4-.5-2-.5-.6 0-1.3.2-2 .5-.7.3-1.3.5-1.8.5-.7 0-1.4-.3-2-1-.4-.4-.9-1-1.5-1.9-.7-.9-1.2-2-1.6-3.2-.5-1.3-.7-2.5-.7-3.7 0-1.4.3-2.5.9-3.5.5-.8 1.1-1.4 1.9-1.8.8-.5 1.6-.7 2.5-.7.5 0 1.2.2 2 .5.8.4 1.3.5 1.5.5.2 0 .7-.2 1.7-.6.8-.4 1.5-.5 2.1-.4 1.6.1 2.7.8 3.5 2-1.4.9-2.1 2.1-2.1 3.6 0 1.2.4 2.3 1.3 3.1.4.4.8.7 1.3.9-.1.3-.2.6-.4 1zM16.5 2c0 1-.3 1.9-1 2.7-.8 1-1.8 1.6-2.9 1.5 0-.1 0-.2 0-.3 0-.9.4-1.9 1-2.7.3-.4.8-.7 1.3-1 .6-.3 1.1-.4 1.5-.5.1.1.1.2.1.3z"/></svg>
+							</div>
+						</div>
+						<div class="hw-vents hw-vents-right">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-power"></div>
+					</div>
+				</div>
+				<p class="hero-hw-note">Runs on dedicated hardware: your office or the cloud. <span style="color: var(--v2-accent); font-weight: 500;">Always upgraded to the latest AI.</span></p>
+			</div>
+		</section>
+
+		<!-- ===== THE PROBLEM ===== -->
+		<section class="section value-prop">
+			<div class="container">
+				<h2 class="section-title">The Problem</h2>
+
+				<div class="problem-grid">
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Onboarding is manual and inconsistent</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Benefits questions overwhelm HR staff</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Compliance tracking is a spreadsheet nightmare</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Employees wait days for simple answers</span></div>
+				</div>
+
+				<p class="problem-callout">What if every employee had instant HR support, onboarding was flawless, and compliance tracked itself?</p>
+			</div>
+		</section>
+
+		<!-- ===== WHAT YOUR AI HR ASSISTANT DOES ===== -->
+		<section class="section roles" id="how-it-works">
+			<div class="container">
+				<h2 class="section-title">What Your AI HR Assistant Does</h2>
+				<p class="section-subtext">All the operational HR work that keeps your team stuck in admin&mdash;automated and always available.</p>
+				<div class="roles-grid">
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconOnboarding}></div>
+						<h3 class="role-card-title">Employee Onboarding</h3>
+						<p class="role-card-desc">Automates the entire onboarding workflow&mdash;paperwork, system access, equipment setup, and 30/60/90 day check-ins.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconBenefits}></div>
+						<h3 class="role-card-title">Benefits Administration</h3>
+						<p class="role-card-desc">Handles enrollment, changes, and questions. Tracks eligibility and compliance deadlines automatically.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconTimeOff}></div>
+						<h3 class="role-card-title">Time-Off Management</h3>
+						<p class="role-card-desc">Processes PTO requests, tracks balances, manages coverage, and ensures compliance with policies.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconSelfService}></div>
+						<h3 class="role-card-title">Employee Self-Service</h3>
+						<p class="role-card-desc">Answers HR questions 24/7 via Slack, Teams, or email. Updates employee info. Resolves issues instantly.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconCompliance}></div>
+						<h3 class="role-card-title">Compliance Tracking</h3>
+						<p class="role-card-desc">Monitors training completions, certifications, and policy acknowledgments. Sends reminders automatically.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconAnalytics}></div>
+						<h3 class="role-card-title">HR Analytics</h3>
+						<p class="role-card-desc">Generates headcount reports, turnover analysis, and workforce insights. Data-driven HR decisions.</p>
+					</div>
+				</div>
+				<div class="roles-footer-card">
+				<div class="roles-footer-icon" set:html={iconUpdated}></div>
+				<h3 class="roles-footer-title">Always Updated</h3>
+				<p class="roles-footer-text">AI moves fast. We keep up so you don't have to. Automatic upgrades to the latest models, new capabilities as they ship. No AI expertise required on your team.</p>
+			</div>
+			</div>
+		</section>
+
+		<!-- ===== COMPLETE HR OPERATIONS COVERAGE ===== -->
+		<section class="section features">
+			<div class="container">
+				<h2 class="section-title">Complete HR Operations Coverage</h2>
+				<p class="section-subtext">From hire to retire, your AI handles the administrative heavy lifting.</p>
+				<div class="value-grid-4">
+					<div class="value-card">
+						<h3 class="value-card-title">Onboarding &amp; Offboarding</h3>
+						<ul class="value-list">
+							<li>Automated new hire workflows</li>
+							<li>Document collection and e-signatures</li>
+							<li>System provisioning coordination</li>
+							<li>Exit interview and offboarding tasks</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Benefits &amp; Payroll</h3>
+						<ul class="value-list">
+							<li>Open enrollment management</li>
+							<li>Life event processing</li>
+							<li>Payroll change coordination</li>
+							<li>Benefits questions and support</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Employee Relations</h3>
+						<ul class="value-list">
+							<li>PTO and leave management</li>
+							<li>Policy questions and guidance</li>
+							<li>Performance review scheduling</li>
+							<li>Employee feedback collection</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Compliance &amp; Reporting</h3>
+						<ul class="value-list">
+							<li>Training and certification tracking</li>
+							<li>Audit-ready documentation</li>
+							<li>Workforce analytics and reporting</li>
+							<li>Policy acknowledgment tracking</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== HR THAT SCALES ===== -->
+		<section class="section stats">
+			<div class="container">
+				<h2 class="section-title">HR That Scales</h2>
+				<div class="stats-grid">
+					<div class="stat-item">
+						<span class="stat-number">75%</span>
+						<span class="stat-label">Reduction in HR ticket volume</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">50%</span>
+						<span class="stat-label">Faster onboarding completion</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">Zero</span>
+						<span class="stat-label">Compliance deadlines missed</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">24/7</span>
+						<span class="stat-label">Employee support available</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== HOW IT WORKS ===== -->
+		<section class="next-steps">
+			<div class="container">
+				<h2 class="accent-heading">How It Works</h2>
+				<div class="steps-grid">
+					<div class="step-card">
+						<span class="step-number">1</span>
+						<h3 class="step-title">Connect Your HRIS</h3>
+						<p class="step-desc">We integrate with BambooHR, Gusto, Rippling, Workday, and more. Your employee data stays in sync.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">2</span>
+						<h3 class="step-title">Configure Workflows</h3>
+						<p class="step-desc">Set up your onboarding checklists, approval chains, and policies. Your AI follows your process.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">3</span>
+						<h3 class="step-title">Scale HR Operations</h3>
+						<p class="step-desc">Within days, routine HR work handles itself. Your team focuses on strategic people initiatives.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FINAL CTA ===== -->
+		<section class="section final-cta" id="final-cta">
+			<div class="container final-cta-container">
+				<h2 class="final-cta-heading">Your HR Team Has Better Things To Do</h2>
+				<p class="final-cta-sub">
+					Stop drowning in tickets and paperwork. Let AI handle operations while you focus on people.
+				</p>
+				<ReserveButton size="lg" />
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+
+</Layout>

@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ReserveButton from '../components/ReserveButton.astro';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faSliders, faUserShield, faClock, faMoneyCheckDollar, faClipboardCheck, faClipboardList, faArrowsRotate } from '@fortawesome/pro-light-svg-icons';
+const iconGranular = icon(faSliders).html[0];
+const iconRoleBased = icon(faUserShield).html[0];
+const iconTimeBased = icon(faClock).html[0];
+const iconSpending = icon(faMoneyCheckDollar).html[0];
+const iconApproval = icon(faClipboardCheck).html[0];
+const iconAuditTrail = icon(faClipboardList).html[0];
+const iconUpdated = icon(faArrowsRotate).html[0];
+---
+
+<Layout title="Cora — Enterprise Permissions">
+
+	<Navbar />
+
+	<main>
+
+		<!-- ===== HERO ===== -->
+		<section class="hero" id="hero">
+			<div class="container hero-container hero-container-wide">
+				<div class="hero-pill"><span class="hero-pill-dot"></span><span class="hero-pill-text">AI Governance</span></div>
+				<h1 class="hero-heading">Your AI. Your Rules. <span class="accent">Complete Control.</span></h1>
+				<p class="hero-sub">
+					Enterprise-grade permissions and policy controls for your AI workforce. Define what each AI employee can do, require approvals for sensitive actions, and maintain full audit trails.
+				</p>
+				<div class="hero-stat">
+					<span class="hero-stat-number">100%</span>
+					<span class="hero-stat-label">Visibility and control over AI actions</span>
+				</div>
+				<div class="hero-buttons">
+					<ReserveButton />
+					<a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+				</div>
+
+				<div class="hw-wrap">
+					<div class="hw-glow"></div>
+					<div class="hw-box">
+						<div class="hw-vents hw-vents-left">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-center">
+							<div class="hw-logo">
+								<svg width="11" height="13" viewBox="0 0 24 28" fill="rgba(139,94,60,0.4)" xmlns="http://www.w3.org/2000/svg"><path d="M20.8 17.7c-.3.7-.7 1.4-1.1 2-.6.9-1.1 1.5-1.5 1.9-.6.6-1.3 1-2 1-.5 0-1.1-.2-1.9-.5-.7-.3-1.4-.5-2-.5-.6 0-1.3.2-2 .5-.7.3-1.3.5-1.8.5-.7 0-1.4-.3-2-1-.4-.4-.9-1-1.5-1.9-.7-.9-1.2-2-1.6-3.2-.5-1.3-.7-2.5-.7-3.7 0-1.4.3-2.5.9-3.5.5-.8 1.1-1.4 1.9-1.8.8-.5 1.6-.7 2.5-.7.5 0 1.2.2 2 .5.8.4 1.3.5 1.5.5.2 0 .7-.2 1.7-.6.8-.4 1.5-.5 2.1-.4 1.6.1 2.7.8 3.5 2-1.4.9-2.1 2.1-2.1 3.6 0 1.2.4 2.3 1.3 3.1.4.4.8.7 1.3.9-.1.3-.2.6-.4 1zM16.5 2c0 1-.3 1.9-1 2.7-.8 1-1.8 1.6-2.9 1.5 0-.1 0-.2 0-.3 0-.9.4-1.9 1-2.7.3-.4.8-.7 1.3-1 .6-.3 1.1-.4 1.5-.5.1.1.1.2.1.3z"/></svg>
+							</div>
+						</div>
+						<div class="hw-vents hw-vents-right">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-power"></div>
+					</div>
+				</div>
+				<p class="hero-hw-note">Runs on dedicated hardware: your office or the cloud. <span style="color: var(--v2-accent); font-weight: 500;">Always upgraded to the latest AI.</span></p>
+			</div>
+		</section>
+
+		<!-- ===== THE PROBLEM ===== -->
+		<section class="section value-prop">
+			<div class="container">
+				<h2 class="section-title">The Problem</h2>
+
+				<div class="problem-grid">
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">AI tools have all-or-nothing access to systems</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">No way to require human approval for sensitive actions</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Audit trails are incomplete or nonexistent</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Compliance teams can't sign off on AI access</span></div>
+				</div>
+
+				<p class="problem-callout">What if you could give AI employees the same granular permissions you give human employees&mdash;with approval workflows and complete audit trails?</p>
+			</div>
+		</section>
+
+		<!-- ===== PERMISSIONS THAT MAKE SENSE ===== -->
+		<section class="section roles" id="how-it-works">
+			<div class="container">
+				<h2 class="section-title">Permissions That Make Sense</h2>
+				<p class="section-subtext">Built for enterprises that need control without killing productivity.</p>
+				<div class="roles-grid">
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconGranular}></div>
+						<h3 class="role-card-title">Granular Action Controls</h3>
+						<p class="role-card-desc">Define exactly what each AI employee can do. Read-only access to some systems, full control of others. You decide.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconRoleBased}></div>
+						<h3 class="role-card-title">Role-Based Access</h3>
+						<p class="role-card-desc">Create permission templates for different AI employee roles. SDRs get CRM access, Bookkeepers get QuickBooks. Clean separation.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconTimeBased}></div>
+						<h3 class="role-card-title">Time-Based Policies</h3>
+						<p class="role-card-desc">Set operating hours for AI employees. No outbound emails after 6pm. No CRM changes on weekends. You control the schedule.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconSpending}></div>
+						<h3 class="role-card-title">Spending Limits</h3>
+						<p class="role-card-desc">Cap what AI employees can spend or commit. Max email sends per day. Max invoice amounts. Financial guardrails built in.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconApproval}></div>
+						<h3 class="role-card-title">Approval Workflows</h3>
+						<p class="role-card-desc">Require human approval for sensitive actions. Contracts over $10K. Customer refunds. Delete operations. You stay in control.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconAuditTrail}></div>
+						<h3 class="role-card-title">Complete Audit Trail</h3>
+						<p class="role-card-desc">Every permission check logged. See what was allowed, what was denied, and why. Export to your SIEM.</p>
+					</div>
+				</div>
+				<div class="roles-footer-card">
+				<div class="roles-footer-icon" set:html={iconUpdated}></div>
+				<h3 class="roles-footer-title">Always Updated</h3>
+				<p class="roles-footer-text">AI moves fast. We keep up so you don't have to. Automatic upgrades to the latest models, new capabilities as they ship. No AI expertise required on your team.</p>
+			</div>
+			</div>
+		</section>
+
+		<!-- ===== FULL POLICY CONTROL ===== -->
+		<section class="section features">
+			<div class="container">
+				<h2 class="section-title">Full Policy Control</h2>
+				<p class="section-subtext">Everything you need to govern AI employees like you govern human employees.</p>
+				<div class="value-grid-4">
+					<div class="value-card">
+						<h3 class="value-card-title">Permission Types</h3>
+						<ul class="value-list">
+							<li>Read, Write, Delete, Admin levels</li>
+							<li>Per-application permissions</li>
+							<li>Per-record type restrictions</li>
+							<li>Field-level access control</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Policy Engine</h3>
+						<ul class="value-list">
+							<li>Conditional logic (if/then rules)</li>
+							<li>Time-based restrictions</li>
+							<li>Amount-based thresholds</li>
+							<li>Velocity limits (actions per hour)</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Approval Workflows</h3>
+						<ul class="value-list">
+							<li>Single and multi-level approvals</li>
+							<li>Slack/Teams integration for approvals</li>
+							<li>Escalation paths</li>
+							<li>Auto-approve rules for low-risk actions</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Governance</h3>
+						<ul class="value-list">
+							<li>Policy versioning and rollback</li>
+							<li>Permission inheritance</li>
+							<li>Separation of duties enforcement</li>
+							<li>Compliance reporting</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== THE NUMBERS DON'T LIE ===== -->
+		<section class="section stats">
+			<div class="container">
+				<h2 class="section-title">The Numbers Don't Lie</h2>
+				<div class="stats-grid">
+					<div class="stat-item">
+						<span class="stat-number">100%</span>
+						<span class="stat-label">Visibility into AI actions</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">0</span>
+						<span class="stat-label">Unauthorized actions possible</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">5min</span>
+						<span class="stat-label">To deploy new permission policies</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">24/7</span>
+						<span class="stat-label">Policy enforcement</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== HOW IT WORKS ===== -->
+		<section class="next-steps">
+			<div class="container">
+				<h2 class="accent-heading">How It Works</h2>
+				<div class="steps-grid">
+					<div class="step-card">
+						<span class="step-number">1</span>
+						<h3 class="step-title">Define Your Policies</h3>
+						<p class="step-desc">Work with us to map your existing governance requirements to AI employee permissions.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">2</span>
+						<h3 class="step-title">Configure Rules</h3>
+						<p class="step-desc">Set up role templates, approval workflows, and spending limits through our policy console.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">3</span>
+						<h3 class="step-title">Monitor &amp; Adjust</h3>
+						<p class="step-desc">See permission denials and approvals in real-time. Tune policies as your AI workforce evolves.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FINAL CTA ===== -->
+		<section class="section final-cta" id="final-cta">
+			<div class="container final-cta-container">
+				<h2 class="final-cta-heading">Ready to Take Control?</h2>
+				<p class="final-cta-sub">
+					Tell us about your governance requirements. We'll show you exactly how our permission system meets them.
+				</p>
+				<ReserveButton size="lg" />
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+
+</Layout>

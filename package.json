@@ -1,0 +1,31 @@
+{
+  "name": "cora-web",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "npm run build:tailwind && concurrently \"npm:dev:astro\" \"npm:dev:tailwind\"",
+    "dev:astro": "astro dev",
+    "dev:tailwind": "tailwindcss -i ./src/styles/global.css -o ./src/styles/tailwind.generated.css --watch",
+    "build": "npm run build:tailwind && astro build",
+    "build:tailwind": "tailwindcss -i ./src/styles/global.css -o ./src/styles/tailwind.generated.css --minify",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.0",
+    "@astrojs/tailwind": "^6.0.2",
+    "@fortawesome/fontawesome-svg-core": "^7.2.0",
+    "@fortawesome/pro-light-svg-icons": "^6.7.2",
+    "astro": "^5.17.1",
+    "astro-favicons": "^3.1.5",
+    "astro-posthog": "^1.0.2",
+    "tailwindcss": "^3.4.19",
+    "vanilla-cookieconsent": "^3.1.0"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "^4.59.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ReserveButton from '../components/ReserveButton.astro';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faCalendarDays, faRocket, faHandshake, faGraduationCap, faArrowRightArrowLeft, faReceipt, faArrowsRotate } from '@fortawesome/pro-light-svg-icons';
+const iconFlexible = icon(faCalendarDays).html[0];
+const iconScale = icon(faRocket).html[0];
+const iconCommitment = icon(faHandshake).html[0];
+const iconTrained = icon(faGraduationCap).html[0];
+const iconTransitions = icon(faArrowRightArrowLeft).html[0];
+const iconBilling = icon(faReceipt).html[0];
+const iconUpdated = icon(faArrowsRotate).html[0];
+---
+
+<Layout title="Cora — AI Employee Leasing">
+
+	<Navbar />
+
+	<main>
+
+		<!-- ===== HERO ===== -->
+		<section class="hero" id="hero">
+			<div class="container hero-container hero-container-wide">
+				<div class="hero-pill"><span class="hero-pill-dot"></span><span class="hero-pill-text">AI Employee Leasing</span></div>
+				<h1 class="hero-heading">Scale Your AI Workforce. <span class="accent">By the Week, Month, or Quarter.</span></h1>
+				<p class="hero-sub">
+					Lease pre-trained AI employees for seasonal workloads, special projects, or trial periods. All the capability, none of the long-term commitment.
+				</p>
+				<div class="hero-stat">
+					<span class="hero-stat-number">72hrs</span>
+					<span class="hero-stat-label">From request to productive AI employee</span>
+				</div>
+				<div class="hero-buttons">
+					<ReserveButton />
+					<a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+				</div>
+
+				<div class="hw-wrap">
+					<div class="hw-glow"></div>
+					<div class="hw-box">
+						<div class="hw-vents hw-vents-left">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-center">
+							<div class="hw-logo">
+								<svg width="11" height="13" viewBox="0 0 24 28" fill="rgba(139,94,60,0.4)" xmlns="http://www.w3.org/2000/svg"><path d="M20.8 17.7c-.3.7-.7 1.4-1.1 2-.6.9-1.1 1.5-1.5 1.9-.6.6-1.3 1-2 1-.5 0-1.1-.2-1.9-.5-.7-.3-1.4-.5-2-.5-.6 0-1.3.2-2 .5-.7.3-1.3.5-1.8.5-.7 0-1.4-.3-2-1-.4-.4-.9-1-1.5-1.9-.7-.9-1.2-2-1.6-3.2-.5-1.3-.7-2.5-.7-3.7 0-1.4.3-2.5.9-3.5.5-.8 1.1-1.4 1.9-1.8.8-.5 1.6-.7 2.5-.7.5 0 1.2.2 2 .5.8.4 1.3.5 1.5.5.2 0 .7-.2 1.7-.6.8-.4 1.5-.5 2.1-.4 1.6.1 2.7.8 3.5 2-1.4.9-2.1 2.1-2.1 3.6 0 1.2.4 2.3 1.3 3.1.4.4.8.7 1.3.9-.1.3-.2.6-.4 1zM16.5 2c0 1-.3 1.9-1 2.7-.8 1-1.8 1.6-2.9 1.5 0-.1 0-.2 0-.3 0-.9.4-1.9 1-2.7.3-.4.8-.7 1.3-1 .6-.3 1.1-.4 1.5-.5.1.1.1.2.1.3z"/></svg>
+							</div>
+						</div>
+						<div class="hw-vents hw-vents-right">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-power"></div>
+					</div>
+				</div>
+				<p class="hero-hw-note">Runs on dedicated hardware: your office or the cloud. <span style="color: var(--v2-accent); font-weight: 500;">Always upgraded to the latest AI.</span></p>
+			</div>
+		</section>
+
+		<!-- ===== THE PROBLEM ===== -->
+		<section class="section value-prop">
+			<div class="container">
+				<h2 class="section-title">The Problem</h2>
+
+				<div class="problem-grid">
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Hiring for seasonal demand is slow and expensive</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Long-term AI commitments don't fit variable needs</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Training investments are lost when projects end</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Capacity planning is impossible in unpredictable markets</span></div>
+				</div>
+
+				<p class="problem-callout">What if you could add AI employees in 72 hours, use them for exactly as long as you need, and return them without penalty?</p>
+			</div>
+		</section>
+
+		<!-- ===== WORKFORCE FLEXIBILITY, FINALLY ===== -->
+		<section class="section roles" id="how-it-works">
+			<div class="container">
+				<h2 class="section-title">Workforce Flexibility, Finally</h2>
+				<p class="section-subtext">AI employees that flex with your business, not against it.</p>
+				<div class="roles-grid">
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconFlexible}></div>
+						<h3 class="role-card-title">Flexible Terms</h3>
+						<p class="role-card-desc">Lease AI employees for weeks, months, or quarters. Scale up for busy seasons, scale down when things slow.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconScale}></div>
+						<h3 class="role-card-title">Instant Scale</h3>
+						<p class="role-card-desc">Add 10 AI employees for a product launch. Add 50 for holiday season. Deploy in days, not months.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconCommitment}></div>
+						<h3 class="role-card-title">No Long-Term Commitment</h3>
+						<p class="role-card-desc">Pay only for what you use. No annual contracts required. Scale down or cancel anytime.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconTrained}></div>
+						<h3 class="role-card-title">Pre-Trained &amp; Ready</h3>
+						<p class="role-card-desc">Leased AI employees come trained and ready to work. No ramp-up time, no training investment lost when lease ends.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconTransitions}></div>
+						<h3 class="role-card-title">Easy Transitions</h3>
+						<p class="role-card-desc">Convert leased employees to permanent anytime. Or return them at lease end with clean handoffs.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconBilling}></div>
+						<h3 class="role-card-title">Usage-Based Billing</h3>
+						<p class="role-card-desc">Pay based on actual usage during the lease. Busy week? Pay more. Slow week? Pay less. Fair and flexible.</p>
+					</div>
+				</div>
+				<div class="roles-footer-card">
+				<div class="roles-footer-icon" set:html={iconUpdated}></div>
+				<h3 class="roles-footer-title">Always Updated</h3>
+				<p class="roles-footer-text">AI moves fast. We keep up so you don't have to. Automatic upgrades to the latest models, new capabilities as they ship. No AI expertise required on your team.</p>
+			</div>
+			</div>
+		</section>
+
+		<!-- ===== BUILT FOR VARIABLE DEMAND ===== -->
+		<section class="section features">
+			<div class="container">
+				<h2 class="section-title">Built for Variable Demand</h2>
+				<p class="section-subtext">Every business has peaks and valleys. Now your AI workforce can too.</p>
+				<div class="value-grid-4">
+					<div class="value-card">
+						<h3 class="value-card-title">Seasonal Scaling</h3>
+						<ul class="value-list">
+							<li>Holiday customer support surge</li>
+							<li>Tax season accounting help</li>
+							<li>Back-to-school e-commerce rush</li>
+							<li>Year-end sales pushes</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Project-Based Work</h3>
+						<ul class="value-list">
+							<li>Product launch campaigns</li>
+							<li>Office relocations</li>
+							<li>System migrations</li>
+							<li>Annual audits</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Trial Periods</h3>
+						<ul class="value-list">
+							<li>Test AI employees before committing</li>
+							<li>Pilot new roles risk-free</li>
+							<li>Compare different solutions</li>
+							<li>Build business case with real data</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Capacity Overflow</h3>
+						<ul class="value-list">
+							<li>Handle unexpected demand spikes</li>
+							<li>Cover for team transitions</li>
+							<li>Bridge hiring gaps</li>
+							<li>Support M&amp;A integrations</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== THE NUMBERS DON'T LIE ===== -->
+		<section class="section stats">
+			<div class="container">
+				<h2 class="section-title">The Numbers Don't Lie</h2>
+				<div class="stats-grid">
+					<div class="stat-item">
+						<span class="stat-number">72hrs</span>
+						<span class="stat-label">From request to deployment</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">60%</span>
+						<span class="stat-label">Cost savings vs. temp agencies</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">0</span>
+						<span class="stat-label">Training investment at risk</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">100%</span>
+						<span class="stat-label">Flexibility to scale</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== HOW IT WORKS ===== -->
+		<section class="next-steps">
+			<div class="container">
+				<h2 class="accent-heading">How It Works</h2>
+				<div class="steps-grid">
+					<div class="step-card">
+						<span class="step-number">1</span>
+						<h3 class="step-title">Define Your Need</h3>
+						<p class="step-desc">Tell us the role, duration, and capacity you need. We'll recommend the right AI employees for your situation.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">2</span>
+						<h3 class="step-title">Deploy Instantly</h3>
+						<p class="step-desc">AI employees deploy to your infrastructure within 72 hours. Pre-trained and ready to contribute immediately.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">3</span>
+						<h3 class="step-title">Scale &amp; Adjust</h3>
+						<p class="step-desc">Add more employees as needed, scale down when done. Convert to permanent or return at lease end.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FINAL CTA ===== -->
+		<section class="section final-cta" id="final-cta">
+			<div class="container final-cta-container">
+				<h2 class="final-cta-heading">Ready for Flexible AI?</h2>
+				<p class="final-cta-sub">
+					Tell us about your seasonal or project needs. We'll show you exactly how AI leasing can help you scale smart.
+				</p>
+				<ReserveButton size="lg" />
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+
+</Layout>

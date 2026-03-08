@@ -1,0 +1,129 @@
+---
+import ReserveButton from './ReserveButton.astro';
+
+interface Props {
+	isHomepage?: boolean;
+}
+
+const { isHomepage = false } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const brandHref = isHomepage ? '#hero' : `${base}/`;
+---
+
+<nav class="navbar" id="navbar">
+	<div class="nav-inner">
+		<a href={brandHref} class="nav-brand">
+			<img src={`${base}/logo.svg`} alt="Cora logo" class="nav-logo" />
+		</a>
+
+		<input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox" />
+		<label for="nav-toggle" class="nav-hamburger" aria-label="Toggle menu">
+			<span class="hamburger-line"></span>
+			<span class="hamburger-line"></span>
+			<span class="hamburger-line"></span>
+		</label>
+
+		<div class="nav-links">
+			<div class="nav-links-left">
+				<div class="nav-dropdown" id="industries-dropdown">
+					<a href="#" class="nav-link nav-dropdown-trigger">Industries <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+					<div class="dropdown-menu">
+						<a href={`${base}/healthcare`} class="dropdown-item">Healthcare</a>
+						<a href={`${base}/finance`} class="dropdown-item">Finance</a>
+						<a href={`${base}/insurance`} class="dropdown-item">Insurance</a>
+						<a href={`${base}/real-estate`} class="dropdown-item">Real Estate</a>
+						<a href={`${base}/property-management`} class="dropdown-item">Property Management</a>
+						<a href={`${base}/legal`} class="dropdown-item">Legal</a>
+						<a href={`${base}/construction`} class="dropdown-item">Construction</a>
+						<a href={`${base}/hospitality`} class="dropdown-item">Hospitality</a>
+						<a href={`${base}/manufacturing`} class="dropdown-item">Manufacturing</a>
+						<a href={`${base}/logistics`} class="dropdown-item">Logistics</a>
+						<a href={`${base}/ecommerce-shopify`} class="dropdown-item">Ecommerce - Shopify</a>
+						<a href={`${base}/ecommerce-amazon`} class="dropdown-item">Ecommerce - Amazon</a>
+						<a href={`${base}/marketplace`} class="dropdown-item">Marketplace</a>
+						<a href={`${base}/leasing`} class="dropdown-item">Leasing</a>
+						<a href={`${base}/accounting`} class="dropdown-item">Accounting</a>
+						<a href={`${base}/outsourcing`} class="dropdown-item">Outsourcing</a>
+					</div>
+				</div>
+				<div class="nav-dropdown" id="teams-dropdown">
+					<a href="#" class="nav-link nav-dropdown-trigger">Teams <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+					<div class="dropdown-menu">
+						<a href={`${base}/sales`} class="dropdown-item">Sales</a>
+						<a href={`${base}/marketing`} class="dropdown-item">Marketing</a>
+						<a href={`${base}/customer-success`} class="dropdown-item">Customer Success</a>
+						<a href={`${base}/support`} class="dropdown-item">Support</a>
+						<a href={`${base}/finance-and-accounting`} class="dropdown-item">Finance & Accounting</a>
+						<a href={`${base}/hr-&-people`} class="dropdown-item">HR & People</a>
+						<a href={`${base}/revenue-operations`} class="dropdown-item">Revenue Operations</a>
+						<a href={`${base}/executive`} class="dropdown-item">Executive</a>
+						<a href={`${base}/procurement`} class="dropdown-item">Procurement</a>
+					</div>
+				</div>
+				<div class="nav-dropdown" id="use-cases-dropdown">
+					<a href="#" class="nav-link nav-dropdown-trigger">Use Cases <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+					<div class="dropdown-menu">
+						<a href={`${base}/sales`} class="dropdown-item">SDR</a>
+						<a href={`${base}/inbound`} class="dropdown-item">Inbound</a>
+						<a href={`${base}/sales-engineer`} class="dropdown-item">Sales Engineer</a>
+						<a href={`${base}/customer-success`} class="dropdown-item">CSM</a>
+						<a href={`${base}/support`} class="dropdown-item">Customer Support</a>
+						<a href={`${base}/finance-and-accounting`} class="dropdown-item">Bookkeeper</a>
+						<a href={`${base}/recruiting`} class="dropdown-item">Recruiting</a>
+						<a href={`${base}/executive`} class="dropdown-item">Executive Assistant</a>
+						<a href={`${base}/community-manager`} class="dropdown-item">Community Manager</a>
+						<a href={`${base}/social-media`} class="dropdown-item">Social Media</a>
+						<a href={`${base}/seo`} class="dropdown-item">SEO</a>
+						<a href={`${base}/marketing`} class="dropdown-item">Ad Ops</a>
+						<a href={`${base}/revenue-operations`} class="dropdown-item">RevOps</a>
+						<a href={`${base}/churn-prevention`} class="dropdown-item">Churn Prevention</a>
+						<a href={`${base}/finance-ops`} class="dropdown-item">Finance Ops</a>
+						<a href={`${base}/hr-&-people`} class="dropdown-item">HR Ops</a>
+						<a href={`${base}/procurement`} class="dropdown-item">Procurement</a>
+						<a href={`${base}/quality-management`} class="dropdown-item">Quality Management</a>
+					</div>
+				</div>
+				<div class="nav-dropdown" id="platform-dropdown">
+					<a href="#" class="nav-link nav-dropdown-trigger">Platform <svg class="nav-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+					<div class="dropdown-menu">
+						<a href={`${base}/security`} class="dropdown-item">Security</a>
+						<a href={`${base}/secure-hosting`} class="dropdown-item">Secure Hosting</a>
+						<a href={`${base}/enterprise-permissions`} class="dropdown-item">Enterprise Permissions</a>
+						<a href={`${base}/audit-logging`} class="dropdown-item">Audit Logging</a>
+						<a href={`${base}/compliance-wrapper`} class="dropdown-item">Compliance Wrapper</a>
+						<a href={`${base}/hardened-runtime`} class="dropdown-item">Hardened Runtime</a>
+						<a href={`${base}/agent-marketplace`} class="dropdown-item">Agent Marketplace</a>
+						<a href={`${base}/agent-app-store`} class="dropdown-item">Agent App Store</a>
+						<a href={`${base}/agent-certification`} class="dropdown-item">Agent Certification</a>
+						<a href={`${base}/workforce-management`} class="dropdown-item">Workforce Management</a>
+						<a href={`${base}/faq`} class="dropdown-item">FAQ</a>
+					</div>
+				</div>
+				<a href={`${base}/pricing`} class="nav-link nav-link-pricing">Pricing</a>
+			</div>
+			<div class="nav-links-right">
+				<ReserveButton class="nav-cta-btn" />
+			</div>
+		</div>
+	</div>
+</nav>
+
+<script>
+	const dropdowns = document.querySelectorAll('.nav-dropdown');
+
+	dropdowns.forEach((dropdown) => {
+		const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+		trigger?.addEventListener('click', (e) => {
+			e.preventDefault();
+			const isOpen = dropdown.classList.contains('open');
+			dropdowns.forEach((d) => d.classList.remove('open'));
+			if (!isOpen) dropdown.classList.add('open');
+		});
+	});
+
+	document.addEventListener('click', (e) => {
+		if (!(e.target as Element).closest('.nav-dropdown')) {
+			dropdowns.forEach((d) => d.classList.remove('open'));
+		}
+	});
+</script>

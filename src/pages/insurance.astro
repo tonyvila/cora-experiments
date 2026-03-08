@@ -1,0 +1,238 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ReserveButton from '../components/ReserveButton.astro';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faCalculator, faBullseye, faArrowsRotate, faLifeRing, faClipboardCheck, faUserGroup } from '@fortawesome/pro-light-svg-icons';
+const iconQuote = icon(faCalculator).html[0];
+const iconLead = icon(faBullseye).html[0];
+const iconRenewals = icon(faArrowsRotate).html[0];
+const iconClaims = icon(faLifeRing).html[0];
+const iconCompliance = icon(faClipboardCheck).html[0];
+const iconRetention = icon(faUserGroup).html[0];
+const iconUpdated = icon(faArrowsRotate).html[0];
+---
+
+<Layout title="Cora — AI Employees for Insurance">
+
+	<Navbar />
+
+	<main>
+
+		<!-- ===== HERO ===== -->
+		<section class="hero" id="hero">
+			<div class="container hero-container hero-container-wide">
+				<div class="hero-pill"><span class="hero-pill-dot"></span><span class="hero-pill-text">AI for Insurance Agencies</span></div>
+				<h1 class="hero-heading">Quote Faster. Retain More. <span class="accent">Grow Without Adding Staff.</span></h1>
+				<p class="hero-sub">
+					An AI employee for insurance agencies that generates quotes in minutes, handles renewals automatically, and provides 24/7 client service.
+				</p>
+				<div class="hero-stat">
+					<span class="hero-stat-number">98%</span>
+					<span class="hero-stat-label">Policy renewal retention</span>
+				</div>
+				<div class="hero-buttons">
+					<ReserveButton />
+					<a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+				</div>
+
+				<div class="hw-wrap">
+					<div class="hw-glow"></div>
+					<div class="hw-box">
+						<div class="hw-vents hw-vents-left">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-center">
+							<div class="hw-logo">
+								<svg width="11" height="13" viewBox="0 0 24 28" fill="rgba(139,94,60,0.4)" xmlns="http://www.w3.org/2000/svg"><path d="M20.8 17.7c-.3.7-.7 1.4-1.1 2-.6.9-1.1 1.5-1.5 1.9-.6.6-1.3 1-2 1-.5 0-1.1-.2-1.9-.5-.7-.3-1.4-.5-2-.5-.6 0-1.3.2-2 .5-.7.3-1.3.5-1.8.5-.7 0-1.4-.3-2-1-.4-.4-.9-1-1.5-1.9-.7-.9-1.2-2-1.6-3.2-.5-1.3-.7-2.5-.7-3.7 0-1.4.3-2.5.9-3.5.5-.8 1.1-1.4 1.9-1.8.8-.5 1.6-.7 2.5-.7.5 0 1.2.2 2 .5.8.4 1.3.5 1.5.5.2 0 .7-.2 1.7-.6.8-.4 1.5-.5 2.1-.4 1.6.1 2.7.8 3.5 2-1.4.9-2.1 2.1-2.1 3.6 0 1.2.4 2.3 1.3 3.1.4.4.8.7 1.3.9-.1.3-.2.6-.4 1zM16.5 2c0 1-.3 1.9-1 2.7-.8 1-1.8 1.6-2.9 1.5 0-.1 0-.2 0-.3 0-.9.4-1.9 1-2.7.3-.4.8-.7 1.3-1 .6-.3 1.1-.4 1.5-.5.1.1.1.2.1.3z"/></svg>
+							</div>
+						</div>
+						<div class="hw-vents hw-vents-right">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-power"></div>
+					</div>
+				</div>
+				<p class="hero-hw-note">Runs on dedicated hardware: your office or the cloud. <span style="color: var(--v2-accent); font-weight: 500;">Always upgraded to the latest AI.</span></p>
+			</div>
+		</section>
+
+		<!-- ===== THE PROBLEM ===== -->
+		<section class="section value-prop">
+			<div class="container">
+				<h2 class="section-title">The Problem</h2>
+				<div class="problem-grid">
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Quote requests sit while producers are on calls</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Renewals slip and policies lapse</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Service calls eat into selling time</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Growing means hiring more CSRs</span></div>
+				</div>
+				<p class="problem-callout">What if every quote went out in 5 minutes, every renewal got handled proactively, and clients could get service 24/7?</p>
+			</div>
+		</section>
+
+		<!-- ===== WHAT YOUR AI INSURANCE EMPLOYEE DOES ===== -->
+		<section class="section roles" id="how-it-works">
+			<div class="container">
+				<h2 class="section-title">What Your AI Insurance Employee Does</h2>
+				<p class="section-subtext">Everything that keeps your agency from growing — quoting, renewals, service — handled autonomously.</p>
+				<div class="roles-grid">
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconQuote}></div>
+						<h3 class="role-card-title">Quote Generation</h3>
+						<p class="role-card-desc">Collects applicant information, runs multi-carrier quotes, and delivers comparisons in minutes instead of hours.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconLead}></div>
+						<h3 class="role-card-title">Lead Response</h3>
+						<p class="role-card-desc">Responds to website and referral leads in under 60 seconds. Qualifies prospects and books appointments automatically.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconRenewals}></div>
+						<h3 class="role-card-title">Policy Renewals</h3>
+						<p class="role-card-desc">Tracks renewal dates, reaches out to clients proactively, and processes renewals before policies lapse.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconClaims}></div>
+						<h3 class="role-card-title">Claims Support</h3>
+						<p class="role-card-desc">Guides clients through the filing process, collects documentation, and coordinates with adjusters.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconCompliance}></div>
+						<h3 class="role-card-title">Compliance &amp; Documentation</h3>
+						<p class="role-card-desc">Maintains E&amp;O documentation, tracks continuing education requirements, and ensures regulatory compliance.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconRetention}></div>
+						<h3 class="role-card-title">Client Retention</h3>
+						<p class="role-card-desc">Proactive outreach for policy reviews, life event check-ins, and cross-sell opportunities to grow your book.</p>
+					</div>
+				</div>
+				<div class="roles-footer-card">
+				<div class="roles-footer-icon" set:html={iconUpdated}></div>
+				<h3 class="roles-footer-title">Always Updated</h3>
+				<p class="roles-footer-text">AI moves fast. We keep up so you don't have to. Automatic upgrades to the latest models, new capabilities as they ship. No AI expertise required on your team.</p>
+			</div>
+			</div>
+		</section>
+
+		<!-- ===== BUILT FOR INSURANCE ===== -->
+		<section class="section features">
+			<div class="container">
+				<h2 class="section-title">Built for Insurance</h2>
+				<p class="section-subtext">Deep understanding of insurance workflows, from quoting to claims.</p>
+				<div class="value-grid-4">
+					<div class="value-card">
+						<h3 class="value-card-title">Sales &amp; Quoting</h3>
+						<ul class="value-list">
+							<li>Multi-carrier quote comparison</li>
+							<li>Application data collection</li>
+							<li>Proposal generation and delivery</li>
+							<li>E-signature coordination</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Policy Servicing</h3>
+						<ul class="value-list">
+							<li>Policy change requests</li>
+							<li>Certificate of insurance issuance</li>
+							<li>Endorsement processing</li>
+							<li>Billing inquiry resolution</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Claims Management</h3>
+						<ul class="value-list">
+							<li>FNOL intake and documentation</li>
+							<li>Adjuster coordination</li>
+							<li>Status updates to clients</li>
+							<li>Claims closure follow-up</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Agency Operations</h3>
+						<ul class="value-list">
+							<li>Producer performance tracking</li>
+							<li>Carrier appointment management</li>
+							<li>Commission reconciliation</li>
+							<li>Compliance reporting</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== THE NUMBERS DON'T LIE ===== -->
+		<section class="section">
+			<div class="container">
+				<h2 class="section-title">The Numbers Don't Lie</h2>
+				<div class="stats-grid">
+					<div class="stat-item">
+						<span class="stat-number">5min</span>
+						<span class="stat-label">Quote turnaround time</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">98%</span>
+						<span class="stat-label">Policy renewal retention</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">50%</span>
+						<span class="stat-label">Reduction in service calls</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">24/7</span>
+						<span class="stat-label">Client service availability</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== HOW IT WORKS ===== -->
+		<section class="next-steps">
+			<div class="container">
+				<h2 class="accent-heading">How It Works</h2>
+				<div class="steps-grid">
+					<div class="step-card">
+						<div class="step-number">1</div>
+						<h3 class="step-title">Connect Your Systems</h3>
+						<p class="step-desc">Integrate with your AMS, carrier portals, and communication tools. Works with all major platforms.</p>
+					</div>
+					<div class="step-card">
+						<div class="step-number">2</div>
+						<h3 class="step-title">Configure Your Workflows</h3>
+						<p class="step-desc">Define quoting rules, renewal timelines, and communication preferences. Your AI learns your agency's way.</p>
+					</div>
+					<div class="step-card">
+						<div class="step-number">3</div>
+						<h3 class="step-title">Grow Your Book</h3>
+						<p class="step-desc">Faster quotes, automatic renewals, 24/7 service. Agents focus on selling, not servicing.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FINAL CTA ===== -->
+		<section class="section final-cta" id="final-cta">
+			<div class="container final-cta-container">
+				<h2 class="final-cta-heading">Ready to Grow Your Agency?</h2>
+				<p class="final-cta-sub">
+					Tell us about your agency and book of business. We'll show you exactly how AI can help you write more premium.
+				</p>
+				<ReserveButton size="lg" />
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+
+</Layout>

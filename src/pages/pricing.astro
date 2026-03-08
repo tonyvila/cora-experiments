@@ -1,0 +1,741 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ReserveButton from '../components/ReserveButton.astro';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faRocket, faCalendar, faDiagramProject, faKey, faDesktop, faChartLine } from '@fortawesome/pro-light-svg-icons';
+const iconRocket = icon(faRocket).html[0];
+const iconCalendar = icon(faCalendar).html[0];
+const iconDiagram = icon(faDiagramProject).html[0];
+const iconKey = icon(faKey).html[0];
+const iconDesktop = icon(faDesktop).html[0];
+const iconChart = icon(faChartLine).html[0];
+---
+
+<Layout title="Cora — Pricing">
+
+	<Navbar />
+
+	<main>
+
+		<!-- ===== HERO ===== -->
+		<section class="hero" id="hero">
+			<div class="container hero-container hero-container-wide">
+				<h1 class="hero-heading">Simple, transparent pricing</h1>
+				<p class="hero-sub">
+					Every Cora is a dedicated AI employee. Pick the plan that fits your team.
+				</p>
+			</div>
+		</section>
+
+		<!-- ===== COMPARISON TABLE ===== -->
+		<section class="section pp-compare-section">
+			<div class="container">
+				<div class="pp-sentinel" id="pp-sentinel"></div>
+				<div class="pp-table-wrap">
+					<table class="pp-table">
+						<thead>
+							<tr>
+								<th class="pp-th-plan">
+									<div class="pp-plan-header">
+										<span class="pp-plan-name">Cora Flex</span>
+										<span class="pp-plan-price">$3,000<span class="pp-period">/mo</span></span>
+										<span class="pp-plan-desc">Ideal for legacy systems and first AI hires</span>
+										<ReserveButton class="btn btn-primary btn-sm pp-plan-cta">Hire Cora Flex</ReserveButton>
+									</div>
+								</th>
+								<th class="pp-th-plan pp-th-soon">
+									<div class="pp-plan-header">
+										<span class="pp-plan-badge">Coming Soon</span>
+										<span class="pp-plan-name">Cora Pro</span>
+										<span class="pp-plan-price">$5,000<span class="pp-period">/mo</span></span>
+										<span class="pp-plan-desc">Designed for ops-heavy and privacy-sensitive teams</span>
+										<span class="btn btn-primary btn-sm pp-plan-cta btn-coming-soon">Coming Soon</span>
+									</div>
+								</th>
+								<th class="pp-th-plan">
+									<div class="pp-plan-header">
+										<span class="pp-plan-name">Cora Cloud</span>
+										<span class="pp-plan-price">$3,000<span class="pp-period">/mo</span></span>
+										<span class="pp-plan-desc">Best for modern SaaS environments</span>
+										<ReserveButton class="btn btn-primary btn-sm pp-plan-cta">Hire Cora Cloud</ReserveButton>
+									</div>
+								</th>
+							</tr>
+						</thead>
+
+						<!-- Hardware & Infrastructure -->
+						<tbody>
+							<tr class="pp-group-row">
+								<td colspan="3">Hardware &amp; Infrastructure <span class="tooltip-wrap"><span class="tooltip-icon" tabindex="0" role="button" aria-label="More info">?</span><span class="tooltip-text"><strong>BYOD Support</strong>Bring Your Own Device — must meet OpenClaw minimum requirements</span></span></td>
+							</tr>
+							<tr>
+								<td><span class="pp-label">Hardware included:</span> Mac mini</td>
+								<td class="pp-soon-col"><span class="pp-label">Hardware included:</span> Mac Studio</td>
+								<td><span class="pp-label">Hardware included:</span> None required</td>
+							</tr>
+							<tr>
+								<td class="pp-yes"><span class="pp-label">BYOD support</span></td>
+								<td class="pp-soon-col pp-no"><span class="pp-label">BYOD support</span></td>
+								<td class="pp-no"><span class="pp-label">BYOD support</span></td>
+							</tr>
+							<tr>
+								<td class="pp-yes"><span class="pp-label">Runs on your premises</span></td>
+								<td class="pp-soon-col pp-yes"><span class="pp-label">Runs on your premises</span></td>
+								<td class="pp-no"><span class="pp-label">Runs on your premises</span></td>
+							</tr>
+							<tr>
+								<td class="pp-no"><span class="pp-label">Cloud-hosted</span></td>
+								<td class="pp-soon-col pp-no"><span class="pp-label">Cloud-hosted</span></td>
+								<td class="pp-yes"><span class="pp-label">Cloud-hosted</span></td>
+							</tr>
+						</tbody>
+
+						<!-- Capabilities -->
+						<tbody>
+							<tr class="pp-group-row">
+								<td colspan="3">Capabilities</td>
+							</tr>
+							<tr>
+								<td class="pp-yes"><span class="pp-label">Uses real software and UIs</span></td>
+								<td class="pp-soon-col pp-yes"><span class="pp-label">Uses real software and UIs</span></td>
+								<td class="pp-yes"><span class="pp-label">Uses real software and UIs</span></td>
+							</tr>
+							<tr>
+								<td class="pp-no"><span class="pp-label">Run local &amp; open-source models</span></td>
+								<td class="pp-soon-col pp-yes"><span class="pp-label">Run local &amp; open-source models</span></td>
+								<td class="pp-no"><span class="pp-label">Run local &amp; open-source models</span></td>
+							</tr>
+							<tr>
+								<td class="pp-no"><span class="pp-label">Higher compute &amp; parallel execution</span></td>
+								<td class="pp-soon-col pp-yes"><span class="pp-label">Higher compute &amp; parallel execution</span></td>
+								<td class="pp-no"><span class="pp-label">Higher compute &amp; parallel execution</span></td>
+							</tr>
+							<tr>
+								<td class="pp-no"><span class="pp-label">Advanced customization</span></td>
+								<td class="pp-soon-col pp-yes"><span class="pp-label">Advanced customization</span></td>
+								<td class="pp-no"><span class="pp-label">Advanced customization</span></td>
+							</tr>
+							<tr>
+								<td class="pp-no"><span class="pp-label">Secure remote access</span></td>
+								<td class="pp-soon-col pp-no"><span class="pp-label">Secure remote access</span></td>
+								<td class="pp-yes"><span class="pp-label">Secure remote access</span></td>
+							</tr>
+							<tr>
+								<td class="pp-no"><span class="pp-label">Easy to scale</span></td>
+								<td class="pp-soon-col pp-no"><span class="pp-label">Easy to scale</span></td>
+								<td class="pp-yes"><span class="pp-label">Easy to scale</span></td>
+							</tr>
+							<tr>
+								<td class="pp-no"><span class="pp-label">Fast deployment</span></td>
+								<td class="pp-soon-col pp-no"><span class="pp-label">Fast deployment</span></td>
+								<td class="pp-yes"><span class="pp-label">Fast deployment</span></td>
+							</tr>
+						</tbody>
+
+						<!-- Service & Support -->
+						<tbody>
+							<tr class="pp-group-row">
+								<td colspan="3">Service &amp; Support</td>
+							</tr>
+							<tr>
+								<td class="pp-yes"><span class="pp-label">Onboarding &amp; setup (up to 50 hrs)</span></td>
+								<td class="pp-soon-col pp-yes"><span class="pp-label">Onboarding &amp; setup (up to 50 hrs)</span></td>
+								<td class="pp-yes"><span class="pp-label">Onboarding &amp; setup (up to 50 hrs)</span></td>
+							</tr>
+							<tr>
+								<td class="pp-yes"><span class="pp-label">Weekly calls (first year)</span></td>
+								<td class="pp-soon-col pp-yes"><span class="pp-label">Weekly calls (first year)</span></td>
+								<td class="pp-yes"><span class="pp-label">Weekly calls (first year)</span></td>
+							</tr>
+							<tr>
+								<td class="pp-yes"><span class="pp-label">Workflow design &amp; iteration</span></td>
+								<td class="pp-soon-col pp-yes"><span class="pp-label">Workflow design &amp; iteration</span></td>
+								<td class="pp-yes"><span class="pp-label">Workflow design &amp; iteration</span></td>
+							</tr>
+							<tr>
+								<td class="pp-yes"><span class="pp-label">Monitoring &amp; troubleshooting</span></td>
+								<td class="pp-soon-col pp-yes"><span class="pp-label">Monitoring &amp; troubleshooting</span></td>
+								<td class="pp-yes"><span class="pp-label">Monitoring &amp; troubleshooting</span></td>
+							</tr>
+							<tr>
+								<td class="pp-yes"><span class="pp-label">Full audit logs</span></td>
+								<td class="pp-soon-col pp-yes"><span class="pp-label">Full audit logs</span></td>
+								<td class="pp-yes"><span class="pp-label">Full audit logs</span></td>
+							</tr>
+						</tbody>
+
+					</table>
+				</div>
+			</div>
+
+				<!-- ===== MOBILE CARDS ===== -->
+				<div class="pp-mobile">
+					<!-- Cora Flex -->
+					<div class="pp-mobile-card">
+						<div class="pp-plan-header">
+							<span class="pp-plan-name">Cora Flex</span>
+							<span class="pp-plan-price">$3,000<span class="pp-period">/mo</span></span>
+							<span class="pp-plan-desc">Ideal for legacy systems and first AI hires</span>
+							<ReserveButton class="btn btn-primary btn-sm pp-plan-cta">Hire Cora Flex</ReserveButton>
+						</div>
+						<div class="pp-mobile-group">
+							<h4 class="pp-mobile-group-title">Hardware &amp; Infrastructure</h4>
+							<div class="pp-mobile-row"><span class="pp-label">Hardware included:</span> Mac mini</div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">BYOD support</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Runs on your premises</span></div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">Cloud-hosted</span></div>
+						</div>
+						<div class="pp-mobile-group">
+							<h4 class="pp-mobile-group-title">Capabilities</h4>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Uses real software and UIs</span></div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">Run local &amp; open-source models</span></div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">Higher compute &amp; parallel execution</span></div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">Advanced customization</span></div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">Secure remote access</span></div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">Easy to scale</span></div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">Fast deployment</span></div>
+						</div>
+						<div class="pp-mobile-group">
+							<h4 class="pp-mobile-group-title">Service &amp; Support</h4>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Onboarding &amp; setup (up to 50 hrs)</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Weekly calls (first year)</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Workflow design &amp; iteration</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Monitoring &amp; troubleshooting</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Full audit logs</span></div>
+						</div>
+					</div>
+
+					<!-- Cora Pro -->
+					<div class="pp-mobile-card pp-mobile-card-soon">
+						<div class="pp-plan-header">
+							<span class="pp-plan-badge">Coming Soon</span>
+							<span class="pp-plan-name">Cora Pro</span>
+							<span class="pp-plan-price">$5,000<span class="pp-period">/mo</span></span>
+							<span class="pp-plan-desc">Designed for ops-heavy and privacy-sensitive teams</span>
+							<span class="btn btn-primary btn-sm pp-plan-cta btn-coming-soon">Coming Soon</span>
+						</div>
+						<div class="pp-mobile-group">
+							<h4 class="pp-mobile-group-title">Hardware &amp; Infrastructure</h4>
+							<div class="pp-mobile-row"><span class="pp-label">Hardware included:</span> Mac Studio</div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">BYOD support</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Runs on your premises</span></div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">Cloud-hosted</span></div>
+						</div>
+						<div class="pp-mobile-group">
+							<h4 class="pp-mobile-group-title">Capabilities</h4>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Uses real software and UIs</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Run local &amp; open-source models</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Higher compute &amp; parallel execution</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Advanced customization</span></div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">Secure remote access</span></div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">Easy to scale</span></div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">Fast deployment</span></div>
+						</div>
+						<div class="pp-mobile-group">
+							<h4 class="pp-mobile-group-title">Service &amp; Support</h4>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Onboarding &amp; setup (up to 50 hrs)</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Weekly calls (first year)</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Workflow design &amp; iteration</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Monitoring &amp; troubleshooting</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Full audit logs</span></div>
+						</div>
+					</div>
+
+					<!-- Cora Cloud -->
+					<div class="pp-mobile-card">
+						<div class="pp-plan-header">
+							<span class="pp-plan-name">Cora Cloud</span>
+							<span class="pp-plan-price">$3,000<span class="pp-period">/mo</span></span>
+							<span class="pp-plan-desc">Best for modern SaaS environments</span>
+							<ReserveButton class="btn btn-primary btn-sm pp-plan-cta">Hire Cora Cloud</ReserveButton>
+						</div>
+						<div class="pp-mobile-group">
+							<h4 class="pp-mobile-group-title">Hardware &amp; Infrastructure</h4>
+							<div class="pp-mobile-row"><span class="pp-label">Hardware included:</span> None required</div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">BYOD support</span></div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">Runs on your premises</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Cloud-hosted</span></div>
+						</div>
+						<div class="pp-mobile-group">
+							<h4 class="pp-mobile-group-title">Capabilities</h4>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Uses real software and UIs</span></div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">Run local &amp; open-source models</span></div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">Higher compute &amp; parallel execution</span></div>
+							<div class="pp-mobile-row pp-no"><span class="pp-label">Advanced customization</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Secure remote access</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Easy to scale</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Fast deployment</span></div>
+						</div>
+						<div class="pp-mobile-group">
+							<h4 class="pp-mobile-group-title">Service &amp; Support</h4>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Onboarding &amp; setup (up to 50 hrs)</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Weekly calls (first year)</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Workflow design &amp; iteration</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Monitoring &amp; troubleshooting</span></div>
+							<div class="pp-mobile-row pp-yes"><span class="pp-label">Full audit logs</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== PRICING NOTE ===== -->
+		<section class="section pp-included-section">
+			<div class="container">
+				<h2 class="section-title">What's included with every plan</h2>
+				<div class="pp-included-grid">
+					<div class="security-item">
+						<div class="security-icon" set:html={iconRocket}></div>
+						<div>
+							<h3 class="security-item-title">Onboarding &amp; setup</h3>
+							<p class="security-item-desc">Up to 50 hours of hands-on configuration and integration.</p>
+						</div>
+					</div>
+					<div class="security-item">
+						<div class="security-icon" set:html={iconCalendar}></div>
+						<div>
+							<h3 class="security-item-title">Weekly calls</h3>
+							<p class="security-item-desc">One-hour check-ins every week for the first year.</p>
+						</div>
+					</div>
+					<div class="security-item">
+						<div class="security-icon" set:html={iconDiagram}></div>
+						<div>
+							<h3 class="security-item-title">Workflow design &amp; iteration</h3>
+							<p class="security-item-desc">We build and refine workflows tailored to your operations.</p>
+						</div>
+					</div>
+					<div class="security-item">
+						<div class="security-icon" set:html={iconKey}></div>
+						<div>
+							<h3 class="security-item-title">Permissions &amp; access guidance</h3>
+							<p class="security-item-desc">Expert setup of roles, access controls, and security boundaries.</p>
+						</div>
+					</div>
+					<div class="security-item">
+						<div class="security-icon" set:html={iconDesktop}></div>
+						<div>
+							<h3 class="security-item-title">Monitoring &amp; troubleshooting</h3>
+							<p class="security-item-desc">Ongoing tuning and issue resolution to keep Cora running smoothly.</p>
+						</div>
+					</div>
+					<div class="security-item">
+						<div class="security-icon" set:html={iconChart}></div>
+						<div>
+							<h3 class="security-item-title">Performance management</h3>
+							<p class="security-item-desc">Continuous optimization so Cora keeps getting better at her job.</p>
+						</div>
+					</div>
+				</div>
+				<p class="pp-included-note">
+					Every Cora is a dedicated AI employee. Pricing reflects not just the technology,
+					but the ongoing service required to make it valuable.
+				</p>
+			</div>
+		</section>
+
+		<!-- ===== FINAL CTA ===== -->
+		<section class="section final-cta" id="final-cta">
+			<div class="container final-cta-container">
+				<h2 class="final-cta-heading">Ready to hire your AI employee?</h2>
+				<p class="final-cta-sub">
+					Your competitors are already moving. Lock in founder pricing now.
+				</p>
+				<ReserveButton size="lg" />
+			</div>
+		</section>
+
+	</main>
+
+	<script>
+		const sentinel = document.getElementById('pp-sentinel');
+		const thead = document.querySelector('.pp-table thead');
+		const mobileHeaders = document.querySelectorAll('.pp-mobile-card > .pp-plan-header');
+
+		function toggleStuck(container: Element, isStuck: boolean) {
+			container.classList.toggle('is-stuck', isStuck);
+			container.querySelectorAll('.pp-plan-desc, .pp-plan-badge').forEach((el) => {
+				const htmlEl = el as HTMLElement;
+				if (isStuck) {
+					const h = htmlEl.offsetHeight;
+					htmlEl.style.height = h + 'px';
+					htmlEl.style.opacity = '1';
+					htmlEl.offsetHeight; // force reflow
+					htmlEl.style.height = '0';
+					htmlEl.style.opacity = '0';
+					htmlEl.style.overflow = 'hidden';
+					htmlEl.style.minHeight = '0';
+					htmlEl.style.margin = '0';
+					htmlEl.style.padding = '0';
+				} else {
+					htmlEl.style.removeProperty('min-height');
+					htmlEl.style.removeProperty('margin');
+					htmlEl.style.removeProperty('padding');
+					const h = htmlEl.scrollHeight;
+					htmlEl.style.height = '0';
+					htmlEl.style.opacity = '0';
+					htmlEl.offsetHeight; // force reflow
+					htmlEl.style.height = h + 'px';
+					htmlEl.style.opacity = '1';
+					htmlEl.addEventListener('transitionend', () => {
+						htmlEl.style.removeProperty('height');
+						htmlEl.style.removeProperty('opacity');
+						htmlEl.style.removeProperty('overflow');
+					}, { once: true });
+				}
+			});
+			const cells = container.querySelectorAll('th').length
+				? container.querySelectorAll('th')
+				: [container];
+			cells.forEach((el) => {
+				const price = el.querySelector('[class*="pp-plan-price"]') as HTMLElement;
+				if (price) price.style.transform = isStuck ? 'translateY(-0.7rem)' : '';
+				const btn = (el.querySelector('a') || el.querySelector('[class*="btn-coming-soon"]')) as HTMLElement;
+				if (btn) btn.style.transform = isStuck ? 'translateY(-1.4rem)' : '';
+			});
+		}
+
+		if (sentinel && thead) {
+			const observer = new IntersectionObserver(
+				([entry]) => {
+					toggleStuck(thead, !entry.isIntersecting);
+				},
+				{ threshold: 0, rootMargin: '-65px 0px 0px 0px' }
+			);
+			observer.observe(sentinel);
+		}
+
+		mobileHeaders.forEach((header) => {
+			const card = header.closest('.pp-mobile-card');
+			if (!card) return;
+			const mobileSentinel = document.createElement('div');
+			mobileSentinel.className = 'pp-mobile-sentinel';
+			card.insertBefore(mobileSentinel, header);
+
+			const observer = new IntersectionObserver(
+				([entry]) => {
+					toggleStuck(header, !entry.isIntersecting);
+				},
+				{ threshold: 0, rootMargin: '-65px 0px 0px 0px' }
+			);
+			observer.observe(mobileSentinel);
+		});
+	</script>
+
+	<Footer />
+
+</Layout>
+
+<style>
+	/* ===== Comparison Table ===== */
+	.pp-compare-section {
+		padding-top: 2rem;
+	}
+
+	.pp-table-wrap {
+		overflow-x: clip;
+	}
+
+	.pp-table {
+		width: 100%;
+		min-width: 600px;
+		border-collapse: separate;
+		border-spacing: 0;
+	}
+
+	.pp-table th,
+	.pp-table td {
+		padding: 0.85rem 1.25rem;
+		text-align: left;
+		font-size: 0.9375rem;
+		border-bottom: 1px solid var(--v2-border);
+		width: 33.33%;
+	}
+
+	.pp-table thead {
+		position: sticky;
+		top: 64px;
+		z-index: 10;
+	}
+
+	.pp-th-plan {
+		vertical-align: bottom;
+		padding: 2rem 1.25rem;
+		border-bottom: 2px solid var(--v2-border);
+		background: var(--v2-bg);
+		transition: padding 0.3s ease;
+	}
+
+	.pp-th-plan + .pp-th-plan {
+		border-left: 1px solid var(--v2-border);
+	}
+
+	.pp-th-soon {
+		background: var(--v2-bg);
+	}
+
+	.pp-th-soon .pp-plan-header {
+		opacity: 0.55;
+	}
+
+	/* ===== Plan header inside <th> ===== */
+	.pp-plan-header {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		gap: 1.1rem;
+		padding-bottom: 1.5rem;
+		text-align: left;
+		transition: gap 0.3s ease, padding-bottom 0.3s ease;
+	}
+
+	.pp-plan-badge {
+		font-size: 0.7rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		background: var(--v2-bg-alt);
+		color: var(--v2-text-muted);
+		border: 1px solid var(--v2-border);
+		padding: 0.2rem 0.75rem;
+		border-radius: 20px;
+		margin-bottom: 0.25rem;
+		align-self: flex-start;
+	}
+
+	.pp-plan-name {
+		font-family: var(--v2-font-heading);
+		font-size: 1.35rem;
+		font-weight: 800;
+		color: var(--v2-text);
+	}
+
+	.pp-plan-price {
+		font-size: 2.25rem;
+		font-weight: 900;
+		color: var(--v2-accent);
+		line-height: 1.2;
+		transition: transform 0.3s ease;
+	}
+
+	.pp-period {
+		font-size: 0.95rem;
+		font-weight: 500;
+		color: var(--v2-text-muted);
+	}
+
+	.pp-plan-desc {
+		font-size: 0.8125rem;
+		font-weight: 400;
+		color: var(--v2-text-secondary);
+		line-height: 1.4;
+		margin-bottom: 0.5rem;
+		min-height: 2.8em;
+		transition: height 0.3s ease, opacity 0.3s ease, margin 0.3s ease, padding 0.3s ease, min-height 0.3s ease;
+	}
+
+	.pp-plan-badge {
+		transition: height 0.3s ease, opacity 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+	}
+
+	.pp-plan-header :global(.btn) {
+		margin-top: -0.25rem;
+		justify-content: flex-start;
+		transition: transform 0.3s ease;
+	}
+
+	/* ===== Sentinel ===== */
+	.pp-sentinel {
+		height: 1px;
+		margin-bottom: -1px;
+	}
+
+	/* ===== Stuck state ===== */
+
+
+	/* ===== Table body ===== */
+	.pp-table td:not(:first-child) {
+		border-left: 1px solid var(--v2-border);
+	}
+
+	.pp-group-row td {
+		font-family: var(--v2-font-heading);
+		font-weight: 700;
+		font-size: 1rem;
+		color: var(--v2-text);
+		text-align: left;
+		padding-top: 1.75rem;
+		padding-bottom: 0.75rem;
+		border-bottom: 2px solid var(--v2-border);
+		background: transparent;
+	}
+
+	/* Feature label */
+	.pp-label {
+		color: var(--v2-text-secondary);
+	}
+
+	/* Yes / No icons */
+	.pp-yes .pp-label::before,
+	.pp-no .pp-label::before {
+		display: inline-block;
+		margin-right: 0.5rem;
+		font-weight: 700;
+		font-size: 1rem;
+	}
+
+	.pp-yes .pp-label::before {
+		content: '\2713';
+		color: var(--v2-accent);
+	}
+
+	.pp-no .pp-label::before {
+		content: '\2717';
+		color: var(--v2-text-muted);
+	}
+
+	.pp-soon-col {
+		color: var(--v2-text-muted);
+	}
+
+	.pp-soon-col .pp-label {
+		color: var(--v2-text-muted);
+	}
+
+	.pp-soon-col.pp-yes .pp-label::before {
+		color: var(--v2-accent-softer);
+	}
+
+	.pp-soon-col.pp-no .pp-label::before {
+		color: #c4ad96;
+	}
+
+	.pp-cta-row td {
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+		border-bottom: none;
+	}
+
+	/* ===== Included Section ===== */
+	.pp-included-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1.25rem;
+		margin-top: 3rem;
+		max-width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.pp-included-note {
+		text-align: center;
+		font-size: 1.25rem;
+		font-weight: 600;
+		font-style: italic;
+		color: var(--v2-text-secondary);
+		max-width: 560px;
+		margin: 2.5rem auto 0;
+		line-height: 1.6;
+		padding: 1.5rem 2rem;
+		position: relative;
+	}
+
+	.pp-included-note::before {
+		content: '';
+		position: absolute;
+		bottom: -0.5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 60px;
+		height: 3px;
+		border-radius: 3px;
+		background: var(--v2-accent-softer);
+	}
+
+	/* ===== Tooltip override for light bg ===== */
+	.pp-table :global(.tooltip-icon) {
+		background: var(--v2-border);
+		color: var(--v2-text-secondary);
+		vertical-align: middle;
+		position: relative;
+		top: -1px;
+		font-family: var(--v2-font);
+		font-weight: 900;
+	}
+
+	.pp-group-row :global(.tooltip-text strong) {
+		display: block;
+		margin-bottom: 0.1rem;
+	}
+
+	/* ===== Mobile Cards ===== */
+	.pp-mobile {
+		display: none;
+	}
+
+	.pp-mobile-card {
+		background: var(--v2-surface);
+		border: 1px solid var(--v2-border);
+		border-radius: var(--v2-radius-lg);
+		padding: 1.75rem;
+		margin-bottom: 1.5rem;
+		width: 90vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.pp-mobile-card > .pp-plan-header {
+		position: sticky;
+		top: 64px;
+		z-index: 10;
+		background: var(--v2-surface);
+		padding-bottom: 1rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.pp-mobile-card-soon > .pp-plan-header {
+		background: var(--v2-surface);
+	}
+
+	.pp-mobile-card-soon {
+		opacity: 0.55;
+	}
+
+	.pp-mobile-group {
+		margin-top: 1.25rem;
+	}
+
+	.pp-mobile-group-title {
+		font-family: var(--v2-font-heading);
+		font-weight: 700;
+		font-size: 0.9375rem;
+		color: var(--v2-text);
+		padding-bottom: 0.5rem;
+		border-bottom: 2px solid var(--v2-border);
+		margin-bottom: 0.5rem;
+	}
+
+	.pp-mobile-row {
+		padding: 0.5rem 0;
+		font-size: 0.9375rem;
+		color: var(--v2-text-secondary);
+		border-bottom: 1px solid var(--v2-border);
+	}
+
+	/* ===== Responsive ===== */
+	@media (max-width: 768px) {
+		.pp-table-wrap {
+			display: none;
+		}
+
+		.pp-mobile {
+			display: block;
+		}
+
+		.pp-included-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

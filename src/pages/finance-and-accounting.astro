@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ReserveButton from '../components/ReserveButton.astro';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faLayerGroup, faScaleBalanced, faReceipt, faFileLines, faChartLine, faCalendarDays, faArrowsRotate } from '@fortawesome/pro-light-svg-icons';
+const iconCategorize = icon(faLayerGroup).html[0];
+const iconReconcile = icon(faScaleBalanced).html[0];
+const iconReceipts = icon(faReceipt).html[0];
+const iconBills = icon(faFileLines).html[0];
+const iconReports = icon(faChartLine).html[0];
+const iconClose = icon(faCalendarDays).html[0];
+const iconUpdated = icon(faArrowsRotate).html[0];
+---
+
+<Layout title="Cora — AI Bookkeeper">
+
+	<Navbar />
+
+	<main>
+
+		<!-- ===== HERO ===== -->
+		<section class="hero" id="hero">
+			<div class="container hero-container hero-container-wide">
+				<div class="hero-pill"><span class="hero-pill-dot"></span><span class="hero-pill-text">AI-Powered Bookkeeping</span></div>
+				<h1 class="hero-heading">Your Books. Clean. Every Day. <span class="accent">Without Hiring a Bookkeeper.</span></h1>
+				<p class="hero-sub">
+					An AI bookkeeping assistant that works inside QuickBooks or Xero, categorizing transactions, matching receipts, and reconciling accounts 24/7.
+				</p>
+				<div class="hero-stat">
+					<span class="hero-stat-number">10hrs</span>
+					<span class="hero-stat-label">Saved per week on bookkeeping tasks</span>
+				</div>
+				<div class="hero-buttons">
+					<ReserveButton />
+					<a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+				</div>
+
+				<div class="hw-wrap">
+					<div class="hw-glow"></div>
+					<div class="hw-box">
+						<div class="hw-vents hw-vents-left">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-center">
+							<div class="hw-logo">
+								<svg width="11" height="13" viewBox="0 0 24 28" fill="rgba(139,94,60,0.4)" xmlns="http://www.w3.org/2000/svg"><path d="M20.8 17.7c-.3.7-.7 1.4-1.1 2-.6.9-1.1 1.5-1.5 1.9-.6.6-1.3 1-2 1-.5 0-1.1-.2-1.9-.5-.7-.3-1.4-.5-2-.5-.6 0-1.3.2-2 .5-.7.3-1.3.5-1.8.5-.7 0-1.4-.3-2-1-.4-.4-.9-1-1.5-1.9-.7-.9-1.2-2-1.6-3.2-.5-1.3-.7-2.5-.7-3.7 0-1.4.3-2.5.9-3.5.5-.8 1.1-1.4 1.9-1.8.8-.5 1.6-.7 2.5-.7.5 0 1.2.2 2 .5.8.4 1.3.5 1.5.5.2 0 .7-.2 1.7-.6.8-.4 1.5-.5 2.1-.4 1.6.1 2.7.8 3.5 2-1.4.9-2.1 2.1-2.1 3.6 0 1.2.4 2.3 1.3 3.1.4.4.8.7 1.3.9-.1.3-.2.6-.4 1zM16.5 2c0 1-.3 1.9-1 2.7-.8 1-1.8 1.6-2.9 1.5 0-.1 0-.2 0-.3 0-.9.4-1.9 1-2.7.3-.4.8-.7 1.3-1 .6-.3 1.1-.4 1.5-.5.1.1.1.2.1.3z"/></svg>
+							</div>
+						</div>
+						<div class="hw-vents hw-vents-right">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-power"></div>
+					</div>
+				</div>
+				<p class="hero-hw-note">Runs on dedicated hardware: your office or the cloud. <span style="color: var(--v2-accent); font-weight: 500;">Always upgraded to the latest AI.</span></p>
+			</div>
+		</section>
+
+		<!-- ===== THE PROBLEM ===== -->
+		<section class="section value-prop">
+			<div class="container">
+				<h2 class="section-title">The Problem</h2>
+
+				<div class="problem-grid">
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Transactions pile up uncategorized for weeks</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Receipt matching is a nightmare at tax time</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Month-end close takes forever</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Good bookkeepers are expensive and hard to find</span></div>
+				</div>
+
+				<p class="problem-callout">What if your books were always up to date, transactions categorized daily, receipts matched automatically, and month-end close done in hours?</p>
+			</div>
+		</section>
+
+		<!-- ===== WHAT YOUR AI BOOKKEEPER DOES ===== -->
+		<section class="section roles" id="how-it-works">
+			<div class="container">
+				<h2 class="section-title">What Your AI Bookkeeper Does</h2>
+				<p class="section-subtext">Everything a bookkeeper does: categorize, reconcile, report, running autonomously inside your accounting software.</p>
+				<div class="roles-grid">
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconCategorize}></div>
+						<h3 class="role-card-title">Transaction Categorization</h3>
+						<p class="role-card-desc">Categorizes every transaction in QuickBooks or Xero with 99% accuracy. Learns your patterns and gets smarter over time.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconReconcile}></div>
+						<h3 class="role-card-title">Bank Reconciliation</h3>
+						<p class="role-card-desc">Matches bank feeds to transactions daily. Flags discrepancies immediately instead of at month-end.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconReceipts}></div>
+						<h3 class="role-card-title">Receipt Capture</h3>
+						<p class="role-card-desc">Pulls receipts from email, extracts data, and attaches them to transactions. No more shoebox of receipts.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconBills}></div>
+						<h3 class="role-card-title">Bill Entry</h3>
+						<p class="role-card-desc">Captures vendor invoices from email, enters them in your system, and routes for approval. Zero manual data entry.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconReports}></div>
+						<h3 class="role-card-title">Financial Reports</h3>
+						<p class="role-card-desc">Generates P&amp;L, balance sheets, and cash flow on demand. Sends weekly summaries to your inbox.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconClose}></div>
+						<h3 class="role-card-title">Month-End Close</h3>
+						<p class="role-card-desc">Prepares accruals, runs depreciation, and generates close checklists. Cuts close time from days to hours.</p>
+					</div>
+				</div>
+				<div class="roles-footer-card">
+				<div class="roles-footer-icon" set:html={iconUpdated}></div>
+				<h3 class="roles-footer-title">Always Updated</h3>
+				<p class="roles-footer-text">AI moves fast. We keep up so you don't have to. Automatic upgrades to the latest models, new capabilities as they ship. No AI expertise required on your team.</p>
+			</div>
+			</div>
+		</section>
+
+		<!-- ===== WORKS WHERE YOU WORK ===== -->
+		<section class="section features">
+			<div class="container">
+				<h2 class="section-title">Works Where You Work</h2>
+				<p class="section-subtext">Deep integration with QuickBooks and Xero. Your AI bookkeeper operates natively in your existing system.</p>
+				<div class="value-grid-4">
+					<div class="value-card">
+						<h3 class="value-card-title">QuickBooks Online</h3>
+						<ul class="value-list">
+							<li>Bank feed management and categorization</li>
+							<li>Invoice and bill entry</li>
+							<li>Bank and credit card reconciliation</li>
+							<li>Sales tax tracking and filing prep</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Xero</h3>
+						<ul class="value-list">
+							<li>Automatic bank rule creation</li>
+							<li>Multi-currency transaction handling</li>
+							<li>Payroll integration and reconciliation</li>
+							<li>Fixed asset management</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Receipt &amp; Document Management</h3>
+						<ul class="value-list">
+							<li>Email receipt capture and extraction</li>
+							<li>Mobile receipt scanning integration</li>
+							<li>Document storage and organization</li>
+							<li>Audit trail maintenance</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Reporting &amp; Analysis</h3>
+						<ul class="value-list">
+							<li>Custom report generation</li>
+							<li>Budget vs. actual tracking</li>
+							<li>Cash flow forecasting</li>
+							<li>KPI dashboards for owners</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== THE NUMBERS DON'T LIE ===== -->
+		<section class="section stats">
+			<div class="container">
+				<h2 class="section-title">The Numbers Don't Lie</h2>
+				<div class="stats-grid">
+					<div class="stat-item">
+						<span class="stat-number">10hrs</span>
+						<span class="stat-label">Saved per week on bookkeeping</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">99%</span>
+						<span class="stat-label">Transaction categorization accuracy</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">3 days</span>
+						<span class="stat-label">To close books vs. 2 weeks</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">$0</span>
+						<span class="stat-label">Missed deductions</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== HOW IT WORKS ===== -->
+		<section class="next-steps">
+			<div class="container">
+				<h2 class="accent-heading">How It Works</h2>
+				<div class="steps-grid">
+					<div class="step-card">
+						<span class="step-number">1</span>
+						<h3 class="step-title">Connect QuickBooks or Xero</h3>
+						<p class="step-desc">One-click integration with your accounting software. We start learning your chart of accounts immediately.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">2</span>
+						<h3 class="step-title">Train Your AI</h3>
+						<p class="step-desc">Review a few categorizations to teach your AI your preferences. It gets smarter with every correction.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">3</span>
+						<h3 class="step-title">Books on Autopilot</h3>
+						<p class="step-desc">Transactions get categorized daily, bills get entered, reconciliation happens automatically. You just review.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FINAL CTA ===== -->
+		<section class="section final-cta" id="final-cta">
+			<div class="container final-cta-container">
+				<h2 class="final-cta-heading">Ready for Clean Books?</h2>
+				<p class="final-cta-sub">
+					Tell us about your current bookkeeping setup. We'll show you exactly how much time you'll save.
+				</p>
+				<ReserveButton size="lg" />
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+
+</Layout>

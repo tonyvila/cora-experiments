@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ReserveButton from '../components/ReserveButton.astro';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faClipboardList, faMoneyCheckDollar, faCalendarCheck, faFileCircleCheck, faHandshake, faShieldHalved, faArrowsRotate } from '@fortawesome/pro-light-svg-icons';
+const iconLogs = icon(faClipboardList).html[0];
+const iconCost = icon(faMoneyCheckDollar).html[0];
+const iconSchedule = icon(faCalendarCheck).html[0];
+const iconRfi = icon(faFileCircleCheck).html[0];
+const iconSubs = icon(faHandshake).html[0];
+const iconSafety = icon(faShieldHalved).html[0];
+const iconUpdated = icon(faArrowsRotate).html[0];
+---
+
+<Layout title="Cora — AI Employees for Construction">
+
+	<Navbar />
+
+	<main>
+
+		<!-- ===== HERO ===== -->
+		<section class="hero" id="hero">
+			<div class="container hero-container hero-container-wide">
+				<div class="hero-pill"><span class="hero-pill-dot"></span><span class="hero-pill-text">AI for Construction</span></div>
+				<h1 class="hero-heading">Run More Jobs. <span class="accent">Without More PMs.</span></h1>
+				<p class="hero-sub">
+					Your AI project administrator handles daily logs, cost tracking, RFIs, submittals, and sub coordination while your team focuses on building.
+				</p>
+				<div class="hero-stat">
+					<span class="hero-stat-number">15hrs</span>
+					<span class="hero-stat-label">Saved per project manager per week</span>
+				</div>
+				<div class="hero-buttons">
+					<ReserveButton />
+					<a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+				</div>
+
+				<div class="hw-wrap">
+					<div class="hw-glow"></div>
+					<div class="hw-box">
+						<div class="hw-vents hw-vents-left">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-center">
+							<div class="hw-logo">
+								<svg width="11" height="13" viewBox="0 0 24 28" fill="rgba(139,94,60,0.4)" xmlns="http://www.w3.org/2000/svg"><path d="M20.8 17.7c-.3.7-.7 1.4-1.1 2-.6.9-1.1 1.5-1.5 1.9-.6.6-1.3 1-2 1-.5 0-1.1-.2-1.9-.5-.7-.3-1.4-.5-2-.5-.6 0-1.3.2-2 .5-.7.3-1.3.5-1.8.5-.7 0-1.4-.3-2-1-.4-.4-.9-1-1.5-1.9-.7-.9-1.2-2-1.6-3.2-.5-1.3-.7-2.5-.7-3.7 0-1.4.3-2.5.9-3.5.5-.8 1.1-1.4 1.9-1.8.8-.5 1.6-.7 2.5-.7.5 0 1.2.2 2 .5.8.4 1.3.5 1.5.5.2 0 .7-.2 1.7-.6.8-.4 1.5-.5 2.1-.4 1.6.1 2.7.8 3.5 2-1.4.9-2.1 2.1-2.1 3.6 0 1.2.4 2.3 1.3 3.1.4.4.8.7 1.3.9-.1.3-.2.6-.4 1zM16.5 2c0 1-.3 1.9-1 2.7-.8 1-1.8 1.6-2.9 1.5 0-.1 0-.2 0-.3 0-.9.4-1.9 1-2.7.3-.4.8-.7 1.3-1 .6-.3 1.1-.4 1.5-.5.1.1.1.2.1.3z"/></svg>
+							</div>
+						</div>
+						<div class="hw-vents hw-vents-right">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-power"></div>
+					</div>
+				</div>
+				<p class="hero-hw-note">Runs on dedicated hardware: your office or the cloud. <span style="color: var(--v2-accent); font-weight: 500;">Always upgraded to the latest AI.</span></p>
+			</div>
+		</section>
+
+		<!-- ===== THE PROBLEM ===== -->
+		<section class="section value-prop">
+			<div class="container">
+				<h2 class="section-title">The Problem</h2>
+
+				<div class="problem-grid">
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Project managers drowning in paperwork</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Daily logs always behind</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Cost reports outdated by the time they're compiled</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">RFIs and submittals falling through the cracks</span></div>
+				</div>
+
+				<p class="problem-callout">What if every project had a dedicated admin that never sleeps, never forgets, and keeps everything organized?</p>
+			</div>
+		</section>
+
+		<!-- ===== WHAT YOUR AI PROJECT ADMIN DOES ===== -->
+		<section class="section roles" id="how-it-works">
+			<div class="container">
+				<h2 class="section-title">What Your AI Project Admin Does</h2>
+				<p class="section-subtext">All the administrative work your PMs shouldn't be doing&nbsp;&mdash; handled automatically.</p>
+				<div class="roles-grid">
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconLogs}></div>
+						<h3 class="role-card-title">Daily Log Automation</h3>
+						<p class="role-card-desc">Compiles daily logs from crew reports, photos, and weather data. Automatically formatted for client delivery and compliance.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconCost}></div>
+						<h3 class="role-card-title">Cost Tracking &amp; Reporting</h3>
+						<p class="role-card-desc">Real-time job costing across all projects. Tracks labor, materials, equipment, and subs against budget.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconSchedule}></div>
+						<h3 class="role-card-title">Schedule Management</h3>
+						<p class="role-card-desc">Updates project schedules based on progress. Identifies delays before they cascade. Coordinates sub schedules automatically.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconRfi}></div>
+						<h3 class="role-card-title">RFI &amp; Submittal Management</h3>
+						<p class="role-card-desc">Tracks all RFIs and submittals. Sends reminders. Routes for approval. Maintains complete audit trail.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconSubs}></div>
+						<h3 class="role-card-title">Subcontractor Coordination</h3>
+						<p class="role-card-desc">Manages sub communications, tracks insurance and certifications, coordinates schedules, and processes pay apps.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconSafety}></div>
+						<h3 class="role-card-title">Safety &amp; Compliance</h3>
+						<p class="role-card-desc">Tracks safety certifications, generates toolbox talks, logs incidents, and maintains OSHA compliance documentation.</p>
+					</div>
+				</div>
+				<div class="roles-footer-card">
+				<div class="roles-footer-icon" set:html={iconUpdated}></div>
+				<h3 class="roles-footer-title">Always Updated</h3>
+				<p class="roles-footer-text">AI moves fast. We keep up so you don't have to. Automatic upgrades to the latest models, new capabilities as they ship. No AI expertise required on your team.</p>
+			</div>
+			</div>
+		</section>
+
+		<!-- ===== INTEGRATES WITH YOUR STACK ===== -->
+		<section class="section features">
+			<div class="container">
+				<h2 class="section-title">Integrates With Your Stack</h2>
+				<p class="section-subtext">Native connections to Procore, Buildertrend, CoConstruct, and your accounting software.</p>
+				<div class="value-grid-4">
+					<div class="value-card">
+						<h3 class="value-card-title">Project Documentation</h3>
+						<ul class="value-list">
+							<li>Automated daily log generation</li>
+							<li>Photo documentation and organization</li>
+							<li>Progress report compilation</li>
+							<li>Meeting minutes and action items</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Financial Management</h3>
+						<ul class="value-list">
+							<li>Real-time job costing</li>
+							<li>Change order tracking</li>
+							<li>Invoice processing and approval</li>
+							<li>Budget vs. actual reporting</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Schedule &amp; Coordination</h3>
+						<ul class="value-list">
+							<li>Master schedule updates</li>
+							<li>Subcontractor scheduling</li>
+							<li>Resource allocation</li>
+							<li>Delay impact analysis</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Compliance &amp; Safety</h3>
+						<ul class="value-list">
+							<li>Safety documentation management</li>
+							<li>Certification tracking</li>
+							<li>Incident reporting</li>
+							<li>Permit and inspection tracking</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== MORE BUILDING, LESS PAPERWORK ===== -->
+		<section class="section stats">
+			<div class="container">
+				<h2 class="section-title">More Building, Less Paperwork</h2>
+				<div class="stats-grid">
+					<div class="stat-item">
+						<span class="stat-number">15hrs</span>
+						<span class="stat-label">Saved per PM per week</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">40%</span>
+						<span class="stat-label">Reduction in admin overhead</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">Zero</span>
+						<span class="stat-label">Missed compliance deadlines</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">Real-time</span>
+						<span class="stat-label">Job cost visibility</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== HOW IT WORKS ===== -->
+		<section class="next-steps">
+			<div class="container">
+				<h2 class="accent-heading">How It Works</h2>
+				<div class="steps-grid">
+					<div class="step-card">
+						<span class="step-number">1</span>
+						<h3 class="step-title">Connect Your Systems</h3>
+						<p class="step-desc">We integrate with Procore, Buildertrend, CoConstruct, and your accounting software. All your data in one place.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">2</span>
+						<h3 class="step-title">Configure Your Workflows</h3>
+						<p class="step-desc">Set up your reporting templates, approval chains, and notification preferences. Your AI follows your process.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">3</span>
+						<h3 class="step-title">Focus on Building</h3>
+						<p class="step-desc">Within days, paperwork handles itself. Your PMs focus on the job site, not the back office.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FINAL CTA ===== -->
+		<section class="section final-cta" id="final-cta">
+			<div class="container final-cta-container">
+				<h2 class="final-cta-heading">Your PMs Shouldn't Be Doing Admin Work</h2>
+				<p class="final-cta-sub">
+					Every hour on paperwork is an hour not on the job site. Let AI handle the back office.
+				</p>
+				<ReserveButton size="lg" />
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+
+</Layout>

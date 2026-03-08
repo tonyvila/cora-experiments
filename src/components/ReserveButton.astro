@@ -1,0 +1,14 @@
+---
+interface Props {
+	size?: 'default' | 'lg';
+	class?: string;
+	style?: string;
+}
+
+const { size = 'default', class: className, style } = Astro.props;
+const href =
+	"mailto:hello@cora.st?subject=Reserve%20My%20Spot&body=Hi%2C%20I'd%20like%20to%20learn%20more%20about%20Cora%20and%20reserve%20my%20spot.%20Please%20let%20me%20know%20the%20next%20steps!";
+const defaultClass = `btn btn-primary${size === 'lg' ? ' btn-lg' : ''}`;
+---
+
+<a href={href} target="_blank" class={className ?? defaultClass} style={style}><slot>Reserve Your Spot &rsaquo;</slot></a>

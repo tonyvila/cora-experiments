@@ -1,0 +1,226 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faArrowLeft, faShieldHalved, faCircleCheck } from '@fortawesome/pro-light-svg-icons';
+const iconBack = icon(faArrowLeft).html[0];
+const iconShield = icon(faShieldHalved).html[0];
+const iconCheck = icon(faCircleCheck).html[0];
+const heroImage = '/images/openclaw-security-hero.jpg';
+---
+
+<Layout
+  title="The State of OpenClaw Security: March 2026 — Cora"
+  description="A monthly dispatch on what the OpenClaw community is learning about security, configuration, and running AI agents safely. Issue 1: CVEs, the ClawHub supply chain attack, and what's still unsettled."
+  image={heroImage}
+>
+
+  <Navbar />
+
+  <main>
+
+    <!-- ===== ARTICLE HERO ===== -->
+    <section class="article-hero">
+      <div class="container article-container">
+        <a href="/security" class="article-back">
+          <span set:html={iconBack}></span> Security
+        </a>
+        <div class="article-series-pill">
+          <span class="article-series-dot"></span>
+          <span>State of OpenClaw Security</span>
+          <span class="article-series-issue">Issue 1</span>
+        </div>
+        <h1 class="article-title">The State of OpenClaw Security: March 2026</h1>
+        <p class="article-deck">A monthly dispatch on what the community is learning about running OpenClaw safely.</p>
+        <div class="article-meta">
+          <span class="article-byline">Cora Team</span>
+          <span class="article-meta-sep">·</span>
+          <span class="article-date">February 26, 2026</span>
+          <span class="article-meta-sep">·</span>
+          <span class="article-read-time">14 min read</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ARTICLE HERO IMAGE ===== -->
+    <div class="article-hero-image-wrap">
+      <div class="container article-container">
+        <img
+          src={heroImage}
+          alt="Mac Mini on a minimal desk with a warm orange screen glow and a folded newspaper beside it"
+          class="article-hero-image"
+          width="1200"
+          height="675"
+          loading="eager"
+        />
+      </div>
+    </div>
+
+    <!-- ===== ARTICLE BODY ===== -->
+    <section class="article-body-section">
+      <div class="container article-container">
+        <div class="article-body">
+
+          <p>OpenClaw has grown fast. Faster, arguably, than the security thinking around it.</p>
+
+          <p>The platform now has over 228,000 GitHub stars and a community producing daily guides, tutorials, and hardening advice. Some of that advice is excellent. Some of it is dangerously incomplete. The gap between the two is hard to see unless you're watching closely.</p>
+
+          <p>That is what this series is for. Each month, we synthesize what the OpenClaw community is actually learning about security and configuration: the incidents, the debates, the tools people are building, and the questions nobody has answered yet. We run Cora on OpenClaw ourselves. We have skin in this.</p>
+
+          <p>This first issue covers a dense February: a major supply chain attack, a critical vulnerability that was public before most users patched, over 42,000 exposed instances on insecure default settings, and a community actively working out what responsible operation looks like. We cover what happened, what people are converging on, what remains genuinely unsettled, and how to think about keeping a running instance secure over time.</p>
+
+          <p>You do not need to be a security expert to read this. Where we use technical terms, we explain them.</p>
+
+          <h2>What Happened in February</h2>
+
+          <p>February was an active month for OpenClaw security, and not in a reassuring way.</p>
+
+          <p>The month opened with researchers publishing data on over 42,000 publicly exposed OpenClaw instances running their default, out-of-the-box settings. The root cause, in almost every case, was the same: the gateway was configured to accept connections from any device on the internet, rather than only from the machine it was running on. Combined with no password protection, this meant anyone who found these instances could connect to them, issue commands, and access whatever data the agent had permission to touch. Most of the affected users did not know their instance was exposed. The defaults that make first-time setup easy are not the defaults that make ongoing operation safe.</p>
+
+          <p>On February 13, a coordinated supply chain attack compromised 341 skills on ClawHub, the community marketplace for OpenClaw add-ons. <a href="https://adversa.ai/blog/openclaw-security-101-vulnerabilities-hardening-2026/" target="_blank" rel="noopener">Adversa AI documented the attack</a> in detail. The skills were silently modified after publication to steal credentials and leave a backdoor in any installation. This was not a theoretical risk. It happened, at scale, and the marketplace had no automated system to detect it. We cover the mechanics in the next section.</p>
+
+          <p>The other major event was a formally disclosed vulnerability tracked as <a href="https://nvd.nist.gov/vuln/detail/CVE-2026-25253" target="_blank" rel="noopener">CVE-2026-25253</a>, rated near-maximum severity on the industry scale used to score these issues. The vulnerability allowed an attacker to send a victim a specially crafted link. When the victim clicked it while their OpenClaw instance was running, the attacker gained full remote access to that instance, with all the permissions the agent held. The OpenClaw team patched it quickly, but the vulnerability was publicly documented before most users had applied the fix.</p>
+
+          <p>Six formally recorded vulnerabilities have been disclosed against OpenClaw in 2026 alone. The project is young. The attack surface is actively being discovered.</p>
+
+          <h2>Deep Dive: The ClawHub Supply Chain Attack</h2>
+
+          <p>The February 13 supply chain attack is worth examining closely, because it reveals something important about how OpenClaw security actually works.</p>
+
+          <p>When you install a skill from ClawHub, you are not installing a limited plugin or a restricted app. You are adding code that runs with the same permissions as the agent itself. A skill can browse the web, execute commands, read and write files, call any API your agent is connected to, and change the agent's own settings. There is no sandbox. A skill is not a helper with limited access. It is code operating with the same authority as the agent.</p>
+
+          <p>The modified skills in the February attack exploited this directly. The injected code, hidden inside otherwise functional skills, ran automatically when the agent started. It scanned the agent's configuration folder for saved credentials and API keys, quietly sent copies of those to attacker-controlled servers, and added a new backdoor access token to the agent's settings. Skills that had been trusted for months became credential theft vectors on the next restart.</p>
+
+          <p>If you installed any ClawHub skills between early January and February 13 and have not reviewed them, that review is overdue. Signs that something may have happened: unexplained changes to your agent's settings, unfamiliar entries in its access logs, or credentials appearing to be used somewhere you did not authorize.</p>
+
+          <p>The harder lesson is structural. The marketplace has no automated scanning, no formal review process, and no trust signal that tells you whether a skill is safe. Until that changes, the only real defense is reading the code before you install anything, and treating an update to an existing skill the same way you'd treat installing it fresh. That is not practical for most people to do well, which is why this problem remains unsolved.</p>
+
+          <h2>What the Community Is Converging On</h2>
+
+          <p>Despite the difficult month, the community response has been serious. A clearer set of baseline practices has started to crystallize, drawn from the accumulated experience of people running OpenClaw in production and documenting what went wrong.</p>
+
+          <p><strong>Use a dedicated machine, not your main computer.</strong> This is the recommendation that shows up in almost every serious guide. If your agent is compromised, you want the damage contained to hardware that only holds what that agent needs, not to the machine you use for everything else. Cloud servers from providers like DigitalOcean or Hetzner are common. A spare Mac Mini or Raspberry Pi 4 works well. Your primary laptop does not.</p>
+
+          <p><strong>Lock the gateway to local-only access.</strong> The single highest-leverage configuration change you can make is ensuring the gateway only accepts connections from the machine it runs on, not from the broader internet. This one setting, if it had been the default, would have protected most of the 42,000 exposed instances. It is not the default. It has to be set explicitly.</p>
+
+          <p><strong>Use Tailscale for remote access.</strong> If you need to reach your OpenClaw instance from other devices or locations, Tailscale is what the community has most broadly settled on. It creates a private, encrypted network between your devices, so your instance stays invisible to the public internet even while you can reach it remotely. No open ports, no public exposure. Some users hit DNS issues this month with certain configurations, but the approach remains the community standard for remote access.</p>
+
+          <p><strong>Use a strong, unique password.</strong> The authentication token that protects your OpenClaw instance should be long, random, and stored somewhere safe, not in a file that also gets backed up to version control. Short or default tokens have appeared as contributing factors in multiple disclosed vulnerabilities.</p>
+
+          <p><strong>Run it in a container if you're doing anything serious.</strong> Docker is a tool that isolates your OpenClaw instance inside its own controlled environment, limiting what it can access on the underlying machine even if it is compromised. Running without this isolation is fine for testing. For anything handling real business data or live credentials, the community has moved to treating containerization as standard, not optional. The specifics of how the container is configured matter significantly: a poorly configured container provides much weaker protection than it might appear.</p>
+
+          <p><strong>Audit your configuration with SecureClaw.</strong> Adversa AI released <a href="https://github.com/adversa-ai/secureclaw" target="_blank" rel="noopener">SecureClaw</a> as a free, open-source tool that checks your setup against 56 security criteria across five categories. Think of it as a health check that tells you what you have missed. Running it after initial setup, after any configuration change, and after installing any new skill has become the baseline expectation in serious community guides.</p>
+
+          <h2>Prompt Injection: What We Know and Don't</h2>
+
+          <p>Prompt injection is the security problem the OpenClaw community is most actively debating and has not solved. It deserves its own section because the threat is real, the current mitigations are partial, and a lot of the advice circulating overstates how much protection any single approach actually provides.</p>
+
+          <p>Here is the basic idea: an OpenClaw agent can read web pages, emails, documents, and messages as part of doing its job. Prompt injection is when an attacker hides instructions inside that content, designed to be read by the agent as commands rather than data. A web page that looks normal to a human might contain hidden text instructing the agent to forward credentials to an external server. A document being processed might contain text telling the agent to perform an action the user never intended. The agent, following instructions as it is designed to do, may comply.</p>
+
+          <p>This is hard to defend against because the same capability that makes an agent useful — reading content and acting on what it finds — is exactly what the attack exploits. You cannot simply tell the agent "ignore any instructions hidden in web content," because that is itself just text, and a sufficiently crafted attack can work around it.</p>
+
+          <p>What partial mitigations actually help: give the agent access only to the tools it genuinely needs for a given task. An agent that does not have the ability to run system commands cannot be tricked into running them through a malicious web page. Restricting tool access does not eliminate the problem but meaningfully reduces the surface area.</p>
+
+          <p>Requiring human approval before the agent takes any consequential action is the other mitigation with real traction. If the agent must ask before sending an email, making an API call, or writing to a file, a successful injection attack triggers a review before damage occurs. This only helps if the approval request is legible, which is not always the case, but it raises the bar significantly.</p>
+
+          <p>What the community is experimenting with but has not settled: using two separate agents in sequence, where one reads external content and can only summarize it, and a separate agent with elevated permissions receives only that summary and never directly touches external content. This reduces injection risk at the cost of complexity. No one is claiming it is fully production-ready yet.</p>
+
+          <p>The honest current state: scope your agent's tools tightly, require approval for consequential actions, and be skeptical of any guide that suggests a single setting solves this.</p>
+
+          <figure class="article-figure">
+            <img
+              src="/images/openclaw-security-mid.jpg"
+              alt="Overhead flat lay of a printed checklist on a warm desk, an orange pen making a checkmark, and a coffee mug in the corner"
+              class="article-figure-img"
+              width="1200"
+              height="675"
+              loading="lazy"
+            />
+          </figure>
+
+          <h2>Keeping It Secure After Setup</h2>
+
+          <p>The most common gap in OpenClaw security advice is treating security as a setup task. You harden the configuration, run a scan, and consider it done. That is not how secure operation actually works.</p>
+
+          <p><strong>Stay current on patches.</strong> Six disclosed vulnerabilities in two months means the attack surface is actively being found. The OpenClaw project does not yet have a formal security mailing list, but the project's GitHub releases page, its official Discord, and a search alert for "OpenClaw" in the National Vulnerability Database together give you reasonable coverage. For high-severity issues, the community expectation has moved toward patching within 48 hours of a disclosure. Being more than one minor version behind on a project with this pace of security fixes is increasingly risky.</p>
+
+          <p><strong>Review your logs periodically.</strong> OpenClaw keeps records of what your agent has done: what websites it visited, what commands it ran, what files it accessed. Reviewing those logs is how you catch anomalies that automated tools miss. An agent that suddenly started making network requests to an unfamiliar domain, or ran a command that was not part of any workflow you configured, is a signal worth investigating. Weekly review is the baseline most serious operators are settling on.</p>
+
+          <p><strong>Keep your skill list current.</strong> Skills accumulate. An agent that has had a dozen skills installed over several months probably has several that are no longer actively used. Each installed skill is code running with agent-level permissions. Remove skills you are not using. When you update a skill, treat it as a new installation and review what changed.</p>
+
+          <p><strong>Run your security audit on a schedule.</strong> SecureClaw is most useful as a regular check, not a one-time scan. Running it after every skill install or configuration change tells you if that change introduced a gap. Running it weekly as a baseline tells you if anything has drifted from the state you last verified.</p>
+
+          <p><strong>Rotate your authentication credentials periodically.</strong> Access tokens should be changed on a regular schedule, and immediately after any personnel change that had access to them or any suspected compromise. This is easy to defer. Put it on a calendar.</p>
+
+          <h2>What Is Still Contested</h2>
+
+          <p>Two areas remain genuinely unsettled, where the community has real debate and no clear answer yet.</p>
+
+          <p><strong>Running OpenClaw for a team.</strong> Almost all the hardening guidance in circulation is written for a single person running their own instance. The questions that come up when multiple people share the same agent, with different roles and different levels of trust, remain significantly less developed. How do you manage access? How do you audit who instructed the agent to do what? The community is producing more writing here, but it has not reached the quality and consensus of the single-operator playbook. If you are deploying OpenClaw for a team rather than an individual, you are in earlier territory and should expect to make more judgment calls.</p>
+
+          <p><strong>Cloud versus self-hosted.</strong> The right answer here genuinely depends on your organization, and the conversation has not gotten simpler. Running your own instance gives you control over your data and eliminates provider trust dependencies. It also requires sustained operational attention. Cloud deployments handle that burden for you but introduce questions about what the provider can see and under what circumstances. Neither approach is categorically safer. The right choice depends on what your agents are doing, what data they touch, and whether your team has the capacity to maintain a self-hosted deployment responsibly over time. Anyone claiming one is categorically better is probably selling something.</p>
+
+          <h2>The Baseline, As Best We Understand It</h2>
+
+          <p>Based on what the community has worked out this month, here is where the bar sits for a defensible setup. This is a synthesis of what serious operators are actually doing, not a definitive list.</p>
+
+          <ul class="article-checklist">
+            <li><span set:html={iconCheck}></span> Gateway bound to loopback, not <code>0.0.0.0</code></li>
+            <li><span set:html={iconCheck}></span> Strong auth token, generated randomly, not left at default</li>
+            <li><span set:html={iconCheck}></span> DM and group policies set to <code>allowlist</code> or <code>pairing</code></li>
+            <li><span set:html={iconCheck}></span> Running as a non-root user</li>
+            <li><span set:html={iconCheck}></span> Docker with hardened compose config (read-only fs, no-new-privileges, capabilities dropped)</li>
+            <li><span set:html={iconCheck}></span> No sensitive directories mounted into the container</li>
+            <li><span set:html={iconCheck}></span> Credential files at <code>chmod 600</code>, config directory at <code>chmod 700</code></li>
+            <li><span set:html={iconCheck}></span> Secrets in <code>.env</code>, not in <code>openclaw.json</code></li>
+            <li><span set:html={iconCheck}></span> Tool sandboxing enabled (<code>sandbox.mode: all</code>) where the workflow allows</li>
+            <li><span set:html={iconCheck}></span> Tailscale or authenticated reverse proxy for remote access</li>
+            <li><span set:html={iconCheck}></span> External-facing tools scoped to minimum necessary</li>
+            <li><span set:html={iconCheck}></span> Human approval required for irreversible external actions</li>
+            <li><span set:html={iconCheck}></span> SecureClaw audit run at setup, after every skill install, and weekly</li>
+            <li><span set:html={iconCheck}></span> Version v2026.1.29 or later (patches CVE-2026-25253)</li>
+            <li><span set:html={iconCheck}></span> Skills vetted before installation; updates treated as new installs</li>
+            <li><span set:html={iconCheck}></span> Unused skills removed</li>
+            <li><span set:html={iconCheck}></span> Logs reviewed weekly</li>
+            <li><span set:html={iconCheck}></span> Auth token rotated on schedule</li>
+          </ul>
+
+          <p>This is the floor the community has converged on. The ceiling is still being built.</p>
+
+          <h2>Where Cora Sits in This</h2>
+
+          <p>We built Cora on OpenClaw, which means we think about this every day. We also run AI agents across our own organization, so we are not advising from theory.</p>
+
+          <p>Our security model reflects the lessons above, applied consistently. Every Cora deployment uses <a href="/enterprise-permissions">isolated identities with least-privilege access</a>, starts with human approval required for all external-facing actions, and maintains a <a href="/audit-logging">complete audit trail</a> of everything the agent does. We track OpenClaw vulnerabilities and patch proactively. We vet every skill before it enters a customer environment. We run continuous automated audits. The full picture is on our <a href="/security">security page</a>.</p>
+
+          <p>What we have learned is that the security work is ongoing, not a setup task. It is the main reason most businesses should not try to self-host an agent for serious operations. Not because it is impossible, but because it demands sustained attention that tends to erode as other priorities compete for it. The incidents above happened to people who had gone through setup correctly.</p>
+
+          <p>If you are weighing your options, reach out at <a href="mailto:hello@cora.st">hello@cora.st</a>. We will be honest about what makes sense for your situation.</p>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section final-cta" id="final-cta">
+      <div class="container final-cta-container">
+        <div class="article-shield-icon" set:html={iconShield}></div>
+        <h2 class="final-cta-heading">AI security handled for you</h2>
+        <p class="final-cta-sub">
+          Cora runs on OpenClaw with a security posture most teams cannot maintain on their own.
+          Least-privilege access, daily automated audits, CVE monitoring, and prompt injection defenses.
+          You get the agent. We carry the security burden.
+        </p>
+        <div class="hero-buttons" style="justify-content: center;">
+          <a href="mailto:hello@cora.st" class="btn btn-primary btn-lg">Talk to us</a>
+          <a href="/security" class="btn btn-outline btn-lg">Security overview</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <Footer />
+
+</Layout>

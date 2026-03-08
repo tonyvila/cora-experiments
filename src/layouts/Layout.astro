@@ -1,0 +1,50 @@
+---
+import 'vanilla-cookieconsent/dist/cookieconsent.css';
+import '../styles/tailwind.generated.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+	image?: string;
+	noindex?: boolean;
+}
+
+const {
+	title = 'Cora — AI Employee',
+	description = 'Cora is an AI employee that gets work done.',
+	image,
+	noindex = false,
+} = Astro.props;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
+const ogImageUrl = image ? new URL(image, Astro.site ?? Astro.url).toString() : undefined;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		{noindex && <meta name="robots" content="noindex, nofollow" />}
+		<link rel="canonical" href={canonicalUrl} />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		{ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		{ogImageUrl && <meta name="twitter:image" content={ogImageUrl} />}
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=Poppins:wght@300&display=swap" rel="stylesheet" />
+	</head>
+	<body>
+		{noindex && <meta http-equiv="X-Frame-Options" content="DENY" />}
+		<slot />
+		<script src="../scripts/cookieconsent.ts"></script>
+	</body>
+</html>

@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ReserveButton from '../components/ReserveButton.astro';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faFileLines, faShieldHalved, faComments, faClipboardList, faMagnifyingGlass, faLayerGroup, faArrowsRotate } from '@fortawesome/pro-light-svg-icons';
+const iconRFP = icon(faFileLines).html[0];
+const iconSecurity = icon(faShieldHalved).html[0];
+const iconQA = icon(faComments).html[0];
+const iconFollowUp = icon(faClipboardList).html[0];
+const iconDemo = icon(faMagnifyingGlass).html[0];
+const iconKnowledge = icon(faLayerGroup).html[0];
+const iconUpdated = icon(faArrowsRotate).html[0];
+---
+
+<Layout title="Cora — AI Sales Engineer">
+
+	<Navbar />
+
+	<main>
+
+		<!-- ===== HERO ===== -->
+		<section class="hero" id="hero">
+			<div class="container hero-container hero-container-wide">
+				<div class="hero-pill"><span class="hero-pill-dot"></span><span class="hero-pill-text">AI-Powered Sales Engineering</span></div>
+				<h1 class="hero-heading">RFPs Done. Questions Answered. <span class="accent">SEs That Actually Scale.</span></h1>
+				<p class="hero-sub">
+					An AI sales engineer that handles RFPs, security questionnaires, and technical follow-ups, so your SEs can focus on demos and architecture, not paperwork.
+				</p>
+				<div class="hero-stat">
+					<span class="hero-stat-number">80%</span>
+					<span class="hero-stat-label">Of RFP response work automated</span>
+				</div>
+				<div class="hero-buttons">
+					<ReserveButton />
+					<a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+				</div>
+
+				<div class="hw-wrap">
+					<div class="hw-glow"></div>
+					<div class="hw-box">
+						<div class="hw-vents hw-vents-left">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-center">
+							<div class="hw-logo">
+								<svg width="11" height="13" viewBox="0 0 24 28" fill="rgba(139,94,60,0.4)" xmlns="http://www.w3.org/2000/svg"><path d="M20.8 17.7c-.3.7-.7 1.4-1.1 2-.6.9-1.1 1.5-1.5 1.9-.6.6-1.3 1-2 1-.5 0-1.1-.2-1.9-.5-.7-.3-1.4-.5-2-.5-.6 0-1.3.2-2 .5-.7.3-1.3.5-1.8.5-.7 0-1.4-.3-2-1-.4-.4-.9-1-1.5-1.9-.7-.9-1.2-2-1.6-3.2-.5-1.3-.7-2.5-.7-3.7 0-1.4.3-2.5.9-3.5.5-.8 1.1-1.4 1.9-1.8.8-.5 1.6-.7 2.5-.7.5 0 1.2.2 2 .5.8.4 1.3.5 1.5.5.2 0 .7-.2 1.7-.6.8-.4 1.5-.5 2.1-.4 1.6.1 2.7.8 3.5 2-1.4.9-2.1 2.1-2.1 3.6 0 1.2.4 2.3 1.3 3.1.4.4.8.7 1.3.9-.1.3-.2.6-.4 1zM16.5 2c0 1-.3 1.9-1 2.7-.8 1-1.8 1.6-2.9 1.5 0-.1 0-.2 0-.3 0-.9.4-1.9 1-2.7.3-.4.8-.7 1.3-1 .6-.3 1.1-.4 1.5-.5.1.1.1.2.1.3z"/></svg>
+							</div>
+						</div>
+						<div class="hw-vents hw-vents-right">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-power"></div>
+					</div>
+				</div>
+				<p class="hero-hw-note">Runs on dedicated hardware: your office or the cloud. <span style="color: var(--v2-accent); font-weight: 500;">Always upgraded to the latest AI.</span></p>
+			</div>
+		</section>
+
+		<!-- ===== THE PROBLEM ===== -->
+		<section class="section value-prop">
+			<div class="container">
+				<h2 class="section-title">The Problem</h2>
+
+				<div class="problem-grid">
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">SEs buried in RFPs instead of selling</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Security questionnaires take days</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Technical follow-ups fall through cracks</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Can't scale SE support with deal volume</span></div>
+				</div>
+
+				<p class="problem-callout">What if your SEs could support 2x the deals by offloading paperwork to an AI that knows your product inside and out?</p>
+			</div>
+		</section>
+
+		<!-- ===== WHAT YOUR AI SALES ENGINEER DOES ===== -->
+		<section class="section roles" id="how-it-works">
+			<div class="container">
+				<h2 class="section-title">What Your AI Sales Engineer Does</h2>
+				<p class="section-subtext">RFP response, security compliance, and technical support, running on hardware you control with full access to your knowledge base.</p>
+				<div class="roles-grid">
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconRFP}></div>
+						<h3 class="role-card-title">RFP Response</h3>
+						<p class="role-card-desc">Drafts comprehensive RFP responses using your product docs, past proposals, and competitive intel. 80% complete on first pass.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconSecurity}></div>
+						<h3 class="role-card-title">Security Questionnaires</h3>
+						<p class="role-card-desc">Completes security questionnaires, vendor assessments, and compliance forms. Pulls from your security documentation automatically.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconQA}></div>
+						<h3 class="role-card-title">Technical Q&amp;A</h3>
+						<p class="role-card-desc">Answers technical questions from prospects via email. Pulls from docs, integrations, and engineering resources.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconFollowUp}></div>
+						<h3 class="role-card-title">Follow-Up Management</h3>
+						<p class="role-card-desc">Tracks every post-demo follow-up. Sends technical resources, answers questions, and keeps deals moving.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconDemo}></div>
+						<h3 class="role-card-title">Demo Prep</h3>
+						<p class="role-card-desc">Researches prospect's tech stack, prepares custom demo scripts, and identifies relevant use cases before every call.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconKnowledge}></div>
+						<h3 class="role-card-title">Knowledge Management</h3>
+						<p class="role-card-desc">Maintains an up-to-date knowledge base of product info, competitive intel, and common objection handlers.</p>
+					</div>
+				</div>
+				<div class="roles-footer-card">
+				<div class="roles-footer-icon" set:html={iconUpdated}></div>
+				<h3 class="roles-footer-title">Always Updated</h3>
+				<p class="roles-footer-text">AI moves fast. We keep up so you don't have to. Automatic upgrades to the latest models, new capabilities as they ship. No AI expertise required on your team.</p>
+			</div>
+			</div>
+		</section>
+
+		<!-- ===== FULL SE SUPPORT ===== -->
+		<section class="section features">
+			<div class="container">
+				<h2 class="section-title">Full SE Support</h2>
+				<p class="section-subtext">From initial RFP to technical close, your AI handles the operational work that bogs down sales engineering.</p>
+				<div class="value-grid-4">
+					<div class="value-card">
+						<h3 class="value-card-title">RFP &amp; Proposal Work</h3>
+						<ul class="value-list">
+							<li>Parse and analyze RFP requirements</li>
+							<li>Draft responses from knowledge base</li>
+							<li>Handle compliance and security sections</li>
+							<li>Format and finalize for submission</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Security &amp; Compliance</h3>
+						<ul class="value-list">
+							<li>Complete security questionnaires</li>
+							<li>Answer vendor assessment questions</li>
+							<li>Pull from security, privacy, and GDPR docs</li>
+							<li>Track and maintain response library</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Technical Support</h3>
+						<ul class="value-list">
+							<li>Answer integration questions</li>
+							<li>Provide API documentation</li>
+							<li>Explain technical architecture</li>
+							<li>Route complex questions to humans</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Deal Acceleration</h3>
+						<ul class="value-list">
+							<li>Prepare custom demo environments</li>
+							<li>Send post-call follow-ups</li>
+							<li>Track technical blockers</li>
+							<li>Coordinate POC logistics</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== SCALE WITHOUT HIRING ===== -->
+		<section class="section stats">
+			<div class="container">
+				<h2 class="section-title">Scale Without Hiring</h2>
+				<div class="stats-grid">
+					<div class="stat-item">
+						<span class="stat-number">80%</span>
+						<span class="stat-label">RFP response completed automatically</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">4hrs</span>
+						<span class="stat-label">Average time saved per security questionnaire</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">24hr</span>
+						<span class="stat-label">Turnaround on technical questions</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">2x</span>
+						<span class="stat-label">More deals supported per SE</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== HOW IT WORKS ===== -->
+		<section class="next-steps">
+			<div class="container">
+				<h2 class="accent-heading">How It Works</h2>
+				<div class="steps-grid">
+					<div class="step-card">
+						<span class="step-number">1</span>
+						<h3 class="step-title">Load Your Knowledge</h3>
+						<p class="step-desc">We ingest your product docs, past RFPs, security documentation, and competitive intel.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">2</span>
+						<h3 class="step-title">Connect Your Tools</h3>
+						<p class="step-desc">Your AI SE connects to email, Salesforce, and document management. Ready to work alongside your team.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">3</span>
+						<h3 class="step-title">Support Every Deal</h3>
+						<p class="step-desc">RFPs get drafted, questions get answered, and follow-ups happen automatically. Your SEs focus on high-value work.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FINAL CTA ===== -->
+		<section class="section final-cta" id="final-cta">
+			<div class="container final-cta-container">
+				<h2 class="final-cta-heading">Ready to Scale Your SEs?</h2>
+				<p class="final-cta-sub">
+					Tell us about your current RFP volume and SE capacity. We'll show you how to support more deals without more headcount.
+				</p>
+				<ReserveButton size="lg" />
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+
+</Layout>

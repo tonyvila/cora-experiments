@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ReserveButton from '../components/ReserveButton.astro';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faEye, faArrowRightArrowLeft, faMoneyCheckDollar, faTriangleExclamation, faBell, faChartLine, faArrowsRotate } from '@fortawesome/pro-light-svg-icons';
+const iconMonitoring = icon(faEye).html[0];
+const iconBids = icon(faArrowRightArrowLeft).html[0];
+const iconBudget = icon(faMoneyCheckDollar).html[0];
+const iconFatigue = icon(faTriangleExclamation).html[0];
+const iconAlerts = icon(faBell).html[0];
+const iconReporting = icon(faChartLine).html[0];
+const iconUpdated = icon(faArrowsRotate).html[0];
+---
+
+<Layout title="Cora — AI Ad Ops">
+
+	<Navbar />
+
+	<main>
+
+		<!-- ===== HERO ===== -->
+		<section class="hero" id="hero">
+			<div class="container hero-container hero-container-wide">
+				<div class="hero-pill"><span class="hero-pill-dot"></span><span class="hero-pill-text">Google Ads &bull; Meta Ads &bull; TikTok</span></div>
+				<h1 class="hero-heading">Cut Your CPA 31% <span class="accent">Without Hiring An Agency.</span></h1>
+				<p class="hero-sub">
+					Your AI ad ops employee monitors campaigns 24/7, pauses wasted spend at 3am, scales winners instantly, and optimizes bids faster than any human could.
+				</p>
+				<div class="hero-stat">
+					<span class="hero-stat-number">31%</span>
+					<span class="hero-stat-label">Average CPA reduction in first 30 days</span>
+				</div>
+				<div class="hero-buttons">
+					<ReserveButton />
+					<a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+				</div>
+
+				<div class="hw-wrap">
+					<div class="hw-glow"></div>
+					<div class="hw-box">
+						<div class="hw-vents hw-vents-left">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-center">
+							<div class="hw-logo">
+								<svg width="11" height="13" viewBox="0 0 24 28" fill="rgba(139,94,60,0.4)" xmlns="http://www.w3.org/2000/svg"><path d="M20.8 17.7c-.3.7-.7 1.4-1.1 2-.6.9-1.1 1.5-1.5 1.9-.6.6-1.3 1-2 1-.5 0-1.1-.2-1.9-.5-.7-.3-1.4-.5-2-.5-.6 0-1.3.2-2 .5-.7.3-1.3.5-1.8.5-.7 0-1.4-.3-2-1-.4-.4-.9-1-1.5-1.9-.7-.9-1.2-2-1.6-3.2-.5-1.3-.7-2.5-.7-3.7 0-1.4.3-2.5.9-3.5.5-.8 1.1-1.4 1.9-1.8.8-.5 1.6-.7 2.5-.7.5 0 1.2.2 2 .5.8.4 1.3.5 1.5.5.2 0 .7-.2 1.7-.6.8-.4 1.5-.5 2.1-.4 1.6.1 2.7.8 3.5 2-1.4.9-2.1 2.1-2.1 3.6 0 1.2.4 2.3 1.3 3.1.4.4.8.7 1.3.9-.1.3-.2.6-.4 1zM16.5 2c0 1-.3 1.9-1 2.7-.8 1-1.8 1.6-2.9 1.5 0-.1 0-.2 0-.3 0-.9.4-1.9 1-2.7.3-.4.8-.7 1.3-1 .6-.3 1.1-.4 1.5-.5.1.1.1.2.1.3z"/></svg>
+							</div>
+						</div>
+						<div class="hw-vents hw-vents-right">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-power"></div>
+					</div>
+				</div>
+				<p class="hero-hw-note">Runs on dedicated hardware: your office or the cloud. <span style="color: var(--v2-accent); font-weight: 500;">Always upgraded to the latest AI.</span></p>
+			</div>
+		</section>
+
+		<!-- ===== THE PROBLEM ===== -->
+		<section class="section value-prop">
+			<div class="container">
+				<h2 class="section-title">The Problem</h2>
+
+				<div class="problem-grid">
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Agencies check accounts twice a day (maybe)</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Winners get found too late to scale</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Losers burn budget for hours before pausing</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Weekend spend = Monday regrets</span></div>
+				</div>
+
+				<p class="problem-callout">What if you had an ad ops specialist watching every campaign 24/7, making optimizations in real-time while you sleep?</p>
+			</div>
+		</section>
+
+		<!-- ===== WHAT YOUR AI AD OPS EMPLOYEE DOES ===== -->
+		<section class="section roles" id="how-it-works">
+			<div class="container">
+				<h2 class="section-title">What Your AI Ad Ops Employee Does</h2>
+				<p class="section-subtext">The work of a $120k/year media buyer, at machine speed.</p>
+				<div class="roles-grid">
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconMonitoring}></div>
+						<h3 class="role-card-title">24/7 Campaign Monitoring</h3>
+						<p class="role-card-desc">Watches every campaign, ad set, and ad. Catches issues in minutes, not hours. You wake up to opportunities, not disasters.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconBids}></div>
+						<h3 class="role-card-title">Automated Bid Management</h3>
+						<p class="role-card-desc">Adjusts bids in real-time based on performance signals. Increases bids when CTR spikes. Decreases when CPA climbs. No manual babysitting.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconBudget}></div>
+						<h3 class="role-card-title">Budget Reallocation</h3>
+						<p class="role-card-desc">Moves budget from underperformers to winners automatically. Why let bad campaigns keep the same budget as your best?</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconFatigue}></div>
+						<h3 class="role-card-title">Creative Fatigue Detection</h3>
+						<p class="role-card-desc">Spots declining CTR before it tanks your campaigns. Alerts you to refresh creative. Suggests which angles are working.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconAlerts}></div>
+						<h3 class="role-card-title">Anomaly Alerts</h3>
+						<p class="role-card-desc">CPM spiked 40%? CTR dropped overnight? You'll know immediately, not at your weekly check-in.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconReporting}></div>
+						<h3 class="role-card-title">Cross-Platform Reporting</h3>
+						<p class="role-card-desc">Unified dashboard for Google, Meta, and TikTok. Compare performance across platforms. See where your money works hardest.</p>
+					</div>
+				</div>
+				<div class="roles-footer-card">
+				<div class="roles-footer-icon" set:html={iconUpdated}></div>
+				<h3 class="roles-footer-title">Always Updated</h3>
+				<p class="roles-footer-text">AI moves fast. We keep up so you don't have to. Automatic upgrades to the latest models, new capabilities as they ship. No AI expertise required on your team.</p>
+			</div>
+			</div>
+		</section>
+
+		<!-- ===== PLATFORM EXPERTISE ===== -->
+		<section class="section features">
+			<div class="container">
+				<h2 class="section-title">Platform Expertise</h2>
+				<p class="section-subtext">Native integration with all major ad platforms. Your AI operates directly in your accounts.</p>
+				<div class="value-grid-4">
+					<div class="value-card">
+						<h3 class="value-card-title">Google Ads Management</h3>
+						<ul class="value-list">
+							<li>Search, Display, YouTube, Performance Max campaigns</li>
+							<li>Keyword bid optimization and negative keyword discovery</li>
+							<li>Quality Score monitoring and improvement</li>
+							<li>Conversion tracking and attribution setup</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Meta Ads Management</h3>
+						<ul class="value-list">
+							<li>Facebook and Instagram campaign optimization</li>
+							<li>Audience testing and lookalike creation</li>
+							<li>Creative performance analysis</li>
+							<li>Advantage+ campaign management</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">TikTok Ads Management</h3>
+						<ul class="value-list">
+							<li>Spark ads and branded content optimization</li>
+							<li>Lead gen and conversion campaigns</li>
+							<li>Creative trend analysis and recommendations</li>
+							<li>Audience insights and targeting</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Optimization &amp; Reporting</h3>
+						<ul class="value-list">
+							<li>Real-time budget reallocation</li>
+							<li>A/B test management and statistical analysis</li>
+							<li>Weekly performance reports</li>
+							<li>ROI tracking and forecasting</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== AGENCY RESULTS. NO AGENCY MARKUP. ===== -->
+		<section class="section stats">
+			<div class="container">
+				<h2 class="section-title">Agency Results. No Agency Markup.</h2>
+				<div class="stats-grid">
+					<div class="stat-item">
+						<span class="stat-number">31%</span>
+						<span class="stat-label">Average CPA reduction</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">$0</span>
+						<span class="stat-label">Wasted overnight spend</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">24/7</span>
+						<span class="stat-label">Campaign monitoring</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">3x</span>
+						<span class="stat-label">Faster optimization cycles</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== HOW IT WORKS ===== -->
+		<section class="next-steps">
+			<div class="container">
+				<h2 class="accent-heading">How It Works</h2>
+				<div class="steps-grid">
+					<div class="step-card">
+						<span class="step-number">1</span>
+						<h3 class="step-title">Connect Your Ad Accounts</h3>
+						<p class="step-desc">We integrate with Google Ads, Meta Ads Manager, and TikTok Ads. Full API access, read and write permissions.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">2</span>
+						<h3 class="step-title">Set Your Rules &amp; Goals</h3>
+						<p class="step-desc">Define your target CPA, budget limits, and optimization preferences. Your AI learns your strategy.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">3</span>
+						<h3 class="step-title">Watch Performance Improve</h3>
+						<p class="step-desc">Within days, see wasted spend eliminated, winners scaled, and campaigns optimized around the clock.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FINAL CTA ===== -->
+		<section class="section final-cta" id="final-cta">
+			<div class="container final-cta-container">
+				<h2 class="final-cta-heading">Your Ad Spend Is Leaking Money Right Now</h2>
+				<p class="final-cta-sub">
+					Every hour without an AI watching your campaigns is money walking out the door. Let's fix that.
+				</p>
+				<ReserveButton size="lg" />
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+
+</Layout>

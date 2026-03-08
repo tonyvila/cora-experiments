@@ -1,0 +1,505 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Layout
+	title="Cora — Proposal for United Airlines"
+	description="A managed AI employee proposal prepared for United Airlines by Cora / Process Street."
+	image="/proposal/united-airlines-2026-03-07-partnership.jpg"
+	noindex={true}
+>
+
+	<Navbar />
+
+	<main>
+
+		<!-- ===== HERO ===== -->
+		<section class="hero" id="hero">
+			<div class="container hero-container hero-container-wide">
+				<div class="hero-pill"><span class="hero-pill-dot"></span><span class="hero-pill-text">Proposal</span></div>
+				<h1 class="hero-heading">Proposal for <span class="accent">United Airlines</span></h1>
+				<p class="hero-sub">
+					Prepared by Cora<br />
+					Account Lead: Vinay Patankar | vinay@cora.st
+				</p>
+				<p class="hero-sub" style="font-size: 0.875rem; color: var(--v2-text-muted);">Valid Until: April 6, 2026</p>
+			</div>
+		</section>
+
+		<!-- ===== PARTNERSHIP IMAGE ===== -->
+		<section class="section" style="padding-top: 0; padding-bottom: 2rem;">
+			<div class="container" style="max-width: 800px;">
+				<img
+					src={`${base}/proposal/united-airlines-2026-03-07-partnership.jpg`}
+					alt="Cora and United Airlines partnership"
+					style="width: 100%; border-radius: var(--v2-radius); box-shadow: var(--v2-shadow-lg);"
+				/>
+			</div>
+		</section>
+
+		<!-- ===== PERSONAL LETTER ===== -->
+		<section class="section" style="padding-top: 2rem;">
+			<div class="container" style="max-width: 720px;">
+				<div class="proposal-letter">
+					<p>Dear United Airlines Team,</p>
+					<p>
+						At United's scale, even small inefficiencies in back-office operations, compliance workflows, and customer communications compound into meaningful cost. We built Cora for exactly this kind of environment. Not to replace your people, but to give them leverage.
+					</p>
+					<p>
+						Every workflow we deploy for customers, we have already built and tested for ourselves. Process Street has spent over a decade helping regulated organizations turn their operations into systems. Cora is the next step: automating those systems with AI agents that work on real computers, use real software, and get better every day.
+					</p>
+					<p>Let's get to work.</p>
+					<p class="proposal-signature">Vinay Patankar | Cofounder and CEO</p>
+					<img src={`${base}/proposal/vinay-signature.png`} alt="Vinay Patankar signature" class="proposal-signature-img" />
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== EXECUTIVE SUMMARY ===== -->
+		<section class="section" id="summary" style="background: var(--v2-bg-alt);">
+			<div class="container" style="max-width: 720px;">
+				<h2 class="section-title" style="text-align: left;">Executive Summary</h2>
+				<p style="margin-bottom: 1rem;">
+					United Airlines manages enormous operational complexity: 100,000+ employees, 4,800+ daily flights, hundreds of airports worldwide. Back-office coordination still relies heavily on manual processes that scale linearly with headcount.
+				</p>
+				<p style="margin-bottom: 1.5rem;">Cora becomes the operational leverage layer that lets United's teams do more without adding more people.</p>
+				<ul class="proposal-list">
+					<li>Automated compliance monitoring and audit preparation across FAA, DOT, and internal standards</li>
+					<li>AI-powered employee onboarding and offboarding at scale across all hubs</li>
+					<li>Intelligent customer communication triage and response drafting</li>
+					<li>Operational reporting and anomaly detection without manual data assembly</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- ===== CURRENT CHALLENGES ===== -->
+		<section class="section" id="challenges">
+			<div class="container" style="max-width: 720px;">
+				<h2 class="section-title" style="text-align: left;">Current Challenges</h2>
+
+				<h3 class="proposal-h3">Manual Coordination at Scale</h3>
+				<p>United operates across 8 major hubs with a workforce spanning pilots, flight attendants, ground crews, maintenance, corporate, and customer service. Shift scheduling, crew assignments, HR lifecycle events, and equipment tracking all require thousands of manual touchpoints daily across fragmented systems.</p>
+
+				<h3 class="proposal-h3">Compliance and Regulatory Pressure</h3>
+				<p>FAA, DOT, TSA, and international aviation authorities demand simultaneous compliance. Audit preparation requires manual documentation assembly across dozens of systems. Training compliance tracking across 100,000+ employees is an ongoing burden.</p>
+
+				<h3 class="proposal-h3">Customer Communication Volume</h3>
+				<p>Millions of customer interactions annually. Routine inquiries (rebooking, refunds, status updates) follow predictable patterns but consume enormous manual capacity. Proactive communication during irregular operations requires rapid, coordinated messaging.</p>
+
+				<p style="margin-top: 1.5rem; font-style: italic; color: var(--v2-text-secondary);">
+					With 4,800+ daily flights, even 1% improvement in operational efficiency represents significant value.
+				</p>
+			</div>
+		</section>
+
+		<!-- ===== THE SOLUTION ===== -->
+		<section class="section" id="solution" style="background: var(--v2-bg-alt);">
+			<div class="container" style="max-width: 720px;">
+				<h2 class="section-title" style="text-align: left;">The Solution</h2>
+				<p style="margin-bottom: 2rem;">A phased engagement beginning with a Managed AI Employee pilot, with a clear path to an AI Transformation Program across United's operations.</p>
+
+				<h3 class="proposal-h3">Managed AI Employee (Pilot Phase)</h3>
+				<p style="margin-bottom: 1rem;">A dedicated AI teammate deployed on United's infrastructure, managed by our team, trained on your specific workflows.</p>
+				<div class="proposal-diff-grid">
+					<div class="proposal-diff-item">
+						<h4>Expert-level intelligence</h4>
+						<p>Writes Python, executes SQL, navigates compliance frameworks, drafts communications, analyzes data. The equivalent of a $200,000/year specialist across every discipline.</p>
+					</div>
+					<div class="proposal-diff-item">
+						<h4>Parallel execution</h4>
+						<p>Runs hundreds of tasks simultaneously. Processing records, generating reports, updating systems in parallel.</p>
+					</div>
+					<div class="proposal-diff-item">
+						<h4>Continuous memory</h4>
+						<p>Retains context across interactions. Remembers your terminology, processes, regulatory requirements, and exceptions.</p>
+					</div>
+					<div class="proposal-diff-item">
+						<h4>Always on</h4>
+						<p>Daily compliance checks, weekly reports, monthly reconciliations: configured once, running continuously.</p>
+					</div>
+				</div>
+
+				<h3 class="proposal-h3" style="margin-top: 3rem;">AI Transformation Program (Scale Phase)</h3>
+				<p>After proving pilot value: business brain architecture for institutional knowledge, second brains for key leaders, and operating model redesign for agent-first operations at airline scale. Not a slide deck engagement. We build, deploy, maintain, and optimize.</p>
+			</div>
+		</section>
+
+		<!-- ===== WHY CORA ===== -->
+		<section class="section roles" id="why-cora">
+			<div class="container">
+				<h2 class="section-title">Why Cora</h2>
+				<div class="roles-grid">
+					<div class="role-card">
+						<h3 class="role-card-title">Real Computer, Real Work</h3>
+						<p class="role-card-desc">Cora operates on an actual computer using the same software your team uses. It opens Workday, navigates SAP, queries databases, and builds reports. A teammate that works the way your people work.</p>
+					</div>
+					<div class="role-card">
+						<h3 class="role-card-title">Managed, Not DIY</h3>
+						<p class="role-card-desc">Process Street deploys, secures, maintains, and continuously optimizes the agent. You get the output without the infrastructure overhead.</p>
+					</div>
+					<div class="role-card">
+						<h3 class="role-card-title">Security by Design</h3>
+						<p class="role-card-desc">Tightest access boundaries from day one. Daily automated security audits, prompt injection defense, complete audit trails, and least-privilege architecture.</p>
+					</div>
+					<div class="role-card">
+						<h3 class="role-card-title">Built by Operators</h3>
+						<p class="role-card-desc">Every workflow we deploy for customers, we have already built and tested internally. You benefit from our entire organization's learning curve.</p>
+					</div>
+					<div class="role-card">
+						<h3 class="role-card-title">Continuous Improvement</h3>
+						<p class="role-card-desc">The agent identifies inefficiencies, suggests optimizations, and builds new solutions. Every night, it gets better at your specific operations.</p>
+					</div>
+					<div class="role-card">
+						<h3 class="role-card-title">Cross-Domain Intelligence</h3>
+						<p class="role-card-desc">One agent covers compliance, data operations, communications, reporting, and administration. Expert-level capability across every domain, 24/7.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== BUSINESS CASE ===== -->
+		<section class="section" id="business-case" style="background: var(--v2-bg-alt);">
+			<div class="container" style="max-width: 720px;">
+				<h2 class="section-title" style="text-align: left;">Business Case</h2>
+				<p style="margin-bottom: 2rem;">Consider just one function: employee lifecycle management. Thousands of HR events per year, each requiring cross-departmental coordination across HR, IT, security, training, and facilities.</p>
+
+				<div class="proposal-table-wrap">
+					<table class="proposal-table">
+						<thead>
+							<tr><th>Approach</th><th>Annual Cost</th><th>Availability</th></tr>
+						</thead>
+						<tbody>
+							<tr><td>Additional ops staff (3 FTEs)</td><td>$300,000+</td><td>Business hours</td></tr>
+							<tr><td>Consulting engagement</td><td>$500,000+</td><td>Project-based</td></tr>
+							<tr class="proposal-table-highlight"><td>Cora Managed AI Employee</td><td>$36,000/year</td><td>24/7/365</td></tr>
+						</tbody>
+					</table>
+				</div>
+
+				<p style="margin-top: 1rem; font-style: italic; color: var(--v2-text-secondary);">
+					As operational complexity grows, manual coordination scales linearly. AI execution does not.
+				</p>
+			</div>
+		</section>
+
+		<!-- ===== ROLLOUT PLAN ===== -->
+		<section class="section" id="rollout">
+			<div class="container" style="max-width: 720px;">
+				<h2 class="section-title" style="text-align: left;">Rollout Plan</h2>
+				<div class="proposal-phases">
+					<div class="proposal-phase">
+						<div class="proposal-phase-label">Phase 1: Weeks 1-4</div>
+						<h4>Pilot in one operational function</h4>
+						<p>Deploy a single Cora agent on compliance documentation, HR lifecycle workflows, or customer communication triage.</p>
+					</div>
+					<div class="proposal-phase">
+						<div class="proposal-phase-label">Phase 2: Months 2-3</div>
+						<h4>Expand and refine</h4>
+						<p>Iterate on Phase 1, add adjacent use cases, begin measuring ROI.</p>
+					</div>
+					<div class="proposal-phase">
+						<div class="proposal-phase-label">Phase 3: Months 4-6</div>
+						<h4>Cross-functional expansion</h4>
+						<p>Second operational function. Begin scoping the AI Transformation Program.</p>
+					</div>
+					<div class="proposal-phase">
+						<div class="proposal-phase-label">Phase 4: Month 7+</div>
+						<h4>AI Transformation Program</h4>
+						<p>Enterprise-scale rollout. Custom scoped based on pilot results.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== INVESTMENT ===== -->
+		<section class="section" id="investment" style="background: var(--v2-bg-alt);">
+			<div class="container" style="max-width: 720px;">
+				<h2 class="section-title" style="text-align: left;">Investment</h2>
+
+				<div class="proposal-table-wrap">
+					<table class="proposal-table">
+						<tbody>
+							<tr><td style="font-weight: 600;">Monthly fee</td><td>$3,000/month</td></tr>
+							<tr><td style="font-weight: 600;">Commitment</td><td>6-month pilot</td></tr>
+							<tr><td style="font-weight: 600;">Included workflow hours</td><td>30 hours/month</td></tr>
+							<tr><td style="font-weight: 600;">Additional hours</td><td>$100/hour</td></tr>
+							<tr><td style="font-weight: 600;">Implementation</td><td>Included in Month 1</td></tr>
+							<tr><td style="font-weight: 600;">Maintenance, security, optimization</td><td>Included</td></tr>
+							<tr><td style="font-weight: 600;">Hardware</td><td>Mac Mini included or cloud instance</td></tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="proposal-total">
+					<span>Total 6-month pilot:</span>
+					<span class="proposal-total-amount">$18,000</span>
+				</div>
+
+				<p style="font-size: 0.875rem; color: var(--v2-text-muted);">
+					Not included: AI model token costs ($50-$500/mo, billed to your account), hardware if applicable (~$600-$800), third-party tool subscriptions. Monthly invoicing, net 30 terms. All prices in USD.
+				</p>
+			</div>
+		</section>
+
+		<!-- ===== SECURITY ===== -->
+		<section class="section">
+			<div class="container" style="max-width: 720px;">
+				<h2 class="section-title" style="text-align: left;">Security Approach</h2>
+				<p style="margin-bottom: 1rem;">Conservative, incremental, designed for aviation-grade requirements.</p>
+				<ul class="proposal-list">
+					<li>Tightest access boundaries from day one. No admin access, ever.</li>
+					<li>All external-facing actions require manual approval before sending</li>
+					<li>Access expands only after 100+ outputs reviewed with zero corrections</li>
+					<li>Daily automated security audits, prompt injection guardrails, complete audit trail</li>
+					<li>Each new system integration approved by your security team before configuration</li>
+				</ul>
+				<p style="margin-top: 1rem;"><a href={`${base}/security`} style="color: var(--v2-accent); text-decoration: underline;">Full security framework</a></p>
+			</div>
+		</section>
+
+		<!-- ===== YOUR TEAM + TERMS ===== -->
+		<section class="section" style="background: var(--v2-bg-alt);">
+			<div class="container" style="max-width: 720px;">
+				<h2 class="section-title" style="text-align: left;">Your Team</h2>
+				<div class="proposal-table-wrap" style="margin-bottom: 3rem;">
+					<table class="proposal-table">
+						<thead><tr><th>Role</th><th>Name</th><th>Responsibility</th></tr></thead>
+						<tbody>
+							<tr><td>Account Lead</td><td>Vinay Patankar</td><td>Strategy, escalation</td></tr>
+							<tr><td>Solutions Engineer</td><td>Lincoln</td><td>Implementation, workflow building</td></tr>
+							<tr><td>Customer Success</td><td>Gustavo Amaral</td><td>Onboarding, ongoing relationship</td></tr>
+						</tbody>
+					</table>
+				</div>
+
+				<h2 class="section-title" style="text-align: left;">Terms</h2>
+				<ul class="proposal-list proposal-terms">
+					<li><strong>Term:</strong> 6 months, renewing month-to-month. 30 days written notice to cancel.</li>
+					<li><strong>Payment:</strong> Monthly invoicing, net 30. First month payable upon execution.</li>
+					<li><strong>Hours:</strong> 30/month, non-cumulative. Additional at $100/hour.</li>
+					<li><strong>Confidentiality:</strong> Mutual NDA alongside this agreement.</li>
+					<li><strong>Early termination:</strong> Requires payment of remaining months.</li>
+				</ul>
+				<div style="margin-top: 1rem; display: flex; gap: 1.5rem; font-size: 0.875rem;">
+					<a href="https://www.process.st/terms" style="color: var(--v2-accent);">Terms</a>
+					<a href="https://www.process.st/privacy" style="color: var(--v2-accent);">Privacy</a>
+					<a href={`${base}/security`} style="color: var(--v2-accent);">Security</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== ACCEPTANCE ===== -->
+		<section class="section" id="accept">
+			<div class="container" style="max-width: 720px;">
+				<!-- FORM STATE -->
+				<div id="acceptance-form-wrap">
+					<h2 class="section-title" style="text-align: left;">Accept Proposal</h2>
+					<p style="margin-bottom: 2rem;">By completing the form below, United Airlines agrees to the terms outlined in this proposal and authorizes Process Street, Inc. to begin the Cora engagement.</p>
+
+					<form class="proposal-form" id="proposal-acceptance-form">
+						<input type="hidden" name="proposal_slug" value="united-airlines-2026-03-07" />
+						<input type="hidden" name="client_name" value="United Airlines" />
+						<input type="hidden" name="offer_type" value="managed-ai-employee" />
+						<input type="hidden" name="monthly_fee" value="$3,000" />
+						<input type="hidden" name="commitment_term" value="6 months" />
+						<input type="hidden" name="proposal_amount" value="$18,000" />
+
+						<div class="proposal-form-group">
+							<label for="signer_name">Full Name</label>
+							<input type="text" id="signer_name" name="signer_name" required placeholder="Jane Smith" maxlength="200" />
+						</div>
+						<div class="proposal-form-group">
+							<label for="signer_title">Title</label>
+							<input type="text" id="signer_title" name="signer_title" required placeholder="VP of Operations" maxlength="200" />
+						</div>
+						<div class="proposal-form-group">
+							<label for="signer_email">Email</label>
+							<input type="email" id="signer_email" name="signer_email" required placeholder="you@united.com" maxlength="254" />
+						</div>
+						<div class="proposal-form-group">
+							<label for="signer_company">Company</label>
+							<input type="text" id="signer_company" name="signer_company" required value="United Airlines" />
+						</div>
+						<div class="proposal-form-group">
+							<label for="typed_signature">Typed Signature</label>
+							<input type="text" id="typed_signature" name="typed_signature" required placeholder="Type your full name as signature" maxlength="200" class="proposal-signature-input" />
+						</div>
+
+						<button type="submit" id="accept-btn" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 1rem;">Accept Proposal</button>
+					</form>
+
+					<p style="margin-top: 2rem; font-size: 0.875rem; color: var(--v2-text-muted); text-align: center;">
+						Your digital signature will be recorded and a signed PDF will be sent to both parties.
+					</p>
+				</div>
+
+				<!-- LOADING STATE -->
+				<div id="acceptance-loading" style="display: none; text-align: center; padding: 3rem 1rem;">
+					<div style="display: inline-block; width: 40px; height: 40px; border: 3px solid var(--v2-border); border-top-color: var(--v2-accent); border-radius: 50%; animation: spin 0.8s linear infinite;"></div>
+					<p style="margin-top: 1.25rem; font-size: 1rem; color: var(--v2-text-muted);">Submitting your acceptance...</p>
+				</div>
+
+				<!-- SUCCESS STATE -->
+				<div id="acceptance-success" style="display: none; text-align: center; padding: 3rem 1rem;">
+					<div style="width: 56px; height: 56px; border-radius: 50%; background: var(--v2-accent); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+					</div>
+					<h2 style="font-family: var(--v2-font-heading); font-size: 1.75rem; color: var(--v2-text); margin-bottom: 0.75rem;">Thank You</h2>
+					<p style="font-size: 1.0625rem; color: var(--v2-text-secondary); line-height: 1.7;" id="acceptance-message"></p>
+					<p style="font-size: 0.875rem; color: var(--v2-text-muted); margin-top: 1.5rem;">A signed PDF will be sent to your email shortly.</p>
+				</div>
+
+				<!-- ALREADY ACCEPTED STATE -->
+				<div id="acceptance-already" style="display: none; text-align: center; padding: 3rem 1rem;">
+					<div style="width: 56px; height: 56px; border-radius: 50%; background: var(--v2-accent); display: inline-flex; align-items: center; justify-content: center; margin-bottom: 1.25rem;">
+						<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+					</div>
+					<h2 style="font-family: var(--v2-font-heading); font-size: 1.75rem; color: var(--v2-text); margin-bottom: 0.75rem;">Proposal Accepted</h2>
+					<p style="font-size: 1.0625rem; color: var(--v2-text-secondary); line-height: 1.7;" id="already-accepted-message">This proposal has already been accepted.</p>
+					<p style="font-size: 0.875rem; color: var(--v2-text-muted); margin-top: 1.5rem;">A signed copy has been sent to both parties. If you need assistance, contact <a href="mailto:vinay@cora.st" style="color: var(--v2-accent);">vinay@cora.st</a>.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== CONTACT ===== -->
+		<section class="section" style="background: var(--v2-bg-alt); padding: 3rem 0;">
+			<div class="container" style="text-align: center;">
+				<p>Questions? Contact Vinay Patankar at <a href="mailto:vinay@cora.st" style="color: var(--v2-accent);">vinay@cora.st</a></p>
+				<p style="margin-top: 0.5rem; font-weight: 600;">Process Street, Inc. &middot; <a href="https://www.cora.st" style="color: var(--v2-accent);">www.cora.st</a></p>
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+
+</Layout>
+
+<style>
+	.proposal-letter { line-height: 1.8; }
+	.proposal-letter p { margin-bottom: 1.25rem; }
+	.proposal-letter .proposal-signature-img { width: 180px; margin-top: 0.5rem; margin-bottom: 0.25rem; }
+	.proposal-letter .proposal-signature { font-weight: 600; color: var(--v2-text); margin-top: 0; }
+
+	.proposal-h3 { font-family: var(--v2-font-heading); font-size: 1.25rem; color: var(--v2-text); margin-top: 2rem; margin-bottom: 0.75rem; }
+
+	.proposal-list { list-style: none; padding: 0; }
+	.proposal-list li { position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem; line-height: 1.6; }
+	.proposal-list li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 8px; height: 8px; background: var(--v2-accent); border-radius: 50%; }
+	.proposal-terms li { margin-bottom: 1rem; }
+
+	.proposal-diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1rem; }
+	.proposal-diff-item { background: var(--v2-surface); border: 1px solid var(--v2-border); border-radius: var(--v2-radius-sm); padding: 1.5rem; }
+	.proposal-diff-item h4 { font-family: var(--v2-font-heading); font-size: 1rem; margin-bottom: 0.5rem; color: var(--v2-text); }
+	.proposal-diff-item p { font-size: 0.9375rem; color: var(--v2-text-secondary); line-height: 1.6; }
+
+	.proposal-table-wrap { overflow-x: auto; margin: 1rem 0; }
+	.proposal-table { width: 100%; border-collapse: collapse; font-size: 0.9375rem; }
+	.proposal-table th { background: var(--v2-accent); color: #fff; text-align: left; padding: 0.75rem 1rem; font-weight: 600; font-family: var(--v2-font); }
+	.proposal-table th:first-child { border-radius: var(--v2-radius-sm) 0 0 0; }
+	.proposal-table th:last-child { border-radius: 0 var(--v2-radius-sm) 0 0; }
+	.proposal-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--v2-border); vertical-align: top; }
+	.proposal-table tbody tr:hover { background: rgba(212, 98, 43, 0.03); }
+	.proposal-table-highlight td { background: rgba(212, 98, 43, 0.08); font-weight: 600; }
+
+	.proposal-total { display: flex; justify-content: space-between; align-items: center; background: var(--v2-accent); color: #fff; padding: 1.25rem 1.5rem; border-radius: var(--v2-radius-sm); margin: 1.5rem 0 2rem; font-size: 1.125rem; font-weight: 600; }
+	.proposal-total-amount { font-size: 1.5rem; }
+
+	.proposal-phases { display: flex; flex-direction: column; gap: 1.5rem; }
+	.proposal-phase { background: var(--v2-bg-alt); border-radius: var(--v2-radius-sm); padding: 1.5rem; border-left: 4px solid var(--v2-accent); }
+	.proposal-phase-label { font-size: 0.8125rem; font-weight: 600; color: var(--v2-accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+	.proposal-phase h4 { font-family: var(--v2-font-heading); font-size: 1.125rem; margin-bottom: 0.5rem; }
+	.proposal-phase p { color: var(--v2-text-secondary); font-size: 0.9375rem; line-height: 1.6; }
+
+	.proposal-form { display: flex; flex-direction: column; gap: 1.25rem; }
+	.proposal-form-group { display: flex; flex-direction: column; gap: 0.375rem; }
+	.proposal-form-group label { font-weight: 600; font-size: 0.875rem; color: var(--v2-text); }
+	.proposal-form-group input { font-family: var(--v2-font); font-size: 1rem; padding: 0.75rem 1rem; border: 1px solid var(--v2-border); border-radius: var(--v2-radius-sm); background: var(--v2-surface); color: var(--v2-text); transition: border-color 0.2s; }
+	.proposal-form-group input:focus { outline: none; border-color: var(--v2-accent); box-shadow: 0 0 0 3px rgba(212, 98, 43, 0.1); }
+	.proposal-signature-input { font-style: italic; font-size: 1.125rem !important; }
+
+	@keyframes spin {
+		to { transform: rotate(360deg); }
+	}
+
+	@media (max-width: 768px) { .proposal-diff-grid { grid-template-columns: 1fr; } }
+</style>
+
+		<script>
+				(function() {
+					var slug = document.querySelector('input[name="proposal_slug"]').value;
+
+					// Check acceptance status on page load
+					fetch('https://vp58.app.n8n.cloud/webhook/proposal-status?slug=' + encodeURIComponent(slug))
+						.then(function(r) { return r.json(); })
+						.then(function(status) {
+							if (status.accepted) {
+								document.getElementById('acceptance-form-wrap').style.display = 'none';
+								document.getElementById('acceptance-already').style.display = 'block';
+								var msg = 'This proposal was accepted';
+								if (status.accepted_at) {
+									var d = new Date(status.accepted_at);
+									msg += ' on ' + d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+								}
+								if (status.signer_name) msg += ' by ' + status.signer_name;
+								msg += '.';
+								document.getElementById('already-accepted-message').textContent = msg;
+							}
+						})
+						.catch(function() { /* silently proceed with form */ });
+
+					// Form submission handler
+					document.getElementById('proposal-acceptance-form').addEventListener('submit', async function(e) {
+						e.preventDefault();
+						var btn = document.getElementById('accept-btn');
+						if (btn.disabled) return;
+						btn.disabled = true;
+
+						var form = e.target;
+						var formData = new FormData(form);
+						var data = Object.fromEntries(formData.entries());
+						data.accepted_at = new Date().toISOString();
+						data.proposal_url = window.location.href;
+
+						document.getElementById('acceptance-form-wrap').style.display = 'none';
+						document.getElementById('acceptance-loading').style.display = 'block';
+
+						try {
+							var res = await fetch('https://vp58.app.n8n.cloud/webhook/proposal-acceptance', {
+								method: 'POST',
+								headers: { 'Content-Type': 'application/json' },
+								body: JSON.stringify(data)
+							});
+							var result = await res.json();
+							document.getElementById('acceptance-loading').style.display = 'none';
+
+							if (result.error === 'already_accepted') {
+								document.getElementById('acceptance-already').style.display = 'block';
+								var msg = 'This proposal was already accepted';
+								if (result.accepted_at) {
+									var d = new Date(result.accepted_at);
+									msg += ' on ' + d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+								}
+								if (result.signer_name) msg += ' by ' + result.signer_name;
+								msg += '.';
+								document.getElementById('already-accepted-message').textContent = msg;
+							} else if (res.ok) {
+								document.getElementById('acceptance-success').style.display = 'block';
+								document.getElementById('acceptance-message').textContent =
+									"We're excited to help " + data.client_name + " on their AI Transformation journey.";
+							} else {
+								throw new Error(result.message || 'Submission failed');
+							}
+						} catch (err) {
+							document.getElementById('acceptance-loading').style.display = 'none';
+							document.getElementById('acceptance-form-wrap').style.display = 'block';
+							btn.disabled = false;
+							btn.textContent = 'Try Again';
+							alert('Something went wrong. Please try again or contact vinay@cora.st.');
+						}
+					});
+				})();
+			</script>

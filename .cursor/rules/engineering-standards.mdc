@@ -1,0 +1,10 @@
+---
+description: single source of engineering standards
+alwaysApply: true
+---
+
+# Engineering standards source
+
+Follow `CONTRIBUTING.md` for all engineering standards, workflow rules, product naming, and AI guardrails.
+
+Do not duplicate standards in this rule file. Keep this file as a pointer only.

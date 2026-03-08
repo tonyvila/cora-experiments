@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import ReserveButton from '../components/ReserveButton.astro';
+import { icon } from '@fortawesome/fontawesome-svg-core';
+import { faCalendarCheck, faFileCircleCheck, faIdCard, faMoneyCheckDollar, faCommentDots, faFolderOpen, faArrowsRotate } from '@fortawesome/pro-light-svg-icons';
+const iconScheduling = icon(faCalendarCheck).html[0];
+const iconAuth = icon(faFileCircleCheck).html[0];
+const iconInsurance = icon(faIdCard).html[0];
+const iconBilling = icon(faMoneyCheckDollar).html[0];
+const iconComms = icon(faCommentDots).html[0];
+const iconRecords = icon(faFolderOpen).html[0];
+const iconUpdated = icon(faArrowsRotate).html[0];
+---
+
+<Layout title="Cora — AI Employees for Healthcare">
+
+	<Navbar />
+
+	<main>
+
+		<!-- ===== HERO ===== -->
+		<section class="hero" id="hero">
+			<div class="container hero-container hero-container-wide">
+				<div class="hero-pill"><span class="hero-pill-dot"></span><span class="hero-pill-text">AI for Medical Practices</span></div>
+				<h1 class="hero-heading">Less Paperwork. <span class="accent">More Patient Care.</span></h1>
+				<p class="hero-sub">
+					An AI employee for medical practices that handles scheduling, prior authorizations, billing, and patient communication&nbsp;&mdash; so your team can focus on care.
+				</p>
+				<div class="hero-stat">
+					<span class="hero-stat-number">40%</span>
+					<span class="hero-stat-label">Reduction in administrative burden</span>
+				</div>
+				<div class="hero-buttons">
+					<ReserveButton />
+					<a href="#how-it-works" class="btn btn-outline">See How It Works</a>
+				</div>
+
+				<div class="hw-wrap">
+					<div class="hw-glow"></div>
+					<div class="hw-box">
+						<div class="hw-vents hw-vents-left">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-center">
+							<div class="hw-logo">
+								<svg width="11" height="13" viewBox="0 0 24 28" fill="rgba(139,94,60,0.4)" xmlns="http://www.w3.org/2000/svg"><path d="M20.8 17.7c-.3.7-.7 1.4-1.1 2-.6.9-1.1 1.5-1.5 1.9-.6.6-1.3 1-2 1-.5 0-1.1-.2-1.9-.5-.7-.3-1.4-.5-2-.5-.6 0-1.3.2-2 .5-.7.3-1.3.5-1.8.5-.7 0-1.4-.3-2-1-.4-.4-.9-1-1.5-1.9-.7-.9-1.2-2-1.6-3.2-.5-1.3-.7-2.5-.7-3.7 0-1.4.3-2.5.9-3.5.5-.8 1.1-1.4 1.9-1.8.8-.5 1.6-.7 2.5-.7.5 0 1.2.2 2 .5.8.4 1.3.5 1.5.5.2 0 .7-.2 1.7-.6.8-.4 1.5-.5 2.1-.4 1.6.1 2.7.8 3.5 2-1.4.9-2.1 2.1-2.1 3.6 0 1.2.4 2.3 1.3 3.1.4.4.8.7 1.3.9-.1.3-.2.6-.4 1zM16.5 2c0 1-.3 1.9-1 2.7-.8 1-1.8 1.6-2.9 1.5 0-.1 0-.2 0-.3 0-.9.4-1.9 1-2.7.3-.4.8-.7 1.3-1 .6-.3 1.1-.4 1.5-.5.1.1.1.2.1.3z"/></svg>
+							</div>
+						</div>
+						<div class="hw-vents hw-vents-right">
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+							<div class="hw-vent"></div>
+						</div>
+						<div class="hw-power"></div>
+					</div>
+				</div>
+				<p class="hero-hw-note">Runs on dedicated hardware: your office or the cloud. <span style="color: var(--v2-accent); font-weight: 500;">Always upgraded to the latest AI.</span></p>
+			</div>
+		</section>
+
+		<!-- ===== THE PROBLEM ===== -->
+		<section class="section value-prop">
+			<div class="container">
+				<h2 class="section-title">The Problem</h2>
+
+				<div class="problem-grid">
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Staff spend more time on phones than patients</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Prior authorizations take days and delay care</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Denials pile up and revenue leaks</span></div>
+					<div class="problem-item"><span class="problem-dot"></span><span class="problem-text">Patients can't reach you after hours</span></div>
+				</div>
+
+				<p class="problem-callout">What if patients could schedule 24/7, prior auths got approved in hours, and your staff had time to actually help patients?</p>
+			</div>
+		</section>
+
+		<!-- ===== WHAT YOUR AI MEDICAL EMPLOYEE DOES ===== -->
+		<section class="section roles" id="how-it-works">
+			<div class="container">
+				<h2 class="section-title">What Your AI Medical Employee Does</h2>
+				<p class="section-subtext">Everything that keeps your team from patient care&nbsp;&mdash; calls, auths, billing&nbsp;&mdash; handled autonomously.</p>
+				<div class="roles-grid">
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconScheduling}></div>
+						<h3 class="role-card-title">Patient Scheduling</h3>
+						<p class="role-card-desc">Handles appointment requests 24/7, optimizes provider schedules, and fills cancellations automatically.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconAuth}></div>
+						<h3 class="role-card-title">Prior Authorization</h3>
+						<p class="role-card-desc">Submits prior auth requests, tracks status, and follows up with payers. Reduces auth delays from days to hours.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconInsurance}></div>
+						<h3 class="role-card-title">Insurance Verification</h3>
+						<p class="role-card-desc">Verifies eligibility and benefits before appointments. Catches coverage issues before patients arrive.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconBilling}></div>
+						<h3 class="role-card-title">Billing &amp; Collections</h3>
+						<p class="role-card-desc">Submits claims, follows up on denials, and manages patient collections. Improves revenue cycle performance.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconComms}></div>
+						<h3 class="role-card-title">Patient Communication</h3>
+						<p class="role-card-desc">Sends appointment reminders, handles prescription refill requests, and answers common questions.</p>
+					</div>
+					<div class="role-card">
+						<div class="role-card-icon" set:html={iconRecords}></div>
+						<h3 class="role-card-title">Medical Records</h3>
+						<p class="role-card-desc">Requests and processes records from other providers. Ensures complete patient history is available.</p>
+					</div>
+				</div>
+				<div class="roles-footer-card">
+				<div class="roles-footer-icon" set:html={iconUpdated}></div>
+				<h3 class="roles-footer-title">Always Updated</h3>
+				<p class="roles-footer-text">AI moves fast. We keep up so you don't have to. Automatic upgrades to the latest models, new capabilities as they ship. No AI expertise required on your team.</p>
+			</div>
+			</div>
+		</section>
+
+		<!-- ===== BUILT FOR HEALTHCARE ===== -->
+		<section class="section features">
+			<div class="container">
+				<h2 class="section-title">Built for Healthcare</h2>
+				<p class="section-subtext">Healthcare-grade AI that understands medical workflows, from scheduling to collections.</p>
+				<div class="value-grid-4">
+					<div class="value-card">
+						<h3 class="value-card-title">Front Office</h3>
+						<ul class="value-list">
+							<li>24/7 appointment scheduling and changes</li>
+							<li>Insurance eligibility verification</li>
+							<li>New patient registration</li>
+							<li>Appointment reminder automation</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Revenue Cycle</h3>
+						<ul class="value-list">
+							<li>Prior authorization submission and tracking</li>
+							<li>Clean claim submission</li>
+							<li>Denial management and appeals</li>
+							<li>Patient payment collection</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Clinical Support</h3>
+						<ul class="value-list">
+							<li>Prescription refill processing</li>
+							<li>Lab and imaging result delivery</li>
+							<li>Referral coordination</li>
+							<li>Care gap outreach</li>
+						</ul>
+					</div>
+					<div class="value-card">
+						<h3 class="value-card-title">Practice Operations</h3>
+						<ul class="value-list">
+							<li>Provider schedule optimization</li>
+							<li>No-show and cancellation management</li>
+							<li>Quality measure tracking</li>
+							<li>Patient satisfaction follow-up</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== THE NUMBERS DON'T LIE ===== -->
+		<section class="section stats">
+			<div class="container">
+				<h2 class="section-title">The Numbers Don't Lie</h2>
+				<div class="stats-grid">
+					<div class="stat-item">
+						<span class="stat-number">40%</span>
+						<span class="stat-label">Reduction in phone volume</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">24hrs</span>
+						<span class="stat-label">Prior auth turnaround (vs. 5 days)</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">15%</span>
+						<span class="stat-label">Increase in collections</span>
+					</div>
+					<div class="stat-item">
+						<span class="stat-number">24/7</span>
+						<span class="stat-label">Patient access to scheduling</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== HOW IT WORKS ===== -->
+		<section class="next-steps">
+			<div class="container">
+				<h2 class="accent-heading">How It Works</h2>
+				<div class="steps-grid">
+					<div class="step-card">
+						<span class="step-number">1</span>
+						<h3 class="step-title">Connect Your EHR</h3>
+						<p class="step-desc">Integrate with your practice management system, EHR, and clearinghouse. healthcare-compliant from day one.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">2</span>
+						<h3 class="step-title">Configure Your Workflows</h3>
+						<p class="step-desc">Define scheduling rules, authorization requirements, and communication preferences.</p>
+					</div>
+					<div class="step-card">
+						<span class="step-number">3</span>
+						<h3 class="step-title">Transform Your Practice</h3>
+						<p class="step-desc">Phones quiet down, prior auths get approved, and staff focus on patients instead of paperwork.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===== FINAL CTA ===== -->
+		<section class="section final-cta" id="final-cta">
+			<div class="container final-cta-container">
+				<h2 class="final-cta-heading">Ready to Transform Your Practice?</h2>
+				<p class="final-cta-sub">
+					Tell us about your practice and current challenges. We'll show you exactly how AI can reduce admin burden and improve revenue.
+				</p>
+				<ReserveButton size="lg" />
+			</div>
+		</section>
+
+	</main>
+
+	<Footer />
+
+</Layout>
