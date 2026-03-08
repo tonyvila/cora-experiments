@@ -191,13 +191,6 @@ h1, h2, h3, h4, h5, h6 {
 	left: 0;
 	right: 0;
 	z-index: 1000;
-	background: transparent;
-	backdrop-filter: none;
-	-webkit-backdrop-filter: none;
-	border-bottom: 1px solid transparent;
-	transition: background 0.3s, border-bottom 0.3s, backdrop-filter 0.3s;
-}
-.nav.nav-scrolled {
 	background: rgba(255, 251, 247, 0.92);
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
@@ -397,7 +390,7 @@ h1, h2, h3, h4, h5, h6 {
 	animation: heroReveal 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 .hero-illus-tr {
-	top: 0;
+	top: 80px;
 	right: 0;
 	width: 45%;
 	max-width: 600px;
